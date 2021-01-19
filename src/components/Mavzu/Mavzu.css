@@ -1,0 +1,40 @@
+.mavzu {
+	position: absolute;
+	top: 130px;
+	right: 45px;
+	width: 76%;
+	margin: 0 auto;
+}
+.text-ceter {
+	margin-top: 30px;
+	text-align: center;
+}
+.mavzu .cards{
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 20px;
+
+}
+.mavzu .cards .cards_item{
+	padding: 0 40px;
+	margin-top: 25px;
+}
+.mavzu .cards .cards_item .img_block{
+	border-radius: 35px;
+	overflow: hidden;
+	transition: 1s;
+}
+.mavzu .cards .cards_item p{
+	color: #011F3B;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 60px;
+}
+
+@media (max-width:1200px){
+	.mavzu .cards{
+		height: 70vh;
+		overflow: auto;
+	}
+
+}

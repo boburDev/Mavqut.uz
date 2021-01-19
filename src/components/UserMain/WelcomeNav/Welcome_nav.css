@@ -1,0 +1,73 @@
+.containerBox {
+  
+  display: flex;
+    margin: 10px 60px;
+    /* height: 100px; */
+  }
+  .containerBox .title_nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .containerBox .title_nav h3 {
+    margin: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    /* height: 30px; */
+  
+  }
+  .containerBox .title_nav .links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    top: 50%;
+  }
+  .containerBox .title_nav .links .link {
+    margin: auto 10px;
+    display: flex;
+    color: #768492;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  .containerBox .title_nav .links .link:hover {
+    cursor: pointer;
+  }
+  .containerBox .title_nav .links .isActive {
+    color: #A057A3;
+    position: relative;
+    justify-content: center;
+  }
+  .containerBox .title_nav .links .isActive::before {
+    position: absolute;
+    bottom: -50%;
+    content: "";
+    border: 1px sold red;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #B683BD;
+    height: 5px;
+  }
+  .containerBox .title_nav .bell {
+    border-radius: 50%;
+    color: #cb6ae9;
+  }
+  .containerBox .title_nav .bell img {
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    transition: all .5s ease-in-out;
+  }
+  .containerBox .title_nav .bell img:hover {
+    cursor: pointer;
+    background: #f1f1f1;
+  }
+  

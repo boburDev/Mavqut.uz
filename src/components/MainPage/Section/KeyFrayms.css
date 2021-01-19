@@ -1,0 +1,250 @@
+@keyframes visibility {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+@keyframes fade-visibility {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0; 
+    }
+}
+
+@keyframes moon{
+    from {
+        bottom: 1000px;
+    }
+    to {
+        /* bottom: -25px; */
+        bottom: -0.74257%;;
+    }
+  }
+
+  @keyframes clouds{
+    from {
+        top: -500px;
+    }
+    to {
+        top: 0px;
+    }
+  }
+  
+@keyframes towers{
+    from {
+       bottom: -2000px;
+    }
+    to {
+        bottom: -2.6%;
+    }
+  }
+  
+@keyframes little-towers{
+    from {
+       bottom: -2000px;
+    }
+    to {
+        /* bottom: -80px; */
+        bottom:-9.8285%;
+    }
+  }
+  
+  @keyframes mosque{
+    from {
+        bottom: -2000px;
+     }
+     to {
+         bottom: 0;
+     }
+}
+
+@keyframes logo{
+    0% {
+        opacity: 0;
+     }
+     90% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+     }
+}
+
+
+@keyframes compact {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-350px, 50px);
+    }
+    75% {
+        transform: translate(-350px, 120px);
+    }
+    80% {
+        transform: translate(-350px, 250px);
+    }
+    85% {
+        transform: translate(-350px, 250px);
+    }
+    100% {
+     
+        transform: scale(0.7);
+         transform-origin: -300px 1350px;
+    }
+  }
+
+@keyframes compact-back {
+    0% {
+        transform: scale(0.7);
+        transform-origin: -300px 1350px;
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+  }
+
+@keyframes compact-towers {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-350px, 50px);
+    }
+    75% {
+        transform: translate(-350px, 120px);
+    }
+    80% {
+        transform: translate(-350px, 250px);
+    }
+    85% {
+        transform: translate(-350px, 450px);
+    }
+    100% {
+        transform: scale(0.7);
+        transform-origin: -300px 2050px;
+    }
+  }
+  
+@keyframes compact-towers-back {
+    0% {
+        transform: scale(0.7);
+        transform-origin: -300px 2050px;
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes way-onclick {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    75% {
+        transform: translate(0px, 60px);
+    }
+    80% {
+        transform-origin: 2500px 900px;
+        transform: rotate(-4.5deg);
+    }
+    100% {
+        transform-origin: 5500px 900px;
+        transform: rotate(-4.5deg);
+    }
+  }
+  @keyframes way-onclick-back {
+    0% {
+        transform-origin: 5500px 900px;
+        transform: rotate(-4.5deg);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+  }
+
+@keyframes moon-fades {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(1000px, -1000px);
+    }
+}
+@keyframes moon-fades-back {
+    0% {
+        transform: translate(1000px, -1000px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes sky-onclick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    75% {
+        transform: scale(1.5);
+    }
+    80% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(2);
+    }
+  }
+
+  @keyframes about-click-for-l-towers{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(300px, 60px);
+        /* transform: translate(196px, 12px); */
+    }
+  }
+
+  @keyframes about-click-for-compact{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+        transform-origin: 1900px 1000px;
+        /* transform-origin: 1305px 639px; */
+    }
+  }
+
+  @keyframes about-click-for-moon{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+        transform-origin: 2000px 1000px;
+        /* transform-origin: 1314px 700px; */
+    }
+  }

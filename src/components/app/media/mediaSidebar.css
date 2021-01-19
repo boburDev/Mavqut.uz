@@ -1,0 +1,59 @@
+@media only screen and (max-width: 1200px) {
+    .sidebarBg--register {
+        background-position: 0 -50px;
+    }
+    .sidebarBg--nigth.down {
+        background-position: 0 -45px;
+    }
+    .sidebarBg--ligth {
+        background-position: 0 -65px;
+    }
+    .sidebarBg--ligth.top {
+        background-position: 0 -65px;
+    }
+    .sideBarAnimation .tower {
+        background-size: 30px;
+        bottom: -5%;
+    }
+    .sideBarAnimation .little-tower-left {
+        background-size: 30px;
+        left: 20%;
+        bottom: -7%;
+    }
+    .sideBarAnimation .little-tower-right {
+        background-size: 30px;
+        left: 72%;
+        bottom: -7%;
+    }
+    .nav .btn a {
+        font-size: 1rem;
+    }
+    .sidebarLink {
+        font-size: .7rem;
+    }
+    .sub-footer-links {
+        top: -179px;
+    }
+    .sub-footer-link {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    @keyframes goingdown {
+        0% {
+            background-position: 0 -120px;
+        }
+        100% {
+            background-position: 0 -45px;
+        }
+    }
+    
+    @keyframes goingtop {
+        0% {
+            background-position: 0 0px;
+        }
+        100% {
+            background-position: 0 -65px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@media only screen and (max-width:1200px){
+    
+    .navbar .nav-item , .navbar-more li{
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+}

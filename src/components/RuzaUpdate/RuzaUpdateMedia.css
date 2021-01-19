@@ -1,0 +1,56 @@
+
+@media screen and  (max-height:740px){
+    .pray-counter {
+        position: relative;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-top: 10px;
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .status-editing {
+        width: 700px;
+        height: 165px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .ruza-update-button {
+        width: 198px;
+        height: 58px;
+        margin-top: 65px;
+        padding: 10px 20px;
+        border-radius: 17px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        font-style: normal;
+        border: 5px solid #BB59A0;
+        background: #BB59A0;
+        color: #FFFFFF;
+        box-sizing: border-box;
+        margin-left: 100px;
+    }
+    .status-editing label {
+        padding: 0;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+    }
+}
+@media screen and (max-height:868px){
+    .pray-counter {
+        position: relative;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-top: 10px;
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}

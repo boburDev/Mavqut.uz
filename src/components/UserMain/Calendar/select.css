@@ -1,0 +1,79 @@
+.customSelect{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin-right:auto;
+    margin-left: 0;
+}
+.custom-select-year,
+.custom-select-month {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    line-height: 1.2;
+    position: relative;
+}
+
+.custom-select-year {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.custom-select-month {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-select-month .select .picker{
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 9px;
+}
+.counter{
+    position:absolute;
+    /* top: 20%; */
+    right: 0;
+}
+.counter .top-caret, .counter .bottom-caret{
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+.counter .top-caret:hover, .counter .bottom-caret:hover{
+    cursor: pointer;
+}
+
+
+.counter .top-caret::after, .counter .bottom-caret::before,
+.counter .bottom-caret::after, .counter .top-caret::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color:  rgb(104, 100, 100); 
+}
+.counter .top-caret::after, .counter .bottom-caret::before{
+    
+    transform: rotate(50deg);
+    
+}
+.counter .top-caret::after{    
+    top: 0;
+    left:6px ;
+}
+.counter .bottom-caret::before{    
+    bottom: 0;
+    left: 0;
+}
+.counter .bottom-caret::after, .counter .top-caret::before{
+    transform: rotate(-50deg);
+}
+.counter .top-caret::before{    
+    top: 0;
+    left: 0px;
+}
+.counter .bottom-caret::after{     
+    bottom: 0;
+    left:6px;
+}

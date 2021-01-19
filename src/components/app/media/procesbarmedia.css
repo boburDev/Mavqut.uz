@@ -1,0 +1,287 @@
+@media only screen and (max-width: 1400px) {
+    .process-wrapper {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .gauge {
+        max-width: 250px;
+        margin-top: 50px;
+        font-size: 32px;
+    }
+    .gauge-title {
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 40px;
+    }
+    .process-pie-charts {
+        left: 50px;
+        width: 60%;
+        height: 194px;
+    }
+    .gauge-pie {
+        position: absolute;
+        height: 100%;
+        left: -10px !important;
+    }
+
+    .process-pie-charts .next {
+        top: 36%;
+        height: 0;
+    }
+    .process-pie-charts .prev {
+        position: relative;
+        left: -60px;
+        top: 36%;
+        height: 0;
+    }
+    
+    
+    .circle-bomdod {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-bomdod .outer {
+        width: 130px;
+        height: 130px;
+    }
+    .circle-bomdod .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .circle-bomdod p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-bomdod span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-bomdod span::before {
+        bottom: -70px;
+    }
+    .progress-ring-bomdod {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-bomdod-time {
+        r: 59;
+        cx: 65;
+        cy: 64;
+        stroke-width: 11;
+    }
+    
+    
+    /* peshin */
+    .circle-peshin {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-peshin .outer {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .circle-peshin .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .circle-peshin p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-peshin span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-peshin span::before {
+        bottom: -70px;
+    }
+    .progress-ring-peshin {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-peshin-time {
+        r: 59;
+        cx: 65;
+        cy: 64;
+        stroke-width: 11;
+    }
+    
+    
+    /* asr */
+    .circle-asr {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-asr .outer {
+        width: 130px;
+        height: 130px;
+    }
+    .circle-asr .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .circle-asr p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-asr span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-asr span::before {
+        bottom: -70px;
+    }
+    .progress-ring-asr {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-asr-time {
+        r: 59;
+        cx: 65;
+        cy: 64;
+        stroke-width: 11;
+    }
+    
+    .gauge-pie--hidden {
+        position: absolute;
+        height: 100%;
+        left: -10px !important;
+    }
+    
+    /* shom */
+    .circle-shom {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-shom .outer {
+        width: 130px;
+        height: 130px;
+    }
+    .circle-shom .inner {
+        width: 105px;
+        height: 105px;
+    }
+    
+    .circle-shom p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-shom span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-shom span::before {
+        bottom: -70px;
+    }
+    .progress-ring-shom {
+        top: 0px;
+        left: 0px;
+        width: 130px !important;
+        height: 130px !important;
+    }
+    .progress-shom-time {
+        r: 59;
+        cx: 65;
+        cy: 64;
+        stroke-width: 11;
+    }
+    
+    
+    /*  XUFTON  */
+    .circle-xufton {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-xufton .outer {
+        width: 130px;
+        height: 130px;
+    }
+    .circle-xufton .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .circle-xufton p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-xufton span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-xufton span::before {
+        bottom: -70px;
+    }
+    .progress-ring-xufton {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-xufton-time {
+        r: 59;
+        cx: 65;
+        cy: 65;
+        stroke-width: 11;
+    }
+    
+    
+    
+    /*  VITR  */
+    .circle-vitr {
+        width: 140px;
+        height: 140px;
+    }
+    .circle-vitr .outer {
+        width: 130px;
+        height: 130px;
+    }
+    .circle-vitr .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .circle-vitr p {
+        left: 35px;
+        font-size: 16px;
+    }
+    .circle-vitr span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .circle-vitr span::before {
+        bottom: -70px;
+    }
+    .progress-ring-vitr {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-vitr-time {
+        r: 59;
+        cx: 65;
+        cy: 65;
+        stroke-width: 11;
+    }
+    
+    /* calendar component */
+    .all {
+        padding: 0;
+        margin: 0;
+        margin: 0 auto;
+    }
+}

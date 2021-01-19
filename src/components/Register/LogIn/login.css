@@ -1,0 +1,52 @@
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login label {
+  width: 50%;
+  height: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  z-index: 9999;
+}
+.login label input {
+  width: 80%;
+  height: 100%;
+  background: #f8f2fc;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 5px 0;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 10px;
+  border: none;
+  padding-left: 20px;
+}
+.login label input::placeholder {
+  font-weight: bold;
+}
+.login span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #2b083c;
+  text-align: center;
+  margin-top: 10px;
+}
+.login span a {
+  color: red;
+  text-transform: none;
+  font-weight: 700;
+}
+.login span a a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,122 @@
+.App {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 65%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.angle {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mosque {
+    width: 43%;
+    position: absolute;
+    bottom: -7vh;
+}
+
+.towers {
+    width: 26%;
+    position: absolute;
+    bottom: 10vh;
+    left: 10vw;
+}
+
+.trees {
+    width: 59%;
+    position: absolute;
+    bottom: -22vh;
+    left: 10vw;
+}
+
+.p_1 {
+    bottom: 85vh;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5rem;
+    left: 35vw;
+}
+
+.p_2 {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 52vh;
+    left: 50vw;
+}
+
+.p_2 span, .p_3 span {
+    font-weight: bold;
+    color: mediumseagreen;
+}
+
+.p_3 {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 25vh;
+    left: 60vw;
+}
+
+.p_4 {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 15vh;
+    font-weight: bold;
+    left: 70vw;
+}
+
+.enter_btn {
+    background: none;
+    border-radius: 50px;
+    outline: none;
+    position: absolute;
+    left: 75vw;
+    bottom: 7vh;
+    width: 180px;
+    height: 50px;
+    border: solid mediumseagreen;
+}
+
+.enter_btn a {
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: mediumseagreen;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+.enter_btn span {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+@media (min-height: 900px) {
+
+    .p_1, .p_2, .p_3, .p_4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-height: 950px) {
+    .p_1, .p_2, .p_3, .p_4 {
+        font-size: 1.7rem;
+    }
+}

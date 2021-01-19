@@ -1,0 +1,62 @@
+@media only screen and (max-width:1300px){
+    .wrapper-item .logo_text h2{
+        font-size: 35px;
+    }
+    .wrapper-item .logo_text p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .wrapper-item .towers.tower {
+        transform-origin: -572px 2050px;
+        transform: scale(0.8);
+    }
+    .wrapper-item .mosque.mosques,
+.wrapper-item .littele-towers.littele-tower {
+    transform: scale(0.8);
+    transform-origin: -572px 1350px;
+}
+
+
+
+.wrapper-item .moon.about-c {
+    animation: about-click-for-moon 4s ease;
+    transform: scale(0.8);
+    transform-origin: 1314px 700px;
+}
+.wrapper-item .mosque.about-c, .wrapper-item .towers.about-c {
+    animation: about-click-for-compact 4s ease;
+    transform: scale(0.8);
+    transform-origin: 1305px 639px;
+    /* transform-origin: 111.699% 11.3636364%; */
+}
+.wrapper-item .littele-towers.about-c {
+    animation: about-click-for-l-towers 4s ease;
+    transform: translate(196px, 12px);
+}
+
+.wrapper-item .mosque.mosques, .wrapper-item .littele-towers.littele-tower1 {
+    animation: compact 6s ease;
+    transform: scale(0.8);
+    transform-origin: -51% 230%;
+}
+.wrapper-item .littele-towers{
+    bottom: -15.8285%;
+}
+}
+@media only screen and (min-width:1200px){
+    .wrapper-item .towers.tower1 {
+        animation: compact-towers 6s ease;
+        transform: scale(0.8);
+        transform-origin: -53% 375%;
+    }
+    .wrapper-item .mosque.mosques, .wrapper-item .littele-towers.littele-tower1 {
+        animation: compact 6s ease;
+        transform: scale(0.8);
+        transform-origin: -51% 230%;
+    }
+}
+@media only screen and (min-width:1300px ){
+    .wrapper-item .littele-towers{
+        bottom: -12.8285%;
+    }
+}

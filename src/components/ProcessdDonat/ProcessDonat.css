@@ -1,0 +1,146 @@
+.nomoz_progres_bar {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 50px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.donat-chart {
+    position: relative;
+}
+.donat-chart::after {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    content: attr(data-done);
+}
+.donat-chart::before {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    content: attr(data-not-done);
+}
+.donat-ruza::after {
+    display: flex;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    content: attr(data-donat-text);
+}
+@media screen and (max-width:1260px){
+    .donat-ruza::after{
+        top: 27%;
+        font-size: 18px;
+    }
+}
+.process_types {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+}
+.type {
+    display: flex;
+    flex-direction: column;
+}
+.dish_wraper {
+    width: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.dish_wraper .percent {
+    margin-left: 15px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+    animation: up-to 2s ease;
+}
+.type .dish {
+    position: relative;
+    width: 50px;
+    height: 200px;
+    border-radius: 50px;
+    border: 1px solid #EEF2FD;
+    overflow: hidden;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+.type .dish .liqual {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    animation: fill 2s ease;
+    border-radius: 22px;
+}
+.type_name {
+    margin-left: 10px;
+}
+.vitr_type .type_name {
+    margin-left: 25px;
+}
+.asr_type .type_name {
+    margin-left: 20px;
+}
+.shom_type .type_name {
+    margin-left: 15px;
+}
+
+.vitr_type .dish .liqual {
+    background: linear-gradient(#F6600C, #A60000, #151C73);
+}
+.xufton_type .dish .liqual {
+    background: linear-gradient(#0CE8F6, #006EA6, #151C73);
+}
+.shom_type .dish .liqual {
+    background: linear-gradient(#772ED9, #6B08FF, #151C73);
+}
+.asr_type .dish .liqual {
+    background: linear-gradient(#0CF8C0, #00A8A4, #151C73);
+}
+.peshin_type .dish .liqual {
+    background: linear-gradient(#CD387C, #AE007E, #151C73);
+}
+.bomdod_type .dish .liqual {
+    background: linear-gradient(#B202BA, #9F36DB, #151C73);
+}
+
+
+@keyframes fill {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 80%;
+    }
+}
+
+@keyframes up-to {
+    0% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: 40%;
+    }
+}

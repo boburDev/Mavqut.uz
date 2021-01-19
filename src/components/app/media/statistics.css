@@ -1,0 +1,84 @@
+/* @media only screen and (max-width: 1500px) {
+
+    .line-wrapping{
+        height: 450px;
+    }
+    .line-wrapping .line{
+        width: 450px;
+    }
+
+    .statics-circle {
+        width: 140px;
+        height: 140px;
+    }
+    .statics-circle .outer {
+        top: 80px;
+        width: 130px;
+        height: 130px;
+    }
+    .statics-circle .inner {
+        width: 105px;
+        height: 105px;
+    }
+    .statics-circle p {
+        top: 39%;
+        left: 44px;
+        font-size: 18px;
+    }
+    .statics-circle span {
+        top: 70px;
+        left: 40px;
+        font-size: 16px;
+    }
+    .statics-circle span::before {
+        bottom: -70px;
+    }
+
+    .progress-ring-namaz {
+        top: 0px;
+        left: 0px;
+        width: 130px;
+        height: 130px;
+    }
+    .progress-namaz-time {
+        r: 59;
+        cx: 65;
+        cy: 65;
+        stroke-width: 11;
+    }
+    
+    
+    .done-namaz {
+        top: 10px;
+        right: 200px;
+        font-size: 18px;
+    }
+    .done-namaz::before {
+        font-size: 18px;
+    }
+    .done-namaz .process {
+        left: -60px;
+        width: 150px;
+        height: 15px;
+    }
+    .done-namaz .process .statics-liqual {
+        height: 15px;
+    }
+    .not-done-namaz {
+        font-size: 18px;
+    }
+    .not-done-namaz .uqilmagan {
+        left: -10px;
+    }
+    .not-done-namaz::before {
+        font-size: 18px;
+    }
+    .not-done-namaz .process {
+        width: 150px;
+        height: 15px;
+        left: -60px;
+    }
+    .not-done-namaz .process .statics-liqual {
+        height: 15px;
+    }
+} */

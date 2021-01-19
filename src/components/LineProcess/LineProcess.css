@@ -1,0 +1,155 @@
+.line-wrapping {
+    max-width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    /* height: 800px; */
+}
+.line-wrapping .line {
+    position: relative;
+    margin-left: 40px;
+    margin-right: auto;
+}
+.right-tab{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+.statics-counter {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.circle-namaz{
+    display: flex;
+    justify-content: center;
+    /* margin: ; */
+    position: relative;
+    width: 180px;
+}
+.circle-namaz .outer {
+    position: relative;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-namaz .inner {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.progress-namaz-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+.progress-ring-namaz {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    stroke: url(#gradient-statics);
+}
+.circle-namaz p {
+    position: absolute;
+    top: 55px;
+    right: 48px;
+    color: #793695;
+    font-size: 22px;
+    z-index: 11;
+}
+.statics-circle svg circle {
+    stroke-linecap: round;   
+}
+.done-namaz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #793695;
+}
+.done-namaz .uqilgan {
+    position: absolute;
+}
+.done-namaz::before {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    content: "O’qilgan rakatlar";
+}
+.done-namaz .process {
+    width: 180px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #EEF2FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+.done-namaz .process .statics-liqual {
+    width: 40%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #730479d5;
+    z-index: 11;
+}
+.not-done-namaz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #793695;
+}
+.not-done-namaz .uqilmagan {
+    position: absolute;
+    left: -10px;
+}
+.not-done-namaz::before {
+    width: 250px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    content: "Qolgan rakatlar";
+}
+.not-done-namaz .process {
+    width: 180px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #EEF2FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+}
+.not-done-namaz .process .statics-liqual {
+        width: 60%;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #730479d5;
+        z-index: 11;
+    
+}

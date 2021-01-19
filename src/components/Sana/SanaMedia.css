@@ -1,0 +1,13 @@
+@media screen and (max-height:850px){
+    .all{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-height:740px){
+    .all{
+        margin-top: 10px;
+    }
+    .big_column .big_column__in {
+        padding: 5px 0 5px 0;
+    }
+}

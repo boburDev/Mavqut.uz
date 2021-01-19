@@ -1,0 +1,452 @@
+.editAll{
+	width: 82%;
+	height: 81%;
+	padding:10px;
+	margin-top: 20px;
+	position: absolute;
+	top: 20%;
+	overflow: hidden;
+}
+.input-group-gender{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+    margin-left: 21px;
+}
+.editAll p {
+	margin:0!important;
+}
+.editPhoto{
+	display: flex;
+	position: relative;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+.editAll .title{
+	width: 100%;
+	height: 38px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.editAll .title .img{
+	width: 24px;
+}
+.editAll .title p{
+	color: #2B083C;
+	font-weight: 500;
+	font-size: 24px;
+	margin-left: 10px!important;
+}
+.editPhoto .profilePhotos{
+
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*personalEdit*/
+.personalEdit{
+	margin-top: 20px;
+}
+.editAll .name_block{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+	align-items: center;
+	z-index: 4;
+}
+.editAll label{
+	color: #2B083C;
+	font-weight: 600;
+	font-size: 25px;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+.nameEditemail{
+	margin-left: 15px;
+}
+.editAll .input-group-text label{
+	font-size: 18px;
+} 
+
+.personalEdit .nameEdit .input-group{
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+}
+.personalEdit .nameEdit .img{
+	position: absolute;
+    left: -27px;
+	width: 8%;
+	margin-right: 5px;
+}
+.personalEdit .nameEdit input{
+	background: none;
+	font-weight: normal;
+	font-size: 22px;
+	border: none!important;
+	color: #050306;
+}
+.personalEdit .nameEdit input:focus{
+	outline: none!important;
+	box-shadow: none!important;
+	border: none!important;
+	border-bottom: 1px solid #fff;
+}
+.personalEdit .nameEdit input:focus{
+	border: 1px solid #130c0c3b!important;
+}
+/*genderAge*/
+.genderAge{
+	margin-top: 5px;
+}
+.gender-radio{
+	margin-left: 7px!important;
+}
+.genderAge .input-group-text{
+	width: 100%!important;
+	justify-content: space-around;
+	background: none;
+	border: none!important;
+	padding-right: 60px;
+}
+.genderAge .input-group-text p{
+	color: #2B083C;
+	font-weight: normal;
+	font-size: 18px;
+	margin-left: 5px!important;
+}
+.genderAge .input-group-text input{
+	position: inherit!important;
+}
+.genderAge .input-group-text div{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.genderAge .input-group select{
+	border: none;
+	background: none;
+	outline: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	font-size: 20px;
+}
+.genderAge .age_input{
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background-color: #F5F5FB;
+}
+.genderAge .age_input:focus{
+	outline: none!important;
+	box-shadow: none!important;
+	border: none!important;
+}
+/*Email and Phone Number*/
+.email{
+	margin-top: 5px;
+}
+.email input{
+	background: none;
+	font-weight: normal;
+	font-size: 22px;
+	border: none!important;
+}
+.email input:focus{
+	outline: none!important;
+	box-shadow: none!important;
+	border: none!important;
+	border-bottom: 1px solid #fff;
+}
+.email input:focus{
+	border: 1px solid #130c0c3b!important;
+	background: none;
+}
+/*Language select*/
+.language{
+	z-index: 4;
+	display: flex;
+    flex-direction: column;
+}
+.language .language_select{
+	display: flex;
+	justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.language .language_select label{
+	font-size: 18px;
+	padding-left: 8px;
+}
+.language .language_select div{
+	width: 100%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+/*password*/
+.password{
+	min-width: 248px;
+	text-align: left;
+	margin-top: 40px;
+	position: relative;
+	z-index: 3;
+}
+.password h4{
+	color: #2B083C;
+	margin-right: 10px;
+}
+.password input{
+	width: 51%;
+	background: #F3E8FB;
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	border: none;
+	padding: 10px 15px 10px 15px;
+	outline: none!important;
+}
+/*image bottom*/
+.bg_image{
+	background: url('./assets/register_bottom_right_icon.png');
+	width: 50%;
+    height: 85%;
+    background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+    position: absolute;
+    bottom: -7%;
+	right: 0;
+	z-index: 0;
+}
+
+
+/*media*/
+@media screen  and (max-height: 865px){
+	.editPhoto .profilePhotos{
+		/* width: 100%; */
+
+		flex-wrap: nowrap;
+	}
+	
+	.editPhoto .profilePhotos .profilePhotos__item{
+		margin-right: 20px;
+	}
+	.genderAge{
+		margin-top: 0;
+	}
+	.editAll label{
+		font-size: 20px;
+	}
+	.language .language_select div{
+		padding: 10px 0;
+	}
+	.language .language_select label{
+		font-size: 22px;
+	}
+}
+.editAll div.row{
+	z-index: 5;
+}
+
+
+
+
+
+
+
+
+.form_right_imgProfile {
+	/* width: 70%; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.one{
+	margin-bottom: 10px;
+}
+.right{
+	position: relative;
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+ .form_right_imgProfile .one, .form .right .img_box .form_right_imgProfile .two {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+ .form_right_imgProfile .one .avatar_1, .form .right .img_box .form_right_imgProfile .two .avatar_1 {
+	background: url(./assets/user_ava_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one .avatar_2, .form .right .img_box .form_right_imgProfile .two .avatar_2 {
+	background: url(./assets/user_ava_2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one .avatar_3, .form .right .img_box .form_right_imgProfile .two .avatar_3 {
+	background: url(./assets/user_ava_3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one .avatar_4, .form .right .img_box .form_right_imgProfile .two .avatar_4 {
+	background: url(./assets/user_ava_4.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one .avatar_5, .form .right .img_box .form_right_imgProfile .two .avatar_5 {
+	background: url(./assets/user_ava_5.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one .avatar_6,.form .right .img_box .form_right_imgProfile .two .avatar_6 {
+	background: url(./assets/user_ava_6.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .one input[type=radio], .form .right .img_box .form_right_imgProfile .two input[type=radio] {
+	-webkit-appearance: none;
+}
+ .form_right_imgProfile .one input[type=radio]:checked + label span, .form .right .img_box .form_right_imgProfile .two input[type=radio]:checked + label span {
+	display: flex;
+}
+ .form_right_imgProfile .one label {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+ .form_right_imgProfile .one label span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	background-color: #00000050;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: all 0.5s ease-in;
+}
+ .form_right_imgProfile .one label span img {
+	width: 50%;
+	height: 50%;
+}
+
+ .form_right_imgProfile .two, .form .right .img_box .form_right_imgProfile .two {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+ .form_right_imgProfile .two .avatar_1, .form .right .img_box .form_right_imgProfile .two .avatar_1 {
+	background: url(./assets/user_ava_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two .avatar_2, .form .right .img_box .form_right_imgProfile .two .avatar_2 {
+	background: url(./assets/user_ava_2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two .avatar_3, .form .right .img_box .form_right_imgProfile .two .avatar_3 {
+	background: url(./assets/user_ava_3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two .avatar_4, .form .right .img_box .form_right_imgProfile .two .avatar_4 {
+	background: url(./assets/user_ava_4.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two .avatar_5, .form .right .img_box .form_right_imgProfile .two .avatar_5 {
+	background: url(./assets/user_ava_5.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two .avatar_6,.form .right .img_box .form_right_imgProfile .two .avatar_6 {
+	background: url(./assets/user_ava_6.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ .form_right_imgProfile .two input[type=radio], .form .right .img_box .form_right_imgProfile .two input[type=radio] {
+	-webkit-appearance: none;
+}
+ .form_right_imgProfile .two input[type=radio]:checked + label span, .form .right .img_box .form_right_imgProfile .two input[type=radio]:checked + label span {
+	display: flex;
+}
+ .form_right_imgProfile .two label {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+ .form_right_imgProfile .two label span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	background-color: #00000050;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: all 0.5s ease-in;
+}
+ .form_right_imgProfile .two label span img {
+	width: 50%;
+	height: 50%;
+}
+
+
+@media  screen and (max-height:690px){
+.profilePhotos{
+	width: 100%;
+	margin-left: 12px;
+}
+.form_right_imgProfile{
+	flex-direction: row;
+	margin-right: 100px;
+	justify-content:flex-start ;
+	width: auto;
+}
+.form_right_imgProfile .one label,.form_right_imgProfile .two label  {
+	width: 45px;
+	height: 45px;
+}
+.editPhoto .profilePhotos {
+	width: 100%;
+	
+}
+.one{
+	margin-bottom: 0;
+
+}
+.form_right_imgProfile .two, .form_right_imgProfile .one{
+	margin-top: 0;
+	justify-content: flex-start;
+}
+}

@@ -1,0 +1,113 @@
+@media only screen and (min-width: 1200px) and (max-width: 1290px) {
+    .nomoz_progres_bar {
+        width: 90%;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .donat-ruza{
+        width: 250px;
+    }
+    .donat-chart::after {
+        top: 15%;
+        font-size: 18px;
+    }
+    .donat-chart::before {
+        top: 15%;
+        font-size: 18px;
+    }
+    .donat-ruza::after {
+        top: 16%;
+        left: 42%;
+        font-size: 16px;
+    }
+    .process_types {
+        padding: 5px;
+    }
+    .dish_wraper {
+        margin-left: 0px;
+    }
+    .dish_wraper .percent {
+        right: 10px;
+    }
+    .type .dish {
+        width: 30px;
+        height: 150px;
+    }
+    
+    .type_name {
+        margin-left: 0px;
+    }
+    .vitr_type .type_name {
+        margin-left: 0px;
+    }
+    .asr_type .type_name {
+        margin-left: 0px;
+    }
+    .shom_type .type_name {
+        margin-left: 5px;
+    }
+    
+    
+    
+    .pray-counter {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .status-editing {
+        width: 700px;
+        height: 200px;
+    }
+    .status-editing label input {
+        width: 30%;
+    }
+    
+    .update-date input{
+        width: 15%;
+    }
+    
+    .custom-update-select-year,
+    .custom-update-select-month {
+        width: 80px;
+        margin-left: 40px;
+    }
+    
+    .ruza-update-button {
+        width: 150px;
+        height: 40px;
+        margin-top: 70px;
+        padding: 20px;
+        line-height: 0px;
+        margin-left: 100px;
+    }
+    .submittion-exit {
+        top: 5px;
+        left: 10px;
+        font-size: 25px;
+    }
+    .submittion-text {
+        font-size: 35px;
+        margin-top: 80px;
+    }
+    
+    .update-date {
+        margin-top: 20px;
+    }
+    
+    @keyframes fill {
+        0% {
+            height: 0%;
+        }
+        100% {
+            height: 80%;
+        }
+    }
+    
+    @keyframes up-to {
+        0% {
+            bottom: 0%;
+        }
+        100% {
+            bottom: 40%;
+        }
+    }
+}

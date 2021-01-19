@@ -1,0 +1,88 @@
+.more {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    width: 90%;
+    height: 77%;
+    padding: 30px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    background-color: #fff;
+    visibility: hidden;
+}
+.more-fade {
+    animation: more-detail 7.5s ease;
+    visibility: visible; 
+}
+.more-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.more-body h2 {
+    text-align: center;
+    font-size: 33px;
+    margin: 0;
+}
+.more-body .more-text {
+    width: 100%;
+    /* position: absolute; */
+    /* top: 10; */
+    width: 100%;
+    /* height:530px; */
+    height: 100%;
+    overflow: auto;
+    line-height: 3.5;
+}
+
+.arrow {
+    position: relative;
+    top: -60px;
+    left: -15px;
+    width: 70px;
+    height: 7px;
+    background-color: #fff;
+    z-index: 12;
+    cursor: pointer;
+}
+
+.arrow::before {
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 30px;
+    height: 5px;
+    transform: rotate(-40deg);
+    background-color: #fff;
+    content: "";
+}
+
+.arrow::after {
+    display: block;
+    position: absolute;
+    top: 9.5px;
+    left: -7px;
+    width: 30px;
+    height: 5px;
+    transform: rotate(40deg);
+    background-color: #fff;
+    content: "";
+}
+
+@keyframes more-detail {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    80% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 11;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+  }

@@ -1,0 +1,30 @@
+
+@media screen and (max-height:868px){
+    .nomoz_progres_bar {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 5px;
+        padding: 25px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .pray-counter {
+        position: relative;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-top: 10px;
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and  (max-height:740px){
+    .nomoz_progres_bar {
+        margin: 0 auto;
+        margin-top: 0;
+        padding: 10px 0;
+    }
+}

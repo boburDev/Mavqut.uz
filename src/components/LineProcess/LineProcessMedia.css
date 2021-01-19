@@ -1,0 +1,31 @@
+@media screen and ( max-height:888px){
+    .line-wrapping{
+        height: 557px;
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-height:740px){
+    .line-wrapping{
+        height: 557px;
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .line-wrapping .line{
+        width: 56%;
+    }
+    .statics-counter{
+        justify-content: start;
+       
+    }
+    .circle-namaz{
+        margin: 10px 0;
+    }
+}
+@media only screen and (max-height:695px){
+    .line-wrapping .line{
+        width: 46%;
+    }
+}

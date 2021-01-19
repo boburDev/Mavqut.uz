@@ -1,0 +1,46 @@
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(to right, transparent 35%, black 35%, black 65%, transparent 65%);
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, transparent 15%,  #AB03B8 15%,  #AB03B8 85%, transparent 85%);
+  border-radius: 35%;
+}
+.section-about {
+    user-select: none;
+    height: 74.2574%;
+    width:41.1522%;
+    position: absolute;
+    top: 12.3762%;
+    left: 5.8789%;
+    z-index: 200;
+    padding: 20px;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50px;
+    visibility: hidden;
+}
+.section-about-ani {
+    animation: about 3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+.section-about .section-body {
+    /* height: 500px; */
+    height: 96.4285%;
+    overflow: auto;
+    padding: 50px 30px;
+}
+
+@keyframes about {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+  }

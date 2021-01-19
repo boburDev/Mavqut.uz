@@ -1,0 +1,40 @@
+@media screen and (max-width:1500px){
+.gauge-cover{
+    font-size: 29px;
+    height: 180%;
+}
+}
+
+@media screen and (max-height:850px){
+    .circle{
+        top: 4%;
+    }
+    .process-pie-charts .next, .process-pie-charts .prev {
+        top: 30%;
+    }
+    .process-pie-charts{
+        height: 212px;
+    }
+    .process-wrapper{
+    padding: 10px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    }
+}
+@media screen and (max-height:750px){
+    .process-chart-wrap .process-heading h3{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    .process-wrapper{
+        padding: 8px;
+        margin-top: 13px;
+        margin-bottom: 10px;
+    }
+    .big_column {
+        margin-top: 0;
+    }
+    .big_column .big_column__in {
+        padding: 5px 0 5px 0;
+    }
+}

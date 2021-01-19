@@ -1,0 +1,153 @@
+.container_box {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container_box .userList {
+    margin-left: 10px;
+    margin-right: auto;
+  }
+  .container_box .userList .parent {
+    width: auto;
+    z-index: 999;
+    position: relative;
+  }
+  .container_box .userList .parent .users {
+    display: flex;
+    z-index: 5;
+    transition: all 0.3s ease;
+    border: 1px solid #AB03B8;
+    border-radius: 5px;
+    position: absolute;
+    /* max-width: 100%; */
+    /* width: auto; */
+    flex-direction: column;
+    justify-content: center;
+    right: 0;
+    padding: 5px 10px;
+    background-color: white;
+  }
+  .container_box .userList .parent .users h5 {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin: 0;
+    color: #9b9b9b;
+  }
+  .container_box .userList .parent .users .accounts {
+    display: flex;
+    color: #444444;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+  }
+  .container_box .userList .parent .users .accounts:hover {
+    background-color: #6e0375;
+    color: white;
+    cursor: pointer;
+  }
+  .container_box .userList .parent .users .accounts img {
+    margin: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .container_box .userList .parent .users .accounts h6 {
+    margin: 3px;
+  }
+  .container_box .userList .parent .users .add-section{
+     border-radius: 10px;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #6e0375;
+  }
+  .container_box .userList .parent .users .add-section:hover{
+    cursor: pointer;
+    color: white;
+    background: #6e0375;
+  }
+  .container_box .userList .parent .users .add-section div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* padding: 5px; */
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 25px;
+    /* border: 0.5px solid #6e0375; */
+    
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin:auto 3px ;
+  }
+  .container_box .userList .parent .users .add-section h6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 3px;
+
+  }
+  .container_box .userList .parent h3 {
+    color: #011F3B;
+    display: flex;
+    font-size: 25px;
+  }
+  .container_box .userList .parent i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 23px;
+    height: 23px;
+    transition: all 0.3s ease;
+  }
+  .container_box .userList .parent i:hover {
+    color:#AB03B8;
+    cursor: pointer;
+  }
+  .container_box .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 25px;
+  }
+  .container_box .title {
+    width: 30%;
+    font-size: 23px;
+    font-weight: 500;
+    color: #253752;
+  }
+ 
+  .add-account{
+    margin: 2px auto ;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border: 0.5px dashed #6e0375;
+    color: #6e0375;
+    color: #6e0375;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .add-account:hover{
+    background-color: #6e0375;
+    color: white;
+    cursor: pointer;
+  }

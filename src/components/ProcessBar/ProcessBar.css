@@ -1,0 +1,574 @@
+.process-wrapper {
+    position: relative;
+    max-width: 90%;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.process-heading {
+    text-align: left;
+}
+.process-gauges {
+    display: flex;
+    position: relative;
+}
+.process-chart-wrap{
+display: flex;
+flex-direction: column;
+width: 65%;
+margin-left: auto;
+}
+.gauge {
+    width: 100%;
+    max-width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: #000;
+    align-items: center;
+}
+.gauge-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.gauge-title-heading {
+    font-size: 24px;
+    color: #aaa;
+}
+.gauge-body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #f2f0f0;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: rgb(48,4,99);
+    background: linear-gradient(90deg, rgba(48,4,99,1) 0%, rgba(139,15,223,1) 28%, rgba(158,20,210,1) 53%, rgba(133,34,176,1) 93%, rgba(150,0,188,1) 100%); 
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge-cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}
+
+.gauge-cover::after {
+    content:attr(data-text);
+    position: absolute;
+    top: 25px;
+    color: #aaa;
+    font-size: 24px;
+}
+.process-pie-charts {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+.process-pie-charts .next {
+    position: absolute;
+    right: -10px;
+    top: 34%;
+    font-size: 24px;
+    color: rgb(90, 4, 189);
+    z-index: 10;
+    cursor: pointer;
+}
+.process-pie-charts .prev {
+    position: absolute;
+    left: -10px;
+    top: 34%;
+    font-size: 24px;
+    color: rgb(90, 4, 189);
+    cursor: pointer;
+    z-index: 11;
+}
+.gauge-pie {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0px;
+    margin-left: auto;
+    width: 100%;
+}
+
+
+                         /*  BOMDOD  */
+.circle-bomdod {
+    /* position: absolute; */
+    display: flex;
+    /* top: 10px; */
+    /* left: 10px; */
+    /* width: 200px;
+    height: 200px; */
+}
+.circle-bomdod .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-bomdod .inner {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.circle-bomdod p {
+    position: absolute;
+    top: 40px;
+    left: 31px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-bomdod span {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+}
+.circle-bomdod span::before {
+    position: absolute;
+    bottom: -80px;
+    left: -10px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-ring-bomdod {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    stroke: url(#gradient);
+    -webkit-filter: drop-shadow(inset 0px 4px 4px  rgba(0, 0, 0, .9));
+    filter: drop-shadow(inset 0px 4px 4px  rgba(0, 0, 0, .9));
+}
+.progress-bomdod-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+
+            /*  PESHIN  */
+.circle-peshin {
+    /* position: absolute;
+    top: 10px; */
+    /* left: 35%; */
+    /* margin-left: auto; */
+    /* width: 200px;
+    
+    height: 200px; */
+    display: flex;
+}
+.circle-peshin .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+
+.circle-peshin .inner {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.circle-peshin p {
+    position: absolute;
+    top: 40px;
+    right: 34px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-peshin span {
+    position: absolute;
+    top: 80px;
+    right: 52px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+    
+}
+.circle-peshin span::before {
+    position: absolute;
+    bottom: -80px;
+    left: -10px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-ring-peshin {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    stroke: url(#gradient1);
+}
+.progress-peshin-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+
+
+                        /*  ASR  */
+.circle-asr {
+    display: flex;
+    /* position: absolute;
+    top: 10px; */
+    /* right: 10px; */
+    /* margin-left: auto; */
+    /* width: 200px;
+    height: 200px; */
+}
+.circle-asr .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-asr .inner {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.circle-asr p {
+    position: absolute;
+    top: 40px;
+    right: 34px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-asr span {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+}
+.circle-asr span::before {
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-ring-asr {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    stroke: url(#gradient2);
+}
+.progress-asr-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+
+
+.gauge-pie--hidden {
+    display: none;
+    /* display: flex; */
+    justify-content: space-around;
+    position: relative;
+    position: relative;
+    width: 100%;   
+}
+
+/*  SHOM  */
+.circle-shom {
+    display: flex;
+    /* position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-left: auto; */
+    /* width: 200px;
+    height: 200px; */
+}
+.circle-shom .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-shom .inner {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+
+.circle-shom p {
+    position: absolute;
+    top: 40px;
+    left: 31px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-shom span {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+}
+.circle-shom span::before {
+    position: absolute;
+    bottom: -80px;
+    left: 0px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-shom-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+.progress-ring-shom {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    stroke: url(#gradient3);
+}
+
+
+
+/*  XUFTON  */
+.circle-xufton {
+    display: flex;
+    /* position: absolute;
+    top: 10px;
+    left: 35%;
+    margin-left: auto; */
+    /* width: 200px;
+    height: 200px; */
+}
+.circle-xufton .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-xufton .inner {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.circle-xufton p {
+    position: absolute;
+    top: 40px;
+    right: 34px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-xufton span {
+    position: absolute;
+    top: 80px;
+    right: 52px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+}
+.circle-xufton span::before {
+    position: absolute;
+    bottom: -80px;
+    left: 0px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-ring-xufton {
+    position: absolute;
+    top: -64px;
+    left: -14px;
+    stroke: url(#gradient4);
+}
+.progress-xufton-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+
+
+
+/*  VITR  */
+.circle-vitr {
+    display: flex;
+    /* position: absolute;
+    top: 10px; */
+    /* right: 10px; */
+    /* margin-left: auto; */
+    /* width: 200px;
+    height: 200px; */
+}
+.circle-vitr .outer {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+.circle-vitr .inner {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+}
+.circle-vitr p {
+    position: absolute;
+    top: 40px;
+    right: 34px;
+    font-size: 22px;
+    z-index: 11;
+}
+.circle-vitr span {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    color: #ccc;
+    font-size: 18px;
+    z-index: 11;
+}
+.circle-vitr span::before {
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
+    color: #ccc;
+    content: attr(data-type);
+}
+.progress-ring-vitr {
+    position: absolute;
+    top: -53px;
+    left: -2px;
+    stroke: url(#gradient5);
+}
+.progress-vitr-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+
+
+
+.click-point {
+    position: absolute;
+    bottom: 0px;
+    left: 46%;
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    height: 10px;
+}
+.click-point .prev-round {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 100%;
+}
+.click-point .next-round {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #EEF2FD;
+    border-radius: 100%;
+}
+.process-pie-charts svg circle {
+    stroke-linecap: round;   
+}
+
+.circle{
+    /* position: absolute; */
+    display: flex;
+    top: 10%;
+    position: relative;
+    width: 145px;
+    height: 145px;
+
+ }   

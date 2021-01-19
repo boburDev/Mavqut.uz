@@ -1,0 +1,102 @@
+
+@media only screen and (max-width: 1540px) {
+    .status-editing label{
+        width: 30%;
+    }
+    .donat-ruza{
+        height: 205px;
+        width: 376px;
+    }
+    .line-wrapping .line {
+        width: 700px;
+    }
+    .process_types {
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .status-editing label input{
+        margin-left: 0!important;
+    }
+    .line-wrapping .line {
+        width: 640px;
+    }
+    .line-wrapping{
+        height: 600px;
+    }
+}
+@media only screen and (max-width: 1370px) {
+    .nomoz_progres_bar {
+       
+        padding: 15px  7px;
+    }
+    .donat-ruza {
+        height: 205px;
+        width: 376px;
+    }
+}
+@media only screen and (max-width: 1350px){
+    .donat-ruza {
+        height: 190px;
+        width: 380px;
+    }
+    .dish_wraper {
+        width: 90px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 1320px) {
+}
+@media only screen and (max-width: 1290px) {
+}
+
+@media only screen and (max-width: 1260px) {
+    .big_column .big_column__right h6{
+        font-size: 18px!important;
+    }
+}
+@media only screen and (max-width: 1260px) {
+    .line-wrapping .line {
+        width: 550px;
+    }
+    .donat-ruza {
+        width: 330px;
+        height: 180px;
+    }
+}
+/* device */
+@media only screen and (max-device-width: 1440px) {
+    
+    .User_register_form_right_email__1xDRt{
+        transform: translateY(-92px);
+    }
+}
+/* device */
+@media only screen and (max-device-width: 1200px) {
+	.Sidebar_sidebar__2US6F{
+        min-width: 22%;
+        width: 30%;
+    }
+    .big_column .big_column__in{
+        height: 220px!important;
+    }
+    .big_column .big_column__left{
+        width: 88%;
+    }
+    .bg_image{
+        height: 360px;
+    }
+    .block_blocks{
+        width: 79%!important;
+    }
+
+    .User_register_form_right_email__1xDRt{
+        transform: translateY(-66px);
+    }
+    .User_register_form_left__35rsZ .User_register_form_ages__1oscT{
+        margin-top: 15px;
+    }
+    .containerCalendar {
+        margin: 30px auto;
+    }
+}

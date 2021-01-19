@@ -1,0 +1,23 @@
+.update-selects {
+    display: flex;
+}
+.custom-update-select-year,
+.custom-update-select-month {
+    position: relative;
+    line-height: 1.2;
+    width: 150px;
+    margin-left: 40px;
+}
+.custom-update-select-month {
+    margin-left: 15px;
+}
+.counter {
+    position: absolute;
+    top: 10px;
+}
+
+.custom-update-select-month .select .picker{
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 9px;
+}

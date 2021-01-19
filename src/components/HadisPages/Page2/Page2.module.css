@@ -1,0 +1,140 @@
+.App {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clouds {
+    position: absolute;
+    left: -9vw;
+    bottom: -13vh;
+    z-index: 0;
+    height: 120%;
+}
+
+.right_angle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 35%;
+}
+
+.woman {
+    position: absolute;
+    height: 90%;
+    bottom: -10vh;
+    left: 7vw;
+    z-index: 1;
+}
+
+.flowers {
+    position: absolute;
+    height: 45%;
+    bottom: -3vh;
+    left: -11vw;
+}
+
+.p_1 {
+    position: absolute;
+    top: 5vh;
+    right: 30vw;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.p_2 {
+    position: absolute;
+    top: 20vh;
+    right: 20vw;
+    font-size: 1.5rem;
+}
+
+.p_2 span {
+    color: lightpink;
+    font-weight: bold;
+}
+
+.p_3 {
+    position: absolute;
+    top: 55vh;
+    right: 3vw;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.enter_btn {
+    background: none;
+    border-radius: 50px;
+    padding: 0;
+    outline: none;
+    position: absolute;
+    right: 5vw;
+    bottom: 5vw;
+    width: 180px;
+    height: 50px;
+    border: solid lightpink;
+}
+
+.enter_btn a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightpink;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.enter_btn span {
+    margin-left: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1350px) {
+    .p_1 {
+        right: 20vw;
+    }
+
+    .p_2 {
+        right: 10vw;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .p_1, .p_2, .p_3 {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media (min-height: 800px) and (min-width: 1500px) {
+    .woman {
+        height: 80%;
+    }
+
+    .flowers {
+        height: 40%;
+    }
+}
+
+@media (min-height: 900px)and (min-width: 1600px) {
+    .p_1, .p_2, .p_3 {
+        font-size: 1.8rem;
+    }
+
+    .woman {
+        height: 75%;
+    }
+
+    .flowers {
+        height: 38%;
+    }
+}

@@ -1,0 +1,137 @@
+.counter-wrapper {
+    max-width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.counter-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 31px;
+    color: #7A008E;
+}
+
+.wrapper-statist {
+    position: relative;
+    width: 70%;
+    height: 343.65px;
+}
+.circle-day-fasting .outer {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+    overflow: hidden;
+}   
+.circle-day-fasting .inner {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    z-index: 12;
+}
+.progress-day-fasting-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+.progress-ring-day-fasting {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    stroke: url(#gradient-fasting-day-statics);
+    z-index: 12;
+}
+.circle-day-fasting p {
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 500;
+    z-index: 12;
+}
+.circle-day-fasting p::before {
+    position: absolute;
+    top: 70px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    content: "Кун қолди";
+}
+.circle-month-fasting .outer {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #EEF2FD;
+    box-shadow: inset 0px 0px 200px rgba(0,0,0,0.1);
+    border-radius: 100%;
+    overflow: hidden;
+}   
+.circle-month-fasting .inner {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    -moz-box-shadow:    3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    box-shadow:         3px 4px 19px 0px rgba(52, 50, 50, 0.75);
+    z-index: 12;
+}
+.progress-month-fasting-time {
+    transform-origin: center;
+    transform: rotate(90deg);
+    transition: storke-dashoffset 0.3s;
+}
+.progress-ring-month-fasting {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    stroke: url(#gradient-fasting-month-statics);
+    z-index: 12;
+}
+.circle-month-fasting p {
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 500;
+    z-index: 12;
+}
+.circle-month-fasting p::before {
+    position: absolute;
+    top: 70px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    content: "Ой қолди";
+}

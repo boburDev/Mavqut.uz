@@ -1,0 +1,115 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+.pray-counter {
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 50px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 10px;
+}
+.ruza-update-form {
+    display: flex;
+    position: relative;
+}
+.status-editing {
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.status-editing label{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+.status-editing label input {
+    width: 30%;
+    margin-right: 20px;
+    background-color: #F5F5FB;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+}
+.ruza-update-date {
+    display: flex;
+    flex-direction: column;
+}
+.update-date {
+    display: flex;
+}
+.update-date input {
+    width: 10%;
+    background-color: #F5F5FB;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+.update-date input::placeholder {
+    text-align: center;
+}
+.ruza-update-button {
+    width: 198px;
+    height: 58px;
+    margin-top: 100px;
+    padding: 10px 20px;
+    border-radius: 17px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 5px solid #BB59A0;
+    background: #BB59A0;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    margin-left: 100px;
+}
+.submitted {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.submitted--block {
+    display: block;
+}
+.submittion-exit {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 25px;
+    z-index: 22;
+}
+.submittion-text {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 80px;
+    text-align: center;
+    color: rgba(183, 87, 159, 1);
+}
+.counter_update{
+    right: -20px!important
+}

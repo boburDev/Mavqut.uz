@@ -1,0 +1,211 @@
+.main {
+    position: relative;
+    z-index: 20;
+    user-select: none;
+}
+
+.wrapper {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.wrapper-item .stars {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.star {
+    animation: sky-onclick 2.5s ease;
+}
+
+.wrapper-item .clouds {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    animation: clouds 2.5s ease;
+}
+
+.wrapper-item .way {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0px, 0px);
+}
+
+.ways {
+    animation: way-onclick 2.5s ease;
+}
+
+.wrapper-item .mosque {
+    position: absolute;
+    bottom: 0;
+    left: 18.8%;
+    width: 85%;
+    z-index: 11;
+    transform: translate(0px, 0px);
+    animation: mosque 3s ease;
+}
+
+.wrapper-item .logo_mavqut {
+    position: absolute;
+    top: 1.9%;
+    left: 21%;
+    width: 8%;
+    z-index: 11;
+    animation: logo 2.5s ease;
+}
+.wrapper-item .logo_text {
+    position: absolute;
+    top: 24%;
+    left: 11%;
+    width: 27%;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    z-index: 20;
+    animation: logo 2.5s ease;
+}
+.wrapper-item .logo_text h2 {
+    font-size: 4.7rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.wrapper-item .logo_text p {
+    font-size: 20px;
+    font-weight: 400;
+}
+.wrapper-item .logo_text span {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+} 
+.mosques {
+    animation: compact 3s ease;
+}
+
+.wrapper-item .towers {
+    position: absolute;
+    bottom: -2.6%;
+    left: 18.8%;
+    width: 85%;
+    z-index: 11;
+    animation: towers 3s ease;
+}
+
+.tower1 {
+    animation: compact 3s ease;
+}
+
+.wrapper-item .littele-towers {
+    position: absolute;
+    bottom: -9.8285%;
+    left: 24.4375%;
+    width: 85%;
+    z-index: 11;
+    animation: little-towers 4s ease;
+}
+
+.littele-tower1 {
+    animation: compact 3s ease;
+}
+
+.wrapper-item .moon {
+    position: absolute;
+    bottom: -0.74257%;
+    left: 18.0482069%;
+    width: 86%;
+    z-index: 10;
+    animation: moon 3s ease;
+    transform: translate(0px, 0px);
+}
+.moons {
+    animation: moon-fades 5s ease;
+    transform: translate(1000px, -1000px);
+}
+
+/* more.... */
+.wrapper-item .mosque.mosques,
+.wrapper-item .littele-towers.littele-tower1 {
+    animation: compact 6s ease;
+    transform: scale(0.7);
+    transform-origin: -300px 1350px;
+}
+
+.wrapper-item .towers.tower1 {
+    animation: compact-towers 6s ease;
+    transform: scale(0.7);
+    transform-origin: -300px 2050px;
+}
+
+.wrapper-item .way.ways {
+    animation: way-onclick 5.5s ease;
+    transform-origin: 5500px 900px;
+    transform: rotate(-4.5deg);
+}
+
+.wrapper-item .stars.star {
+    animation: sky-onclick 5.5s ease;
+    transform: scale(2);
+}
+
+.wrapper-item .moon.moons {
+    animation: moon-fades 5s ease;
+    transform: translate(1000px, -1000px);
+}
+
+/* back */
+.wrapper-item .mosque.back,
+.wrapper-item .littele-towers.back {
+    animation: compact-back 2s ease;
+    transform: translate(0px, 0px);
+}
+.wrapper-item .towers.back {
+    animation: compact-towers-back 2s ease;
+    transform: translate(0px, 0px);
+}
+
+.wrapper-item .way.back {
+    animation: way-onclick-back .1s ease;
+    transform: translate(0px, 0px);
+}
+
+.wrapper-item .stars.back {
+    animation: sky-onclick 1.5s ease;
+    transform: translate(0px, 0px);
+}
+
+.wrapper-item .moon.back {
+    animation: moon-fades-back 2s ease;
+    transform: translate(0px, 0px);
+}
+
+/* about */
+.wrapper-item .mosque.about-c,
+.wrapper-item .towers.about-c {
+    animation: about-click-for-compact 4s ease;
+    transform: scale(0.8);
+    transform-origin: 1900px 1000px;
+    /* transform-origin: 111.699%   11.3636364%; */
+}
+.wrapper-item .moon.about-c {
+    animation: about-click-for-moon 4s ease;
+    transform: scale(0.8);
+    transform-origin: 2000px 1000px;
+}
+
+.wrapper-item .littele-towers.about-c {
+    animation: about-click-for-l-towers 4s ease;
+    transform: translate(300px, 60px);
+}
