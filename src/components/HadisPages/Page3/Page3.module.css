@@ -44,17 +44,17 @@
 }
 
 .p_1 {
-    bottom: 85vh;
+    bottom: 87%;
     position: absolute;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     left: 35vw;
 }
 
 .p_2 {
     position: absolute;
-    font-size: 1.5rem;
-    bottom: 52vh;
+    font-size: 1.3rem;
+    bottom: 50%;
     left: 50vw;
 }
 
@@ -65,15 +65,15 @@
 
 .p_3 {
     position: absolute;
-    font-size: 1.5rem;
-    bottom: 25vh;
+    font-size: 1.3rem;
+    bottom: 22%;
     left: 60vw;
 }
 
 .p_4 {
     position: absolute;
-    font-size: 1.5rem;
-    bottom: 15vh;
+    font-size: 1.3rem;
+    bottom: 10%;
     font-weight: bold;
     left: 70vw;
 }
@@ -84,8 +84,8 @@
     outline: none;
     position: absolute;
     left: 75vw;
-    bottom: 7vh;
-    width: 180px;
+    bottom: 3%;
+    width: 150px;
     height: 50px;
     border: solid mediumseagreen;
 }
@@ -98,7 +98,12 @@
     align-items: center;
     color: mediumseagreen;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.enter_btn a:hover {
+    color: mediumseagreen;
+    text-decoration: none;
 }
 
 

@@ -83,7 +83,7 @@
     position: absolute;
     top: 90vh;
     left: 25vw;
-    width: 130px;
+    width: 150px;
     height: 50px;
     border: solid #c06200;
 }
@@ -97,6 +97,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.enter_btn a:hover {
+    text-decoration: none;
+    color: #c95000;
 }
 
 .enter_btn span {
