@@ -54,6 +54,7 @@ function Section () {
 				</ul>
 				<SectionMore />
 				<SectionAbout />
+				
 			</div>
 		</main>
 	</>
