@@ -78,7 +78,7 @@ function ProcessBar() {
     useEffect(()=>{
        
         const gaugeElement = document.getElementById("gauge");
-        setGaugeValue(gaugeElement, .5, '567,810');
+        setGaugeValue(gaugeElement, .4, '567,810');
         
         const circleBomdod = document.querySelector('.progress-bomdod-time')
         const circlePeshin = document.querySelector('.progress-peshin-time')
