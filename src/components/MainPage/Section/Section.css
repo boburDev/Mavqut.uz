@@ -135,6 +135,8 @@
     transform: translate(1000px, -1000px);
 }
 
+
+
 /* more.... */
 .wrapper-item .mosque.mosques,
 .wrapper-item .littele-towers.littele-tower1 {
@@ -205,7 +207,28 @@
     transform-origin: 2000px 1000px;
 }
 
+
 .wrapper-item .littele-towers.about-c {
     animation: about-click-for-l-towers 4s ease;
     transform: translate(300px, 60px);
+}
+
+.wrapper-footer{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+    width: 50%;
+    height: 50%;
+    z-index: 10;
+    color: thistle;
+}
+ul li Link{
+    position: fixed;
+    display: block;
+}
+.phone{
+    margin-bottom: 15px;
 }
