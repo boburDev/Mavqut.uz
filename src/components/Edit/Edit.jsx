@@ -1,11 +1,31 @@
-import React from 'react';
+import axios from 'axios'
+import React, { useState } from 'react'
 
-import edit from '././assets/edit.png';
-import registerUser from '././assets/register_user.png';
-import tick_icon from '././assets/tick_icon.png';
-import './Edit.css';
-
+import edit from '././assets/edit.png'
+import registerUser from '././assets/register_user.png'
+import tick_icon from '././assets/tick_icon.png'
+import './Edit.css'
+import { useServer } from '../app/ServerContext'
 export default function Edit() {
+
+	const [server] = useServer()
+	// const [bomdod,setBobdod] = useState(0)
+	// const [peshin,setPeshin] = useState(0)
+	// const [asr,setArs] = useState(0)
+	// const [shom,setShom] = useState(0)
+	// const [xufton,setXufton] = useState(0)
+	// const [vitr,setVitr] = useState(0)
+
+	async function loginForm(e) {
+		e.preventDefault()
+	
+		if(server){
+			const resp = await axios.post(server + '/api/daily')
+			
+		}
+	}
+
+
 	return(
 		<div>
 			<div className="editAll">
