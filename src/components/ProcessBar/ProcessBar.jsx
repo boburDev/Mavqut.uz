@@ -11,7 +11,9 @@ function ProcessBar() {
     const [shom,setShom] = useState(0)
     const [xufton,setXufton] = useState(0)
     const [vitr,setVitr] = useState(0)
-    // const [totalNamaz,setTotalNamaz] = useState(0)
+    const [namaz,setNamaz] = useState(0)
+    const [totalNamaz,setTotalNamaz] = useState(0)
+    const [totalNamazEditable,setTotalNamazEditable] = useState(0)
 
     const [bomdodEditable,setBomdodEditable] = useState(0)
     const [peshinEditable,setPeshinEditable] = useState(0)
@@ -51,13 +53,17 @@ function ProcessBar() {
 					}
                 })
                 const data = resp1.data
+                setTotalNamaz(data.const_total_namaz)
+                setTotalNamazEditable(data.total_namaz)
+
                 const bomdod = -(((data.bomdod * 100) / data.const_bomdod) - 100)
                 const peshin = -(((data.peshin * 100) / data.const_peshin) - 100)
                 const asr = -(((data.asr * 100) / data.const_asr) - 100)
                 const shom = -(((data.shom * 100) / data.const_shom) - 100)
                 const xufton = -(((data.xufton * 100) / data.const_xufton) - 100)
                 const vitr = -(((data.vitr * 100) / data.const_vitr) - 100)
-
+                const namaz = (data.total_namaz) / data.const_total_namaz
+                setNamaz(namaz)
                 setBomdodEditable(data.bomdod)
                 setPeshinEditable(data.peshin)
                 setAsrEditable(data.asr)
@@ -76,9 +82,9 @@ function ProcessBar() {
 	},[server,token])
 
     useEffect(()=>{
-       
+        
         const gaugeElement = document.getElementById("gauge");
-        setGaugeValue(gaugeElement, .4, '567,810');
+        setGaugeValue(gaugeElement, namaz, `${totalNamazEditable}`);
         
         const circleBomdod = document.querySelector('.progress-bomdod-time')
         const circlePeshin = document.querySelector('.progress-peshin-time')
@@ -97,7 +103,7 @@ function ProcessBar() {
         setProgress(xufton,circumference,circleXufton)
         setProgress(vitr,circumference,circleVitr)
 
-    }, [bomdod,peshin, asr, shom, xufton, vitr])
+    }, [bomdod,peshin, asr, shom, xufton, vitr, totalNamazEditable, namaz])
 
 
 	return (
@@ -110,7 +116,7 @@ function ProcessBar() {
                         <div className="gauge" id="gauge">
                             <p className="gauge-title">
                                 <span className="gauge-title-heading">Жами</span>
-                                <span className="gauge-title-amount">1,000,000</span>
+                                <span className="gauge-title-amount">{totalNamaz}</span>
                             </p>
                             <div className="gauge-body">
                                 <div className="gauge-fill"></div>
