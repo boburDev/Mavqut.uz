@@ -144,7 +144,7 @@
     outline: none;
     line-height: 1 !important;
     font-size: 12px;
-    resize: none;
+    resize: none !important;
 }
 .submitButton{
     display: flex;
