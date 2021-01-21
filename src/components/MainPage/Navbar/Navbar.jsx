@@ -78,8 +78,8 @@ export default function Navbar () {
       </ul>
 	  <ul className="navbar-footer footer" id="navbar-footer">
         <li  className="nav-item phone"><Link to="#"><img src={phone} className="phone-icon" alt="phone"/></Link></li>
-		<li  className="nav-item phone"><Link to="#"><img src={message} className="message-icon" alt="phone"/></Link></li>
-		<li  className="nav-item phone"><Link to="#"><img src={question} className="question-icon" alt="phone"/></Link></li>
+		<li  className="nav-item phone"><Link to="/get-in-touch"><img src={message} className="message-icon" alt="phone"/></Link></li>
+		<li  className="nav-item phone"><Link to=""><img src={question} className="question-icon" alt="phone"/></Link></li>
       </ul>
 	  <ul className="navbar-foot foot" id="navbar-foot">
         <li className="nav-item download"><Link to="#"><span>Download</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>

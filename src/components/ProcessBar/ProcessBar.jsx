@@ -1,7 +1,28 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './ProcessBar.css';
 import './ProcessBarMedia.css'
+import { useServer } from '../app/ServerContext'
+import axios from 'axios'
 function ProcessBar() {
+
+    const [bomdod,setBomdod] = useState(0)
+    const [peshin,setPeshin] = useState(0)
+    const [asr,setAsr] = useState(0)
+    const [shom,setShom] = useState(0)
+    const [xufton,setXufton] = useState(0)
+    const [vitr,setVitr] = useState(0)
+    // const [totalNamaz,setTotalNamaz] = useState(0)
+
+    const [bomdodEditable,setBomdodEditable] = useState(0)
+    const [peshinEditable,setPeshinEditable] = useState(0)
+    const [asrEditable,setAsrEditable] = useState(0)
+    const [shomEditable,setShomEditable] = useState(0)
+    const [xuftonEditable,setXuftonEditable] = useState(0)
+    const [vitrEditable,setVitrEditable] = useState(0)
+
+    const [server] = useServer()
+	const token = window.localStorage.getItem("access_token")
+	
 
     function setGaugeValue(gauge, value, leftCount) {
         if (value < 0 || value > 1) {
@@ -22,6 +43,39 @@ function ProcessBar() {
     }
 
     useEffect(()=>{
+		;(async()=>{
+			if (server) {
+				const resp1 = await axios.get(server + '/api/remnant/info',{
+					headers: {
+						'authorization': `Bearer ${token}`
+					}
+                })
+                const data = resp1.data
+                const bomdod = -(((data.bomdod * 100) / data.const_bomdod) - 100)
+                const peshin = -(((data.peshin * 100) / data.const_peshin) - 100)
+                const asr = -(((data.asr * 100) / data.const_asr) - 100)
+                const shom = -(((data.shom * 100) / data.const_shom) - 100)
+                const xufton = -(((data.xufton * 100) / data.const_xufton) - 100)
+                const vitr = -(((data.vitr * 100) / data.const_vitr) - 100)
+
+                setBomdodEditable(data.bomdod)
+                setPeshinEditable(data.peshin)
+                setAsrEditable(data.asr)
+                setShomEditable(data.shom)
+                setXuftonEditable(data.xufton)
+                setVitrEditable(data.vitr)
+
+				setBomdod(bomdod)
+				setPeshin(peshin)
+				setAsr(asr)
+				setShom(shom)
+				setXufton(xufton)
+				setVitr(vitr)
+			}
+		})()
+	},[server,token])
+
+    useEffect(()=>{
        
         const gaugeElement = document.getElementById("gauge");
         setGaugeValue(gaugeElement, .5, '567,810');
@@ -36,14 +90,14 @@ function ProcessBar() {
         const radius = circleBomdod.r.baseVal.value
         const circumference = 2 * Math.PI * radius
 
-        setProgress(100,circumference,circleBomdod)
-        setProgress(50,circumference,circlePeshin)
-        setProgress(50,circumference,circleAsr)
-        setProgress(50,circumference,circleShom)
-        setProgress(50,circumference,circleXufton)
-        setProgress(50,circumference,circleVitr)
+        setProgress(bomdod,circumference,circleBomdod)
+        setProgress(peshin,circumference,circlePeshin)
+        setProgress(asr,circumference,circleAsr)
+        setProgress(shom,circumference,circleShom)
+        setProgress(xufton,circumference,circleXufton)
+        setProgress(vitr,circumference,circleVitr)
 
-    }, [])
+    }, [bomdod,peshin, asr, shom, xufton, vitr])
 
 
 	return (
@@ -100,7 +154,7 @@ function ProcessBar() {
                                                 <circle className="progress-bomdod-time" strokeWidth="15" cx="74" cy="76" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{bomdodEditable}</b></p>
                                             <span data-type="Бомдод">Қолди</span>
                                         </div>
                                     </div>
@@ -116,7 +170,7 @@ function ProcessBar() {
                                                 <circle className="progress-peshin-time" strokeWidth="15" cx="74" cy="76" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{peshinEditable}</b></p>
                                             <span data-type="Пешин">Қолди</span>
                                         </div>
                                     </div>
@@ -132,7 +186,7 @@ function ProcessBar() {
                                                 <circle className="progress-asr-time" strokeWidth="15" cx="74" cy="76" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{asrEditable}</b></p>
                                             <span data-type="Aср">Қолди</span>
                                         </div>
                                     </div>
@@ -150,7 +204,7 @@ function ProcessBar() {
                                                 <circle className="progress-shom-time" strokeWidth="15" cx="74" cy="76" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{shomEditable}</b></p>
                                             <span data-type="Шом">Қолди</span>
                                         </div>
                                     </div>
@@ -166,7 +220,7 @@ function ProcessBar() {
                                                 <circle className="progress-xufton-time" strokeWidth="15" cx="150" cy="150" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{xuftonEditable}</b></p>
                                             <span data-type="Хуфтон">Қолди</span>
                                         </div>
                                     </div>
@@ -182,7 +236,7 @@ function ProcessBar() {
                                                 <circle className="progress-vitr-time" strokeWidth="15" cx="150" cy="150" r="65" fill="transparent" />
                                             </svg>
                                             <div className="inner"></div>
-                                            <p><b>22,000</b></p>
+                                            <p><b>{vitrEditable}</b></p>
                                             <span data-type="Витр">Қолди</span>
                                         </div>
                                     </div>

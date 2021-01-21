@@ -9,12 +9,9 @@ import castle from "./assets/castle.png";
 import moon from "./assets/moon.png";
 import halfTree from "./assets/half-tree.png";
 import tree from "./assets/tree.png";
+import { Link } from "react-router-dom";
 
 export default function Validation() {
-
-    const valClearHandler = () => {
-        console.log("clear")
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,9 +22,9 @@ export default function Validation() {
       <div className="bg-img"></div>
       <div className="val-content">
         <div className="val-text">
-          <div className="val-clear-icon" onClick={valClearHandler}>
+          <Link className="val-clear-icon" to='/main'>
             <MdClear size={30} color="#ccc" />
-          </div>
+          </Link>
           <h2 className="val-title">Get In Touch</h2>
            <div className="val-main-text">
                If you have any questions, please feel free to ask. <br/>

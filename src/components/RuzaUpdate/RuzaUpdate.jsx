@@ -1,18 +1,53 @@
 import './RuzaUpdate.css'
 import './RuzaUpdateMedia.css'
 import { Select, Option } from '../Select/Seelct'
+// import axios from 'axios'
 import './Select.css'
 import { useEffect, useState } from 'react'
+// import { useServer } from '../app/ServerContext'
+
 function RuzaUpdate() {
-    
+	// const [server] = useServer()
+
     const [today,setToday] = useState()
+
     const months = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun", "Iyul","Avgust","Sentabr","Oktabr","Noyabr","Dekabr"]
+
     const years = [1992,1993,1994,1995,1996,1997,1999,2000]
+    
     useEffect(()=>{
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, '0');
         setToday(dd)
     },[])
+
+    // const bomdod = useRef()
+	// const peshin = useRef()
+	// const asr = useRef()
+	// const shom = useRef()
+	// const xufton = useRef()
+	// const vitr = useRef()
+
+    // async function updatingRemnant(e) {
+	// 	e.preventDefault()
+	// 	const userRemnantData = {
+    //         bomdod: bomdod,
+    //         peshin: peshin,
+    //         asr: asr,
+    //         shom: shom,
+    //         xufton: xufton,
+    //         vitr: vitr,
+	// 	}
+	// 	if(server){
+	// 		const resp = await axios.post(server + '/', {
+	// 			userRemnantData
+	// 		})
+	// 		console.log(resp)
+			
+	// 	}
+	// }
+
+
     return (
         <>
         <div className="pray-counter">
@@ -20,7 +55,8 @@ function RuzaUpdate() {
         onSubmit={e => {
             e.preventDefault()
             document.querySelector('.submitted').classList.add('submitted--block')
-            console.log(document.querySelector('.submitted'))
+
+            // updatingRemnant()
             e.target.reset()
         }}>
         <div className="status-editing">

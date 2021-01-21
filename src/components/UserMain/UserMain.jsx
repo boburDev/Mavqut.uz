@@ -25,7 +25,7 @@ function UserMain({type, who}) {
 						'authorization': `Bearer ${token}`
 					}
 				})
-				console.log(resp.data)	
+				// console.log(resp.data)	
 				setUserData({
 					user_id: resp.data._id,
 					name: resp.data.name,
@@ -34,6 +34,13 @@ function UserMain({type, who}) {
 					age: resp.data.age,
 					start_namaz: resp.data.start_at_namaz
 				})
+
+				// const resp1 = await axios.get(server + '/api/remnant/info',{
+				// 	headers: {
+				// 		'authorization': `Bearer ${token}`
+				// 	}
+				// })
+				// console.log(resp1.data)
 			}
 		})()
 	},[server,token])
