@@ -25,6 +25,7 @@ export default function Validation() {
           <Link className="val-clear-icon" to='/main'>
             <MdClear size={30} color="#ccc" />
           </Link>
+          <div className="val-all-text-wrapper">
           <h2 className="val-title">Get In Touch</h2>
            <div className="val-main-text">
                If you have any questions, please feel free to ask. <br/>
@@ -60,6 +61,7 @@ export default function Validation() {
               </div>
            </div>
           </div>
+        </div>     
         </div>
         <div className="val-view">
           <div className="mountain-img">
