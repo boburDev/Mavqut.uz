@@ -44,7 +44,7 @@ export default function LogIn() {
               Саҳифангиз мавжуд эмасми ? <Link to="/register/sign-up">Бу ерга</Link>{" "}
               босинг
               <br />
-              <Link to="/main">Паролни унутдингизми ?</Link>
+              <Link to="/get-in-touch">Паролни унутдингизми ?</Link>
 			  {/* register/forgot-password */}
             </span>
           </form>
