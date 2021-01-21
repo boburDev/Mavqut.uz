@@ -75,7 +75,7 @@
     position: absolute;
     right: 5vw;
     bottom: 5vw;
-    width: 180px;
+    width: 150px;
     height: 50px;
     border: solid lightpink;
 }
@@ -88,6 +88,11 @@
     color: lightpink;
     font-weight: bold;
     font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.enter_btn a:hover {
+    color: lightpink;
     text-decoration: none;
 }
 
@@ -115,26 +120,22 @@
 
 }
 
-@media (min-height: 800px) and (min-width: 1500px) {
-    .woman {
-        height: 80%;
-    }
-
-    .flowers {
-        height: 40%;
-    }
-}
-
-@media (min-height: 900px)and (min-width: 1600px) {
-    .p_1, .p_2, .p_3 {
-        font-size: 1.8rem;
-    }
-
+@media (min-height: 800px) {
     .woman {
         height: 75%;
     }
 
     .flowers {
         height: 38%;
+    }
+
+    .clouds {
+        width: 70%;
+    }
+}
+
+@media (min-height: 900px)and (min-width: 1600px) {
+    .p_1, .p_2, .p_3 {
+        font-size: 1.8rem;
     }
 }

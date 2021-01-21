@@ -24,7 +24,7 @@
 .p_1 {
     position: absolute;
     font-size: 1.8rem;
-    bottom: 77vh;
+    bottom: 77%;
     z-index: 1;
     left: 30vw;
 }
@@ -32,7 +32,7 @@
 .p_2 {
     position: absolute;
     font-size: 1.5rem;
-    bottom: 42vh;
+    bottom: 35%;
     left: 17vw;
     z-index: 1;
 }
@@ -47,7 +47,7 @@
     z-index: 1;
     position: absolute;
     font-size: 1.5rem;
-    bottom: 25vh;
+    bottom: 15%;
     left: 3vw;
 }
 
@@ -74,24 +74,17 @@
     text-decoration: none;
 }
 
+.enter_btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
 .enter_btn span {
     font-size: 2rem;
     margin-left: 5px;
 }
 
 @media (min-height: 800px) {
-    .p_1 {
-        bottom: 75vh;
-    }
-
-    .p_2 {
-        bottom: 45vh;
-    }
-
-    .p_3 {
-        bottom: 25vh;
-    }
-
     .left_angle {
         height: 40%;
     }
@@ -104,17 +97,17 @@
 @media (min-height: 900px) {
     .p_1 {
         font-size: 2rem;
-        bottom: 80vh;
+        bottom: 80%;
     }
 
     .p_2 {
         font-size: 1.7rem;
-        bottom: 45vh;
+        bottom: 40%;
     }
 
     .p_3 {
         font-size: 1.7rem;
-        bottom: 25vh;
+        bottom: 20%;
     }
 
     .left_angle {
