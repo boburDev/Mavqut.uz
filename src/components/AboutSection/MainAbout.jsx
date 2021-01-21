@@ -2,18 +2,17 @@ import React from 'react'
 import "./MainAbout.css"
 import manImg from "./images/man.png"
 import { MdClear } from "react-icons/md"
+import { Link } from 'react-router-dom'
 export default function MainAbout() {
-    const clearHandler = () => {
-        console.log('clear');
-    }
+    
     return (
         <div className="main-about">
             <div className="bg-star"></div>
             <div className="main-content">
              <div className="main-text">
-                <div className="cancel-btn" onClick={clearHandler} >
+                <Link to='/main' className="cancel-btn">
                     <MdClear size={30} color="#ccc" />
-                </div>
+                </Link>
                  <h2 className="about-text-title">Biz Haqimizda</h2>
                  <div className="about-body">
                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem laudantium, nesciunt nam consequuntur eligendi culpa sequi quam doloribus molestiae tenetur corporis deserunt dolorum optio veniam porro vitae omnis iure laborum?

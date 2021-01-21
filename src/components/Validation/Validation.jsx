@@ -9,7 +9,6 @@ import castle from "./assets/castle.png";
 import moon from "./assets/moon.png";
 import halfTree from "./assets/half-tree.png";
 import tree from "./assets/tree.png";
-import mountains from "./assets/mountains.png";
 
 export default function Validation() {
 

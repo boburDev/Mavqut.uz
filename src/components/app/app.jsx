@@ -4,7 +4,6 @@ import UserMain from '../UserMain/UserMain'
 import Register from "../Register/Register"
 import LogIn from "../Register/LogIn/LogIn"
 import { SidebarReg } from "../SideBar/SidebarReg"
-// import Logout from '../Logout/Exit'
 import Term from '../Terms/Terms'
 import Privacy from '../Privacy/Privacy'
 import Theme from '../Mavzu/Mavzu'
@@ -19,6 +18,8 @@ import Page3 from '../HadisPages/Page3/Page3.jsx'
 import Page4 from '../HadisPages/Page4/Page4.jsx'
 import Page5 from '../HadisPages/Page5/Page5.jsx'
 import Page6 from '../HadisPages/Page6/Page6.jsx'
+import AboutUs from '../AboutSection/MainAbout'
+import GetInTouch from "../Validation/Validation";
 import './index'
 import { useEffect, useState } from "react"
 
@@ -76,6 +77,16 @@ function App() {
 					<div className="main">
 						<Section />
 						<Navbar />
+					</div>
+				</Route>
+				<Route path='/about-us' exact>
+					<div className="main">
+						<AboutUs />
+					</div>
+				</Route>
+				<Route path='/get-in-touch' exact>
+					<div className="main">
+						<GetInTouch />
 					</div>
 				</Route>
 				<Route path='/main/dashboard' exact>
