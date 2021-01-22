@@ -24,6 +24,7 @@ export default function Navbar () {
 	document.getElementById('navbar-more').style.display = 'none'
 	document.getElementById('navbar-footer').classList.add('navbar-fade')
 	document.getElementById('navbar-foot').classList.add('navbar-fade')
+	document.getElementById('navbar-language').classList.add('navbar-fade')
 	more.children[2].children[0].classList.add('about-c')
 	more.children[4].children[0].classList.add('about-c')
 	more.children[5].children[0].classList.add('about-c')
@@ -40,6 +41,7 @@ export default function Navbar () {
 	document.getElementById('navbar-more').style.display = 'block'
 	document.getElementById('navbar-footer').classList.add('navbar-fade')
 	document.getElementById('navbar-foot').classList.add('navbar-fade')
+	document.getElementById('navbar-language').classList.add('navbar-fade')
     more.children[2].children[0].classList.remove('about-c')
     more.children[4].children[0].classList.remove('about-c')
     more.children[5].children[0].classList.remove('about-c')
@@ -54,6 +56,7 @@ export default function Navbar () {
 		document.getElementById('navbar-more').classList.add('navbar-fade')
 		document.getElementById('navbar-footer').classList.add('navbar-fade')
 		document.getElementById('navbar-foot').classList.add('navbar-fade')
+		document.getElementById('navbar-language').classList.add('navbar-fade')
 		document.getElementById('more').classList.add('more-fade')
 		more.children[0].children[0].classList.add('star')
 		more.children[2].children[0].classList.add('moons')
@@ -82,12 +85,14 @@ export default function Navbar () {
 		<li  className="nav-item phone"><Link to=""><img src={question} className="question-icon" alt="phone"/></Link></li>
       </ul>
 	  <ul className="navbar-foot foot" id="navbar-foot">
-        <li className="nav-item download"><Link to="#"><span>Download</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>
+        <li className="nav-item download"><Link to="#"><span>Download App</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>
       </ul>
 	  <ul className="navbar-language language" id="navbar-language">
-        <li className="nav-item lang"><Link to="#"><span>Eng</span></Link></li>
-		<li className="nav-item lang"><Link to="#"><span>Uz</span></Link></li>
-		<li className="nav-item lang"><Link to="#"><span>Ru</span></Link></li>
+        <li className="nav-item lang"><Link to="#"><span>EN</span></Link></li>
+		<div class="vl"></div>
+		<li className="nav-item lang"><Link to="#"><span>RU</span></Link></li>
+		<div class="vl"></div>
+		<li className="nav-item lang"><Link to="#"><span>UZ</span></Link></li>
       </ul>
     </nav>
   )

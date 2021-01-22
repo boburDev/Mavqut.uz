@@ -11,6 +11,7 @@ export default function SectionMore () {
       document.getElementById('more').classList.remove('more-fade')
       document.getElementById('navbar-footer').classList.remove('navbar-fade')
       document.getElementById('navbar-foot').classList.remove('navbar-fade')
+	document.getElementById('navbar-language').classList.remove('navbar-fade')
       
       more.children[0].children[0].classList.remove('star')
       more.children[0].children[0].classList.add('back')
