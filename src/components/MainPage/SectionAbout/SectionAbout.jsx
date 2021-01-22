@@ -21,6 +21,7 @@ export default function SectionAbout () {
         document.getElementById('navbar-more').style.display = 'block'
         document.getElementById('navbar-footer').classList.remove('navbar-fade')
       document.getElementById('navbar-foot').classList.remove('navbar-fade')
+	document.getElementById('navbar-language').classList.remove('navbar-fade')
         more.children[2].children[0].classList.remove('about-c')
         more.children[4].children[0].classList.remove('about-c')
         more.children[5].children[0].classList.remove('about-c')
