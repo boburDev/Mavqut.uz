@@ -21,7 +21,7 @@ import Page6 from '../HadisPages/Page6/Page6.jsx'
 import AboutUs from '../AboutSection/MainAbout'
 import GetInTouch from "../Validation/Validation";
 import './index'
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 
 function App() {
 
@@ -44,6 +44,25 @@ function App() {
 			
 		}
 	}
+	useLayoutEffect(() => {
+		let width = window.innerWidth
+		const windowNone = document.querySelector('.display')
+		const windowNoneSecond = document.querySelector('.main')
+		if (width < 1200) {
+			if (windowNone) {
+				windowNone.style.display = 'none'
+			}else {
+				windowNoneSecond.style.display = 'none'
+			}
+		} else {
+			if (windowNone) {
+				windowNone.style.display = 'block'
+			} else {
+				windowNoneSecond.style.display = 'block'
+			}
+			
+		}
+	},[])
 
 	const [index,setIndex] = useState()
 

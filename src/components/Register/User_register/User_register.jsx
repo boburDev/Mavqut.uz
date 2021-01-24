@@ -25,7 +25,7 @@ export default function UserRegister(){
 
 
 	function registtationForm(e) {
-		e.preventDefault()
+    e.preventDefault()
 		;(async()=>{
 
 			

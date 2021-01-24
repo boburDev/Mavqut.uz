@@ -25,7 +25,6 @@ function UserMain({type, who}) {
 						'authorization': `Bearer ${token}`
 					}
 				})
-				// console.log(resp.data)	
 				setUserData({
 					user_id: resp.data._id,
 					name: resp.data.name,
