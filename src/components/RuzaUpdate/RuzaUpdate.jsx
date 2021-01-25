@@ -41,11 +41,9 @@ function RuzaUpdate() {
             ruza: ruza.current.value,
 		}
 		if(server){
-			const resp = await axios.post(server + '/', {
+			await axios.post(server + '/', {
 				userRemnantData
 			})
-			console.log(resp)
-			
 		}
 	}
 
@@ -58,7 +56,7 @@ function RuzaUpdate() {
             e.preventDefault()
             document.querySelector('.submitted').classList.add('submitted--block')
 
-            // updatingRemnant()
+            updatingRemnant()
             e.target.reset()
         }}>
         <div className="status-editing">

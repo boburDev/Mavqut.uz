@@ -9,7 +9,7 @@ function Counter() {
 
     const [fastingConst,setFastingConst] = useState(0)
     const [fasting,setFasting] = useState(0)
-    const [fastingMonth,setFastingMonth] = useState(0)
+    const [fastingMonths,setFastingMonth] = useState(0)
     useEffect(()=>{
         const token = window.localStorage.getItem("access_token")
 
@@ -19,11 +19,9 @@ function Counter() {
                     'authorization': `Bearer ${token}`
                 }
             })
-            // -(((data.bomdod * 100) / data.const_bomdod) - 100)
             const data = resp1.data
             setFasting(((data.total_fasting * 100) / data.const_total_fasting))
-            setFastingMonth(1)
-            console.log((data.total_fasting / 30 ) / (data.const_total_fasting / 30))
+            setFastingMonth(((data.total_fasting * 100) / data.const_total_fasting))
             setFastingConst(data.const_total_fasting)
         })()
 
@@ -43,8 +41,8 @@ function Counter() {
         const radius = fastingDay.r.baseVal.value
         const circumference = 2 * Math.PI * radius
         setProgress(fasting,circumference,fastingDay)
-        setProgress(fastingMonth,circumference,fastingMonth)
-    },[fasting,fastingMonth])
+        setProgress(fastingMonths,circumference,fastingMonth)
+    },[fasting,fastingMonths])
 
 
     return (

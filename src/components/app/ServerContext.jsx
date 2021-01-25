@@ -6,7 +6,7 @@ const ServerProvider = ({children}) => {
 
     const [state,setState] = useState()
 
-    const isTester = false
+    const isTester = true
     
     useEffect(()=>{
         const server = {

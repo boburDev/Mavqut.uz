@@ -45,7 +45,6 @@ export default function LogIn() {
               босинг
               <br />
               <Link to="/get-in-touch">Паролни унутдингизми ?</Link>
-			  {/* register/forgot-password */}
             </span>
           </form>
         </div>
