@@ -11,6 +11,7 @@ const WelcomeNav = ({type, who, category, name}) => {
 
     const [setCategory] = useCategory(true)
     const [bell, setBell] = useState(false)
+    
     return (
         <div className="containerBox">
             <div className="title_nav">
