@@ -168,26 +168,26 @@
 	background: none;
 }
 /*Language select*/
-.language-profile{
+.language_profile{
 	z-index: 4;
 	display: flex;
     flex-direction: column;
 }
-.language-profile .language_select{
+.language_profile .language_select{
 	display: flex;
 	justify-content: left;
     align-items: center;
     flex-wrap: wrap;
 }
-.language-profile .language_select label{
+.language_profile .language_select label{
 	
 	font-size: 18px;
 	padding-left: 8px;
 }
-.language-profile .language_select label:hover{
+.language_profile .language_select label:hover{
 	cursor: pointer;
 }
-.language-profile .language_select div{
+.language_profile .language_select div{
 	width: 100%;
 	display: flex;
 	justify-content: left;
@@ -246,10 +246,10 @@
 	.editAll label{
 		font-size: 20px;
 	}
-	.language-profile  .language_select div{
+	.language_profile  .language_select div{
 		padding: 10px 0;
 	}
-	.language-profile .language_select label{
+	.language_profile .language_select label{
 		font-size: 22px;
 	}
 }
