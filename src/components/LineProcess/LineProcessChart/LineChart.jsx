@@ -1,6 +1,36 @@
+import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
-
+import { useServer } from "../../app/ServerContext";
+import axios from "axios"
+import moment from "moment"
 function Donat() {
+
+    const [server] = useServer()
+	const token = window.localStorage.getItem("access_token")
+    const [value,setValue] = useState([])
+    const [date,setDate] = useState([])
+    useEffect(()=>{
+		;(async()=>{
+			if (server) {
+				const resp = await axios.get(server + `/api/daily/user/getAll/`,{
+					headers:{
+						'authorization': `Bearer ${token}`
+					}
+                })
+                const data = resp.data
+                const date = new Date().getDate()
+				for(let i of data){
+                    setDate([date - moment(i.created_at, "YYYYMMDD").fromNow().split(' ')[0]])
+                    setValue([i.asr + i.bomdod + i.peshin + i.shom + i.vitr + i.xufton])
+                }
+				
+			}
+		})()
+	},[server, token])
+
+    useEffect(()=>{
+        console.log(value)
+    },[value])
 
     const data = (canvas) => {
         const ctx = canvas.getContext("2d");
@@ -12,11 +42,11 @@ function Donat() {
         
 
         return {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', ''],
+            labels: date,
             datasets: [
             {
                 label: 'rakatlar soni',
-                data: [5, 8, 10, 9, 8, 13, 11, 9, 15, 14, 4, 0, 3, 6,],
+                data: value,
                 backgroundColor : gradient,
                 borderColor: ['rgba(44, 5, 128, .5)'],
                 opacity: 0.8,

@@ -33,26 +33,9 @@ function UserMain({type, who}) {
 					age: resp.data.age,
 					start_namaz: resp.data.start_at_namaz
 				})
-
-				// const resp1 = await axios.get(server + '/api/remnant/info',{
-				// 	headers: {
-				// 		'authorization': `Bearer ${token}`
-				// 	}
-				// })
-				// console.log(resp1.data)
 			}
 		})()
 	},[server,token])
-	
-	useEffect(()=>{
-		;(async()=>{
-			if (server && userData.user_id) {
-				await axios.get(server + `/api/daily/user/getAll/${userData.user_id}`)
-				// console.log(resp.data[0])
-				
-			}
-		})()
-	},[server, userData])
 
 	if (!token) return <Redirect to="/register/sign-in" />
 	return (
