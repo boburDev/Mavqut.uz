@@ -47,8 +47,8 @@ function UserMain({type, who}) {
 	useEffect(()=>{
 		;(async()=>{
 			if (server && userData.user_id) {
-				const resp = await axios.get(server + `/api/daily/user/getAll/${userData.user_id}`)
-				console.log(resp.data[0])
+				await axios.get(server + `/api/daily/user/getAll/${userData.user_id}`)
+				// console.log(resp.data[0])
 				
 			}
 		})()
