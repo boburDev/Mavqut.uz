@@ -238,7 +238,7 @@ export default function Edit() {
 					</div>
 					<div className="right col-xl-6">
 						{/*language*/}
-						<div className="language">
+						<div className="language_profile">
 							<div className="title">
 								<div className="img">
 									<img alt="icon" src={edit} className="w-100" />
