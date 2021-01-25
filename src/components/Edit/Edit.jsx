@@ -40,7 +40,7 @@ export default function Edit() {
 					phone: resp.data.phone,
 				}
 				setFetchingData(setUserData)
-				console.log(setUserData);
+				// console.log(setUserData);
 			}
 		})()
 	},[server,token])
@@ -59,12 +59,31 @@ export default function Edit() {
 						icon: image || fetchingData.avatar,
 						email: email.current.value || fetchingData.email,
 						phone: phone.current.value || fetchingData.phone,
+					}
+					const userDate1 = {
+						name: name.current.value || fetchingData.name,
+						surname: surname.current.value || fetchingData.surname,
+						age: age.current.value || fetchingData.age,
+						gender: gender || fetchingData.gender,
+						icon: image || fetchingData.avatar,
+						email: email.current.value || fetchingData.email,
+						phone: phone.current.value || fetchingData.phone,
 						password: password.current.value
 					}
-					if (server){
-						console.log(userDate);
-						// const resp = await axios.post(server + '/api/user', userDate)
-						// setToken(resp.data.token)
+					if (server && password.current.value.length){
+						const resp = await axios.put(server + '/api/user/', userDate1,{
+							headers: {
+								'authorization': `Bearer ${token}`
+							}
+						})
+						console.log(resp)
+					} else if (server){
+						const resp = await axios.put(server + '/api/user/', userDate,{
+							headers: {
+								'authorization': `Bearer ${token}`
+							}
+						})
+						console.log(resp)
 					}
 				} catch (err) {
 					console.error(err)
@@ -149,7 +168,7 @@ export default function Edit() {
 											<div className="img">
 												<img alt="icon" src={edit} className="w-100" />
 											</div>
-											<input ref={name} type="text" className="form-control" placeholder="Ali" id="name" aria-label="Username" aria-describedby="basic-addon1" />
+											<input ref={name} type="text" className="form-control" placeholder={fetchingData && fetchingData.name} id="name" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
 
 									</div>
@@ -157,7 +176,7 @@ export default function Edit() {
 									
 										<label htmlFor="name" className="form-label">Surname</label>
 										<div className="input-group mb-3">
-											<input ref={surname} type="text" className="form-control" placeholder="Usman" id="surname" aria-label="Username" aria-describedby="basic-addon1" />
+											<input ref={surname} type="text" className="form-control" placeholder={fetchingData && fetchingData.surname} id="surname" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
 
 									</div>
@@ -169,7 +188,6 @@ export default function Edit() {
 							<div className="nameEdit">
 								<div className="row">
 									<div className="name_block col-xl-6 col-6">
-
 										<label htmlFor="group1" className="form-label">Gender</label>
 										<div className="input-group-gender">
 										<div>
@@ -187,7 +205,7 @@ export default function Edit() {
 									<div className=" name_block col-xl-6 col-6">
 										<label htmlFor="age" className="form-label">Age</label>
 										<div className="input-group mb-3">
-											<input ref={age} type="number" max='2' className="form-control age_input" placeholder="26" id="age" aria-label="age" />
+											<input ref={age} type="number" max='99' className="form-control age_input" placeholder={fetchingData && fetchingData.age} id="age" aria-label="age" />
 										</div>
 									</div>
 								</div>
@@ -201,7 +219,7 @@ export default function Edit() {
 
 										<label htmlFor="name" className="form-label">Email</label>
 										<div className="nameEditemail input-group mb-3">
-											<input ref={email} type="text" className="form-control" placeholder="Usman@gmail.com" id="email" aria-label="Username" aria-describedby="basic-addon1" />
+											<input ref={email} type="text" className="form-control" placeholder={fetchingData && fetchingData.email} id="email" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
 
 									</div>
@@ -209,7 +227,7 @@ export default function Edit() {
 									
 										<label htmlFor="name" className="form-label">Phone number</label>
 										<div className="input-group mb-3">
-											<input ref={phone} type="text" className="form-control" placeholder="+998 93 123 45 67" id="number" aria-label="Username" aria-describedby="basic-addon1" />
+											<input ref={phone} type="text" className="form-control" placeholder={fetchingData && fetchingData.phone} id="number" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
 
 									</div>
