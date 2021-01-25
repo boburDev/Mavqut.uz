@@ -1,6 +1,13 @@
+import { useEffect } from 'react'
+
 import { Doughnut } from 'react-chartjs-2'
 
-function Donat() {
+function Donat({dataDonat}) {
+
+
+    useEffect(()=>{
+        console.log(dataDonat)
+    },[dataDonat])
 
     const data = (canvas) => {
         const ctx = canvas.getContext("2d");

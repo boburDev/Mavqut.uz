@@ -13,19 +13,7 @@ function DonatProcess() {
     const [shom,setShom] = useState(0)
     const [xufton,setXufton] = useState(0)
     const [vitr,setVitr] = useState(0)
-    const [namaz,setNamaz] = useState(0)
-    const [totalNamaz,setTotalNamaz] = useState(0)
-    const [totalNamazEditable,setTotalNamazEditable] = useState(0)
-
-    // const [bomdodEditable,setBomdodEditable] = useState(0)
-    // const [peshinEditable,setPeshinEditable] = useState(0)
-    // const [asrEditable,setAsrEditable] = useState(0)
-    // const [shomEditable,setShomEditable] = useState(0)
-    // const [xuftonEditable,setXuftonEditable] = useState(0)
-    // const [vitrEditable,setVitrEditable] = useState(0)
-
-
-
+    const [donatData,setDonatData] = useState({})
     useEffect(()=>{
         const token = window.localStorage.getItem("access_token")
 
@@ -43,22 +31,13 @@ function DonatProcess() {
             const shom = -(((data.shom * 100) / data.const_shom) - 100)
             const xufton = -(((data.xufton * 100) / data.const_xufton) - 100)
             const vitr = -(((data.vitr * 100) / data.const_vitr) - 100)
-
-            // setBomdodEditable(data.bomdod)
-            // setPeshinEditable(data.peshin)
-            // setAsrEditable(data.asr)
-            // setShomEditable(data.shom)
-            // setXuftonEditable(data.xufton)
-            // setVitrEditable(data.vitr)
-
-
+            setDonatData(data)
             setBomdod(bomdod)
             setPeshin(peshin)
             setAsr(asr)
             setShom(shom)
             setXufton(xufton)
             setVitr(vitr)
-            // console.log(data)
         })()
 
     },[server])
@@ -137,7 +116,7 @@ function DonatProcess() {
                 </div>
                     <div className="donat-chart" data-done="70%" data-not-done="30%">
                         <div className="donat-ruza" data-donat-text="Рўза">
-                            <Donat />
+                            <Donat dataDonat={donatData} />
                         </div>
                     </div>
                 </div>

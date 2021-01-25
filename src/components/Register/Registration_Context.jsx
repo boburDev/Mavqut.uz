@@ -6,7 +6,6 @@ const RegistrationProvider = ({children})=>{
     const [state, setState] = useState(localStorage.getItem("access_token"))
     useEffect(()=>{
         if (state) {
-            // setState(state)
             window.localStorage.setItem('access_token', state)
         }else{
             window.localStorage.removeItem('access_token')
