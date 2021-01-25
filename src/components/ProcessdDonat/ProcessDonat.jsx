@@ -1,7 +1,68 @@
 import './ProcessDonat.css'
 import Donat from './DonatChart/Donat'
-import  "./ProcessDonatMedia.css";
+import  "./ProcessDonatMedia.css"
+import { useServer } from '../app/ServerContext'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 function DonatProcess() {
+    const [server] = useServer()
+
+    const [bomdod,setBomdod] = useState(0)
+    const [peshin,setPeshin] = useState(0)
+    const [asr,setAsr] = useState(0)
+    const [shom,setShom] = useState(0)
+    const [xufton,setXufton] = useState(0)
+    const [vitr,setVitr] = useState(0)
+    const [namaz,setNamaz] = useState(0)
+    const [totalNamaz,setTotalNamaz] = useState(0)
+    const [totalNamazEditable,setTotalNamazEditable] = useState(0)
+
+    // const [bomdodEditable,setBomdodEditable] = useState(0)
+    // const [peshinEditable,setPeshinEditable] = useState(0)
+    // const [asrEditable,setAsrEditable] = useState(0)
+    // const [shomEditable,setShomEditable] = useState(0)
+    // const [xuftonEditable,setXuftonEditable] = useState(0)
+    // const [vitrEditable,setVitrEditable] = useState(0)
+
+
+
+    useEffect(()=>{
+        const token = window.localStorage.getItem("access_token")
+
+        ;(async()=>{
+            const resp1 = await axios.get(server + '/api/remnant/info',{
+                headers: {
+                    'authorization': `Bearer ${token}`
+                }
+            })
+            const data = resp1.data
+
+            const bomdod = -(((data.bomdod * 100) / data.const_bomdod) - 100)
+            const peshin = -(((data.peshin * 100) / data.const_peshin) - 100)
+            const asr = -(((data.asr * 100) / data.const_asr) - 100)
+            const shom = -(((data.shom * 100) / data.const_shom) - 100)
+            const xufton = -(((data.xufton * 100) / data.const_xufton) - 100)
+            const vitr = -(((data.vitr * 100) / data.const_vitr) - 100)
+
+            // setBomdodEditable(data.bomdod)
+            // setPeshinEditable(data.peshin)
+            // setAsrEditable(data.asr)
+            // setShomEditable(data.shom)
+            // setXuftonEditable(data.xufton)
+            // setVitrEditable(data.vitr)
+
+
+            setBomdod(bomdod)
+            setPeshin(peshin)
+            setAsr(asr)
+            setShom(shom)
+            setXufton(xufton)
+            setVitr(vitr)
+            // console.log(data)
+        })()
+
+    },[server])
+
     return (
         <>
             <div className="">
@@ -10,9 +71,9 @@ function DonatProcess() {
                     <div className="type bomdod_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: bomdod + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: bomdod > 20 ? bomdod : 20}}>{bomdod}%</div>
                         </div>
                         <div className="type_name">
                             Бомдод
@@ -21,9 +82,9 @@ function DonatProcess() {
                     <div className="type peshin_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: peshin + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: peshin > 20 ? peshin : 20}}>{peshin}%</div>
                         </div>
                         <div className="type_name">
                             Пешин
@@ -32,9 +93,9 @@ function DonatProcess() {
                     <div className="type asr_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: asr + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: asr > 20 ? asr : 20}}>{asr}%</div>
                         </div>
                         <div className="type_name">
                             Aср
@@ -43,9 +104,9 @@ function DonatProcess() {
                     <div className="type shom_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: shom + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: shom > 20 ? shom : 20}}>{shom}%</div>
                         </div>
                         <div className="type_name">
                             Шом
@@ -54,9 +115,9 @@ function DonatProcess() {
                     <div className="type xufton_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: xufton + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: xufton > 20 ? xufton : 20}}>{xufton}%</div>
                         </div>
                         <div className="type_name">
                             Хуфтон
@@ -65,9 +126,9 @@ function DonatProcess() {
                     <div className="type vitr_type">
                         <div className="dish_wraper">
                             <div className="dish">
-                                <div className="liqual"></div>
+                                <div className="liqual" style={{height: vitr + "%"}}></div>
                             </div>
-                            <div className="percent">80%</div>
+                            <div className="percent" style={{bottom: vitr > 20 ? vitr : 20}}>{vitr}%</div>
                         </div>
                         <div className="type_name">
                             Витр

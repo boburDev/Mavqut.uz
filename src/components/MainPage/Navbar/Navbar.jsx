@@ -76,9 +76,6 @@ export default function Navbar () {
       <ul className="navbar-more" id="navbar-more">
         <li onClick={more} className="navbar-more-item">Batafsil</li>
       </ul>
-	   <ul className="navbar-more" id="navbar-more">
-        <li onClick={more} className="navbar-more-item">Batafsil</li>
-      </ul>
 	  <ul className="navbar-footer footer" id="navbar-footer">
         <li  className="nav-item phone"><Link to="#"><img src={phone} className="phone-icon" alt="phone"/></Link></li>
 		<li  className="nav-item phone"><Link to="/get-in-touch"><img src={message} className="message-icon" alt="phone"/></Link></li>
