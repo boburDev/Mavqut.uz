@@ -54,7 +54,7 @@ function UserMain({type, who}) {
 		})()
 	},[server, userData])
 
-	// if (!token) return <Redirect to="/register/sign-in" />
+	if (!token) return <Redirect to="/register/sign-in" />
 	return (
 		<div className={cl(st.main)}>
 		<div className={cl(st.main_userNav)}>
