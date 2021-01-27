@@ -36,7 +36,7 @@
 .donat-ruza::after {
     display: flex;
     position: absolute;
-    top: 38%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-style: normal;
