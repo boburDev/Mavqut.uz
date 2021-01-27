@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 function DonatProcess() {
     const [server] = useServer()
-
     const [bomdod,setBomdod] = useState(0)
     const [peshin,setPeshin] = useState(0)
     const [asr,setAsr] = useState(0)
