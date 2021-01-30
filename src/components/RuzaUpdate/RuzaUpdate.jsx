@@ -56,7 +56,7 @@ function RuzaUpdate() {
             e.preventDefault()
             document.querySelector('.submitted').classList.add('submitted--block')
 
-            // updatingRemnant()
+            updatingRemnant()
             e.target.reset()
         }}>
         <div className="status-editing">

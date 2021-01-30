@@ -16,7 +16,7 @@ export default function Edit() {
 	const age = useRef()
 	const email = useRef()
 	const phone = useRef()
-	const [lang,setLang] = useState()
+	const [,setLang] = useState()
 	const password = useRef()
 
 	const [fetchingData,setFetchingData] = useState()
@@ -40,7 +40,6 @@ export default function Edit() {
 					phone: resp.data.phone,
 				}
 				setFetchingData(setUserData)
-				// console.log(setUserData);
 			}
 		})()
 	},[server,token])
