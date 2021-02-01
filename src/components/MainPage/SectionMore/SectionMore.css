@@ -36,7 +36,7 @@
     line-height: 3.5;
 }
 
-.arrow {
+/* .arrow {
     position: relative;
     top: -60px;
     left: -15px;
@@ -45,9 +45,9 @@
     background-color: #fff;
     z-index: 12;
     cursor: pointer;
-}
+}*/
 
-.arrow::before {
+/* .arrow::before {
     display: block;
     position: absolute;
     top: -7px;
@@ -69,8 +69,18 @@
     transform: rotate(40deg);
     background-color: #fff;
     content: "";
+}  */
+.close{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 40px;
+    align-items: left;
+    height: 40px;
+    color: #000;
+    z-index: 12;
+    cursor: pointer;
 }
-
 @keyframes more-detail {
     0% {
         opacity: 0;

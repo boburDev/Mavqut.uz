@@ -1,18 +1,53 @@
 import './RuzaUpdate.css'
 import './RuzaUpdateMedia.css'
 import { Select, Option } from '../Select/Seelct'
+import axios from 'axios'
 import './Select.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useServer } from '../app/ServerContext'
+
 function RuzaUpdate() {
-    
+	const [server] = useServer()
+
     const [today,setToday] = useState()
+
     const months = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun", "Iyul","Avgust","Sentabr","Oktabr","Noyabr","Dekabr"]
-    const years = [1992,1993,1994,1995,1996,1997,1999,2000]
+
+    const years = [1992,1993,1994,1995,1996,1997,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
+    
     useEffect(()=>{
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, '0');
         setToday(dd)
     },[])
+
+    const bomdod = useRef()
+	const peshin = useRef()
+	const asr = useRef()
+	const shom = useRef()
+	const xufton = useRef()
+	const vitr = useRef()
+	const ruza = useRef()
+
+    async function updatingRemnant(e) {
+		e.preventDefault()
+		const userRemnantData = {
+            bomdod: bomdod.current.value,
+            peshin: peshin.current.value,
+            asr: asr.current.value,
+            shom: shom.current.value,
+            xufton: xufton.current.value,
+            vitr: vitr.current.value,
+            ruza: ruza.current.value,
+		}
+		if(server){
+			await axios.post(server + '/', {
+				userRemnantData
+			})
+		}
+	}
+
+
     return (
         <>
         <div className="pray-counter">
@@ -20,30 +55,31 @@ function RuzaUpdate() {
         onSubmit={e => {
             e.preventDefault()
             document.querySelector('.submitted').classList.add('submitted--block')
-            console.log(document.querySelector('.submitted'))
+
+            updatingRemnant()
             e.target.reset()
         }}>
         <div className="status-editing">
         <label htmlFor="bomdod">
-        Бомдод<input maxLength="2" type="text" id="bomdod"/>
+        Бомдод<input ref={bomdod} maxLength="2" type="text" id="bomdod"/>
         </label>
         <label htmlFor="peshin">
-        Пешин<input maxLength="2" type="text" id="peshin"/>
+        Пешин<input ref={peshin} maxLength="2" type="text" id="peshin"/>
         </label>
         <label htmlFor="asr">
-        Aср<input maxLength="2" type="text" id="asr"/>
+        Aср<input ref={asr} maxLength="2" type="text" id="asr"/>
         </label>
         <label htmlFor="shom">
-        Шом<input maxLength="2" type="text" id="shom"/>
+        Шом<input ref={shom} maxLength="2" type="text" id="shom"/>
         </label>
         <label htmlFor="xufton">
-        Хуфтон<input maxLength="2" type="text" id="xufton"/>
+        Хуфтон<input ref={xufton} maxLength="2" type="text" id="xufton"/>
         </label>
         <label htmlFor="vitr">
-        Витр<input maxLength="2" type="text" id="vitr"/>
+        Витр<input ref={vitr} maxLength="2" type="text" id="vitr"/>
         </label>
         <label htmlFor="ruza">
-        Рўза<input maxLength="1" type="text" id="ruza"/>
+        Рўза<input ref={ruza} maxLength="1" type="text" id="ruza"/>
         </label>
         </div>
         <div className="ruza-update-date">

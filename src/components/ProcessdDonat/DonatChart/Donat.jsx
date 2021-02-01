@@ -1,6 +1,7 @@
+
 import { Doughnut } from 'react-chartjs-2'
 
-function Donat() {
+function Donat({dataDonat}) {
 
     const data = (canvas) => {
         const ctx = canvas.getContext("2d");

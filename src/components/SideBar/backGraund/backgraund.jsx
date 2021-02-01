@@ -27,9 +27,10 @@ function Background({role}) {
 		'animate': sideBArValue.animateMoon === 'animate',
 		'default': sideBArValue.animateMoon === 'default'
 	  })}></div>
-      <div className={cc({
+      <div  className={cc({
         "way-wrapper": true,
         "calculate": sideBArValue.roadInSideBarFooter
+        
       })}>
         <div className="way"></div>
       </div>

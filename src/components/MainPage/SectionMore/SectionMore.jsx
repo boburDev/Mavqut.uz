@@ -1,5 +1,6 @@
 import React from 'react' 
 import './SectionMore.css'
+import close from '../Section/images/cloIcon.svg'
 
 export default function SectionMore () {
     function arrow() {
@@ -8,6 +9,9 @@ export default function SectionMore () {
       document.getElementById('navabr').classList.remove('navbar-fade')
       document.getElementById('navbar-more').classList.remove('navbar-fade')
       document.getElementById('more').classList.remove('more-fade')
+      document.getElementById('navbar-footer').classList.remove('navbar-fade')
+      document.getElementById('navbar-foot').classList.remove('navbar-fade')
+	document.getElementById('navbar-language').classList.remove('navbar-fade')
       
       more.children[0].children[0].classList.remove('star')
       more.children[0].children[0].classList.add('back')
@@ -30,9 +34,7 @@ export default function SectionMore () {
     return(
         <>
         <div className="more" id="more">
-                    <div className="arrow" id="arrow"
-                    onClick={arrow}>
-                    </div>
+                    <div onClick={arrow}><img className="close" src={close} alt="close"/></div>
                     <div className="more-body">
                         <h2>Clicked</h2>
                         <p className="more-text">

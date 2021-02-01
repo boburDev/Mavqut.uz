@@ -1,65 +1,151 @@
 .navbar-main {
-    position: fixed;
-    z-index: 200;
-    top: 60px;
-    right: 50px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    animation: visibility 4s ease;
+  position: fixed;
+  z-index: 200;
+  top: 60px;
+  right: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  animation: visibility 4s ease;
 }
 .navbar-fade {
-    visibility: hidden;
-    opacity: 0;
-    animation: fade-visibility 6s ease;
+  visibility: hidden;
+  opacity: 0;
+  animation: fade-visibility 6s ease;
 }
 .navbar-more {
-    position: fixed;
-    z-index: 200;
-    left: 21%;
-    bottom: 15%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    animation: visibility 4s ease;
+  position: fixed;
+  z-index: 200;
+  left: 21%;
+  bottom: 15%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  animation: visibility 4s ease;
 }
 
-.navbar-main .about a{
-    margin-right: 70px;
-    padding: 10px 50px;
-    font-weight: 700;
-    border-radius: 50px;
-    font-size: 33px;
-    color: #fff;
-    z-index: 90;
-    text-decoration: none;
+.navbar-main .about a {
+  margin-right: 70px;
+  padding: 10px 50px;
+  font-weight: 700;
+  border-radius: 50px;
+  font-size: 33px;
+  color: #fff;
+  z-index: 90;
+  text-decoration: none;
 }
 
 .navbar-main li,
 .navbar-more li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar-main .lets a {
-    color: rgb(47, 8, 63);
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 15px 30px;
-    font-size: 33px;
-    font-weight: 700;
-    text-decoration: none;
+  color: rgb(47, 8, 63);
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 33px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.navbar-more li{
-    color: #fff;
-    border: 3px solid #fff;
-    border-radius: 50px;
-    padding: 10px 50px;
-    font-size: 27px;
+.navbar-more li {
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 10px 50px;
+  font-size: 27px;
 }
 
-.navbar-more li:hover{
-    color: rgb(47, 8, 63);
-    background-color: #fff;
+.navbar-more li:hover {
+  color: rgb(47, 8, 63);
+  background-color: #fff;
+}
+.footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+  z-index: 100;
+}
+.footer li Link {
+  position: fixed;
+  display: block;
+}
+.phone {
+  margin-bottom: 10px;
+}
+.phone-icon {
+  width: 5%;
+  margin-left: 1%;
+}
+
+.message-icon {
+  width: 7%;
+}
+.question-icon {
+  width: 10%;
+  margin-left: -2%;
+}
+.footer-fade {
+  visibility: hidden;
+  opacity: 0;
+  animation: fade-visibility 6s ease;
+}
+.foot {
+  list-style-type: none;
+  position: fixed;
+  bottom: 1%;
+  margin: 0 0 0 10%;
+  z-index: 100;
+}
+
+.download span {
+  color: #fff;
+  font-size: 20px;
+}
+.download-icon {
+  width: 5%;
+  margin: 0 0 2% 5px;
+}
+.foot:hover {
+  text-decoration: none;
+  color: black;
+}
+.foot-fade {
+  visibility: hidden;
+  opacity: 0;
+  animation: fade-visibility 6s ease;
+}
+.language {
+  list-style-type: none;
+  position: fixed;
+  bottom: 1%;
+  position: absolute;
+  right: 1%;
+  display: inline;
+  z-index: 100;
+}
+.lang {
+  display: inline;
+  margin: 5px;
+}
+.lang span {
+  color: rgba(255, 255, 255, 0.664);
+  font-size: 25px;
+}
+.language span:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.vl {
+  border-left: 2px solid rgba(255, 255, 255, 0.664);
+  display: inline;
+  position: absolute;
+  top: 0%;
+  height: 100%;
 }

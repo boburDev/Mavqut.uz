@@ -25,7 +25,6 @@ function UserMain({type, who}) {
 						'authorization': `Bearer ${token}`
 					}
 				})
-				console.log(resp.data)
 				setUserData({
 					user_id: resp.data._id,
 					name: resp.data.name,
@@ -37,18 +36,9 @@ function UserMain({type, who}) {
 			}
 		})()
 	},[server,token])
-	
-	useEffect(()=>{
-		;(async()=>{
-			if (server && userData.user_id) {
-				const resp = await axios.get(server + `/api/daily/user/getAll/${userData.user_id}`)
-				console.log(resp.data[0])
-				
-			}
-		})()
-	},[server, userData])
 
 	if (!token) return <Redirect to="/register/sign-in" />
+	
 	return (
 		<div className={cl(st.main)}>
 		<div className={cl(st.main_userNav)}>

@@ -1,0 +1,73 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(to right, transparent 35%, white 35%, #ffffff 65%, transparent 65%);
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, transparent 15%, white 15%, white 85%, transparent 85%);
+    border-radius: 20px;
+}
+.main-about{
+    /* display: flex; */
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.bg-star{
+    background-image: url("./images/stars.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+.main-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-about .main-content .main-text{
+    user-select: none;
+    height: 90%;
+    width: 38%;
+    position: absolute;
+    top: 3.5%;
+    left: 5%;
+    z-index: 200;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0;
+    padding-bottom: 12px;
+    background-color: #590cb1;
+    border-radius: 12%;
+}
+.about-text-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+}
+.main-about .main-content .main-text .about-body{
+    overflow: auto;
+    height: 86.5%;
+    padding-left: 10px;
+    padding-right: 5px;
+    color: #fff;
+}
+.main-about .main-content .man-img{
+    position: absolute;
+    width: 75%;
+    height: 95%;
+    bottom: 0;
+    right: 0;
+}
+.cancel-btn{
+    position: absolute;
+    top: 0.5%;
+    left: -2%;
+    cursor: pointer;
+}

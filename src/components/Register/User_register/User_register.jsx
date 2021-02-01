@@ -25,7 +25,7 @@ export default function UserRegister(){
 
 
 	function registtationForm(e) {
-		e.preventDefault()
+    e.preventDefault()
 		;(async()=>{
 
 			
@@ -47,7 +47,6 @@ export default function UserRegister(){
 					setToken(resp.data.token)
 				}
 			} catch (err) {
-				// Handle Error Here
 				console.error(err)
 			}
 		})()
