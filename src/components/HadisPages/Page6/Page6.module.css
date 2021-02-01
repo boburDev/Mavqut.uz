@@ -104,10 +104,9 @@
     color: #c95000;
 }
 
-.enter_btn span {
-    font-size: 3rem;
-    font-weight: lighter;
-    margin-left: 10px;
+.arrow {
+    margin-left: 5px;
+    width: 1.7rem;
 }
 
 @media screen and (max-width: 1300px) {

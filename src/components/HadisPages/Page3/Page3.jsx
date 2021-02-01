@@ -2,6 +2,7 @@ import bg from './images/Scroll_Group_10.png';
 import angle from './images/angle.png';
 import towers from './images/tower.png';
 import mosque from './images/kupol.png';
+import arrow from './images/next.svg';
 import trees from './images/Scroll_Group_13.png';
 import { Spring } from 'react-spring/renderprops.js';
 import classes from './Page3.module.css';
@@ -100,7 +101,7 @@ function Page3() {
         {props =>
           <button style={props} className={classes.enter_btn}>
             <NavLink to="/main">
-              Kirish <span>></span>
+              Kirish <img className={classes.arrow} src={arrow} alt="" />
             </NavLink>
           </button>}
       </Spring>

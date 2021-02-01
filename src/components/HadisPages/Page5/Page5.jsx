@@ -13,6 +13,7 @@ import React from 'react';
 import { Spring } from 'react-spring/renderprops.js';
 import classes from './Page5.module.css';
 import { NavLink } from 'react-router-dom';
+import arrow from './images/next.svg';
 
 function Page5() {
 
@@ -158,9 +159,9 @@ function Page5() {
       >
         {props =>
           <button style={props} className={classes.enter_btn}>
-              <NavLink to="/main">
-                  Kirish <span>></span>
-              </NavLink>
+            <NavLink to="/main">
+              Kirish <img className={classes.arrow} src={arrow} alt="" />
+            </NavLink>
           </button>}
       </Spring>
     </div>

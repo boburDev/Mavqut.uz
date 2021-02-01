@@ -79,10 +79,11 @@
     color: white;
 }
 
-.enter_btn span {
-    font-size: 2rem;
+.arrow {
     margin-left: 5px;
+    width: 1.7rem;
 }
+
 
 @media (min-height: 800px) {
     .left_angle {

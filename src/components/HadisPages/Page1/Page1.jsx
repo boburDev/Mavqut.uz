@@ -2,6 +2,7 @@ import React from 'react';
 import { Spring } from 'react-spring/renderprops.js';
 import angle from './images/left_angle.png';
 import man from './images/man.png';
+import arrow from './images/next.svg';
 import classes from './Page1.module.css';
 import { NavLink } from 'react-router-dom';
 
@@ -72,7 +73,7 @@ function Page1() {
       >
         {props => <button style={props} className={classes.enter_btn}>
           <NavLink to="/main">
-            Kirish <span>></span>
+            Kirish <img className={classes.arrow} src={arrow} alt="" />
           </NavLink>
         </button>}
       </Spring>

@@ -106,11 +106,9 @@
     text-decoration: none;
 }
 
-
-.enter_btn span {
-    font-size: 3rem;
-    font-weight: 400;
-    margin-left: 10px;
+.arrow {
+    margin-left: 5px;
+    width: 1.7rem;
 }
 
 @media (min-height: 900px) {

@@ -1,6 +1,7 @@
 import classes from './Page2.module.css';
 import clouds from './images/clouds.png';
 import woman from './images/woman.png';
+import arrow from './images/next.svg';
 import angle from './images/right_angle.png';
 import { Spring } from 'react-spring/renderprops.js';
 import flowers from './images/flowers.png';
@@ -87,7 +88,7 @@ function Page2() {
         {props =>
           <button style={props} className={classes.enter_btn}>
             <NavLink to="/main">
-              Kirish <span>></span>
+              Kirish <img className={classes.arrow} src={arrow} alt="" />
             </NavLink>
           </button>
         }

@@ -3,6 +3,7 @@ import moon from './images/moon.png';
 import mosque from './images/mosque.png';
 import towers from './images/towers.png';
 import classes from './Page4.module.css';
+import arrow from './images/next.svg';
 import { NavLink } from 'react-router-dom';
 
 function Page4() {
@@ -94,7 +95,7 @@ function Page4() {
         {props =>
           <button style={props} className={classes.enter_btn}>
             <NavLink to="/main">
-              Kirish <span>></span>
+              Kirish <img className={classes.arrow} src={arrow} alt="" />
             </NavLink>
           </button>}
       </Spring>

@@ -96,10 +96,9 @@
     text-decoration: none;
 }
 
-.enter_btn span {
+.arrow {
     margin-left: 5px;
-    font-size: 3rem;
-    font-weight: 400;
+    width: 1.7rem;
 }
 
 @media (max-width: 1350px) {

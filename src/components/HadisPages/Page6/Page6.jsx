@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spring } from 'react-spring/renderprops.js';
-import classes from './Page6.module.css';
+import classes from './Page6.module.css'
+import arrow from './images/next.svg';
 import bg from './images/bg.png';
 import mosque from './images/Group 541.png';
 import hedge from './images/Group 539.png';
@@ -95,7 +96,7 @@ function Page6() {
         {props =>
           <button style={props} className={classes.enter_btn}>
             <NavLink to="/main">
-              Kirish <span>></span>
+              Kirish <img className={classes.arrow} src={arrow} alt="" />
             </NavLink>
           </button>}
       </Spring>
