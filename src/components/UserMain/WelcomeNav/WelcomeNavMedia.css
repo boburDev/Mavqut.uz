@@ -3,3 +3,11 @@
         margin: 0px 60px;
     }
 }
+@media screen and (max-width:1492px){
+    .containerBox .title_nav h3 {
+        font-size: 20px;
+    }
+    .containerBox .title_nav .links .link {
+        font-size: 14px;
+    }
+}

@@ -30,3 +30,8 @@
 		overflow: auto;
 	}	
 }
+@media (max-height: 650px){
+	.terms .text_block {
+		height: 70vh;
+	}
+}

@@ -1,4 +1,9 @@
-
+@media only screen and (min-width: 1200px) and (max-width: 1290px){
+    .pray-counter {
+        margin-top: 10px;
+        padding: 5px;
+    }
+}
 @media screen and  (max-height:740px){
     .pray-counter {
         position: relative;
@@ -6,7 +11,7 @@
         background-color: #fff;
         margin-top: 10px;
         width: 90%;
-        padding: 10px;
+        padding:5px;
         border-radius: 10px;
     }
     .status-editing {

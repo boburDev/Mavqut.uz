@@ -181,7 +181,7 @@
 }
 .language_profile .language_select label{
 	
-	font-size: 18px;
+	font-size: 25px;
 	padding-left: 8px;
 }
 .language_profile .language_select label:hover{
@@ -245,9 +245,6 @@
 	}
 	.editAll label{
 		font-size: 20px;
-	}
-	.language_profile  .language_select div{
-		padding: 10px 0;
 	}
 	.language_profile .language_select label{
 		font-size: 22px;
@@ -433,7 +430,7 @@
 }
 .form_right_imgProfile{
 	flex-direction: row;
-	margin-right: 100px;
+	/* margin-right: 100px; */
 	justify-content:flex-start ;
 	width: auto;
 }
