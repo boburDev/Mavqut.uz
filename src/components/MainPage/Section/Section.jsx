@@ -53,7 +53,8 @@ function Section () {
 					<li className="wrapper-item">
 						<img className="littele-towers" src={litteTowers} alt="litteTowers"/>
 					</li>
-					<li className="wrapper-item" id="logo_mavqut">
+					<li className="wrapper-item " id="logo_mavqut">
+						<div className="logo_box">
 						<img className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
 						<div className="logo_text">
 							<h2>{Languages[language].main.heading.logoHead}</h2>
@@ -61,6 +62,7 @@ function Section () {
 							<p>{Languages[language].main.heading.textOnAR}</p>
 							<p>{Languages[language].main.heading.textOnRU}</p>
 							<span>{Languages[language].main.heading.ayahName}</span>
+						</div>
 						</div>
 					</li>
 				</ul>
