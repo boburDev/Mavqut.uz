@@ -41,7 +41,8 @@ function Section () {
 					<li className="wrapper-item">
 						<img className="littele-towers" src={litteTowers} alt="litteTowers"/>
 					</li>
-					<li className="wrapper-item" id="logo_mavqut">
+					<li className="wrapper-item " id="logo_mavqut">
+						<div className="logo_box">
 						<img className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
 						<div className="logo_text">
 							<h2>Mavqut</h2>
@@ -49,6 +50,7 @@ function Section () {
 							<p>ان الصلاة كانت على المؤمنين كتابا موقوتا</p>
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At!</p>
 							<span>Niso - 103</span>
+						</div>
 						</div>
 					</li>
 				</ul>

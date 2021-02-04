@@ -25,3 +25,9 @@
 		overflow: auto;
 	}
 }
+@media (max-height: 650px){
+.privacy .text_block {
+    height: 70vh;
+    
+}
+}
