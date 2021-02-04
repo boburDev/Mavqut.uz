@@ -98,7 +98,7 @@
     font-weight: bold;
     color: #000;
     display: flex;
-    content: "O’qilgan rakatlar";
+    content: attr(data-title);
 }
 .done-namaz .process {
     width: 180px;
@@ -134,7 +134,7 @@
     font-size: 22px;
     font-weight: bold;
     color: #000;
-    content: "Qolgan rakatlar";
+    content: attr(data-title);
 }
 .not-done-namaz .process {
     width: 180px;

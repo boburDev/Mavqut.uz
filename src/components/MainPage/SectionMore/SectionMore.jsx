@@ -15,7 +15,7 @@ export default function SectionMore () {
     
 
     useEffect(()=>{
-        setLanguage(lang)
+        setLanguage(lang || 'UZ')
       },[lang, setLanguage])
 
       

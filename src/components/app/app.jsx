@@ -19,6 +19,7 @@ import Page3 from '../HadisPages/Page3/Page3.jsx'
 import Page4 from '../HadisPages/Page4/Page4.jsx'
 import Page5 from '../HadisPages/Page5/Page5.jsx'
 import Page6 from '../HadisPages/Page6/Page6.jsx'
+import Validation from "../Validation/Validation"
 import './index'
 import { useEffect, useState } from 'react'
 
@@ -78,7 +79,7 @@ function App() {
           <Navbar />
         </div>
       </Route>
-      <Route path="/main/dashboard" exact>
+      <Route path="/:lang?/main/dashboard" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks"
@@ -87,7 +88,12 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/main/calculate" exact>
+      <Route path="/:lang?/get-in-touch" exact>
+        <div className="display">
+		  <Validation />
+        </div>
+      </Route>
+      <Route path="/:lang?/main/calculate" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks"
@@ -98,7 +104,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/main/statistics" exact>
+      <Route path="/:lang?/main/statistics" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks"
@@ -107,13 +113,13 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/register/sign-up" exact>
+      <Route path="/:lang?/register/sign-up" exact>
         <div className="display">
           <SidebarReg />
           <Register />
         </div>
       </Route>
-      <Route path="/register/sign-in" exact>
+      <Route path="/:lang?/register/sign-in" exact>
         <div className="display">
           <SidebarReg />
           <LogIn />
@@ -125,7 +131,7 @@ function App() {
 					<Logout />
 					</div>
 				</Route> */}
-      <Route path="/setting/" exact>
+      <Route path="/:lang?/setting/" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks" style={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
@@ -134,7 +140,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/setting/theme" exact>
+      <Route path="/:lang?/setting/theme" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks" style={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
@@ -143,7 +149,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/setting/term" exact>
+      <Route path="/:lang?/setting/term" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks" style={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
@@ -152,7 +158,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/setting/privacy" exact>
+      <Route path="/:lang?/setting/privacy" exact>
         <div className="display">
           <Sidebar />
           <div className="block_blocks" style={{ width: '80%', display: 'flex', flexDirection: 'column' }}>

@@ -1,49 +1,3 @@
-
-const Uz = {
-	body: {
-		h1: "Filter orqali xonadon tanlang",
-		filterLabel: {
-			kompaniya: 'Qurilish kompaniyasi',
-			complex: 'Kompleks',
-			xonasoni: 'Xona soni',
-			yili: 'Kredit muddati'
-		},
-		filterButton: {
-			button: 'Qidirish'
-		}
-	},
-	header: {
-		langLabel: 'Tilni tanlang',
-		nav: {
-			home: 'Uy saxifasi',
-			about: 'Biz haqimizda',
-			admin: 'Admin',
-			filter: 'Filter'
-		}
-	},
-	infoBox: {
-		million: 'million',
-		xonali: 'xonali',
-		kvm: 'kvadrat metr',
-		address: 'Shaxar markazida'
-	},
-	infoBank: {
-		milliongacha: 'milliongacha',
-		krmuddat: 'Kredit muddati',
-		stavkasi: 'Foiz stavkasi',
-		yil: 'yil'
-	},
-	infoCalc: {
-		kalk: 'Kalkulator',
-		baxosi: 'Xonadon baxosi',
-		boshlan: `Boshlang'ich to'lov`,
-		oytolov: `Oyli to'lov`,
-		xizmat: 'Bank xizmati',
-		davr: `To'lov davri`
-	}
-}
-
-
 const UZ = {
 	main: {
 		linkAbout: 'Biz haqimizda',
@@ -74,9 +28,11 @@ const UZ = {
 		2. Ushbu bo'limda foydalanuvchining 15 yoshidan boshlab namoz o'qishni boshlagan paytigacha bo'lgan vaqt oralig'idagi umumiy qazolar hisobi ko'rsatiladi.
 		3. Umumiy qazolar 5 vaqt namozning har biri uchun alohida hisob holida ham berib boriladi.
 		4. Ekranning quyi qismida umumiy ado etilmagan qazo namozlari miqdori har kuni o'rtacha 20 rakatdan o'qilganda, qancha muddat davomida to'liq tugatilishi kun, oy, yil hisobida ko'rsatiladi.
-		5. "Qazo namozlarini tezlashtirish" qismida kunlik qazo namozlari miqdorini 1, 2 yoki 3 marotaba ko'proq ado etilganda tugatilish muddatini aniqlash imkoniyati mavjud.4. Asosiy oyna
+		5. "Qazo namozlarini tezlashtirish" qismida kunlik qazo namozlari miqdorini 1, 2 yoki 3 lastDaysOfNamaz: 'O\'qilmagan Namozlar muddati',
+		5. "Qazo namozlarini nezlashtirish" qismida kunlik qazo namozlari miqdorini 1, 2 yoki 3 lastDaysOfNamazSpeed:Qazo namozlarini tezlashtirish',
 		1. Sahifaning yuqori qismidan "Ro'za qazolari" bo'limi tanlanadi.
-		2. Ekranning markaziy qismida ro'za qazolarini ado etishni bugundan boshlanganda, yakunlanish muddati kun va oy hisobida ko'rsatiladi.
+		2. Ekranning markaziy qismida ro'za qazolarini ado etishni bugundan boshlanganda, yakunlanish lastDaysOfNamaz: 'O\'qilmagan Namozlar muddati',
+		2. Ekranning markaziy qismida ro'na qazolarini ado etishni bugundan boshlanganda, yakunlanish lastDaysOfNamazSpeed: 'O\Qazo namozlarini tezlashtirish
 		3. Ro'za qazolari tutilishi boshlagan sana.
 		4. Qazolar ado etilishni boshlangan kundan uzluksiz tutilganda to'liq tugatilish sanasi qayd etib boriladi. Qazolarni qayd etish qismida tutilgan ro'zalar hisobiga qarab, avtomatik ravishda o'zgarib boradi.
 		
@@ -101,11 +57,111 @@ const UZ = {
 		6. Barcha ma'lumotlar taqdim etilganidan so'ng "Qayd etish" tugmasi bosiladi va jarayon yakunlanadi. Ushbu kiritilgan ma'lumotlar asosida barcha ma'lumotlar va statistik tahlillar avtomatik tarzda o'zgarib boradi.`,
 		
 		aboutUsBtn: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae ut similique distinctio corporis repellat doloribus facilis nesciunt porro ad. Excepturi dolor illum pariatur perspiciatis autem impedit. Excepturi aspernatur, sequi vero ipsum, doloribus dicta fugiat accusamus commodi minima ducimus, atque vitae voluptatum cupiditate dolores aliquam ipsa adipisci ea sed id expedita nulla reprehenderit delectus. Esse, asperiores nemo temporibus quod eos dicta, eveniet ipsam distinctio sint velit aut quos voluptate consectetur nulla impedit rem odio qui ea dolor! Est mollitia eum architecto dolores ducimus iste. Earum provident aspernatur soluta ipsa deleniti quam officiis accusamus eveniet sapiente quibusdam laudantium labore tempora a expedita quis ducimus iure, debitis ut eaque hic delectus consequuntur quasi non? Odit maxime consequatur voluptas, mollitia dicta ut quas molestias eius eveniet distinctio! Et architecto porro, illo soluta voluptates saepe ducimus obcaecati aut harum, cupiditate, repellat suscipit! Corrupti consectetur nulla vitae repudiandae vel eveniet magnam neque suscipit, necessitatibus veritatis ab, quo deleniti. Quo harum corporis officia est alias iste. Necessitatibus quo neque, molestias molestiae dignissimos esse laboriosam, repudiandae quae soluta nisi illum cupiditate animi repellendus assumenda nostrum minima veritatis consequatur cum perspiciatis, dicta facilis nobis omnis? Tempore cum ad eos repellendus inventore quas, sunt architecto excepturi dolorum repellat eum doloremque beatae voluptatem sed officia possimus iusto dolorem deleniti! Dolorum ullam laudantium consectetur officiis nihil quaerat odit quos nemo, quas velit officia optio facere aperiam assumenda ipsam animi ab omnis aut error nostrum dolor facilis numquam. Tenetur porro asperiores temporibus eius possimus in expedita veniam ea repellendus odio ipsam ad commodi, error, doloremque dolor atque aliquam deleniti veritatis maxime mollitia ducimus quam. Reprehenderit quasi, pariatur id suscipit fuga laborum rem veritatis minus corrupti officiis nisi labore eligendi eius amet debitis explicabo tempora necessitatibus incidunt saepe a ipsam! Dolores nulla molestiae accusamus, aliquid voluptatem minima iste sed vitae laborum quos vero dolore maiores reprehenderit, libero dolor quas earum aliquam assumenda ut, ducimus culpa adipisci eos iure placeat. Quos doloribus perspiciatis, perferendis maiores amet veritatis provident voluptatum asperiores adipisci pariatur facilis itaque quo dignissimos eligendi, consequatur vitae. Ad incidunt, sequi inventore quam provident harum architecto blanditiis ex laudantium reiciendis tempore dolorum vel saepe eaque sit rerum. Facere necessitatibus ullam odio, eum alias molestiae, architecto nam et pariatur, fuga repellendus porro dolorum laborum reiciendis quidem voluptatibus nihil saepe quae? Soluta nisi aliquam doloribus hic necessitatibus impedit accusamus tempora quisquam illo sequi, maxime eveniet ratione illum unde atque quas corporis pariatur nemo! Dolorum quisquam explicabo porro voluptatum at unde praesentium ipsa. Sit aliquid ab dignissimos sapiente odit consequatur laborum ducimus eligendi non, quod quisquam labore laudantium doloribus corrupti omnis repellendus id veritatis. At esse, quo id eaque architecto ipsam fugiat aspernatur vitae, exercitationem illum error ipsum delectus accusamus culpa eum blanditiis voluptate voluptatem enim voluptas! Quod perspiciatis voluptatem quia repellendus libero! Labore pariatur enim amet, itaque atque commodi eveniet perferendis repellat quia, vero culpa. Velit distinctio, tenetur expedita inventore sint quidem eveniet rerum non quaerat ipsum maiores, omnis doloribus dolore suscipit aliquid quia numquam consequatur? At voluptates nisi ipsam maxime recusandae. Animi rem exercitationem reiciendis voluptatibus dolore sit deleniti, maiores corporis perferendis! Saepe rem error similique, repellat esse iste facilis adipisci, ad maiores deserunt cum fugiat minima perspiciatis nisi eveniet veniam quis, repudiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu',
+		authintification: {
+			title: 'Ro\'yxatdan o\'tish',
+			personalInfo: 'Shaxsiy ma\'lumotlaringizni kiriting',
+			name: 'Ism',
+			surname: 'Familiya',
+			age: 'Yosh',
+			gender: {
+				title: 'Jins',
+				male: 'Erkak',
+				female: 'Ayol'
+			},
+			namazStart: 'Namozni necha yoshdan boshlagansiz ?',
+			fastingStart: 'Ro\'zani necha yoshdan boshlagansiz ?',
+			mail: 'Elektron pochta manzilingizni kiriting',
+			password: 'Maxfiy parolingizni kiriting',
+			phone: 'Telefon raqamingizni kiriting',
+			haveAnAcc: 'Sahifangiz oldindan mavjudmi ?',
+			dontHave: 'Sahifangiz mavjud emasmi ?',
+			forgetPassword: 'Parolni unutdingizmi ?',
+			here: 'Bu yega',
+			press: 'bosing',
+			send: 'Yakunlash',
+		},
+		changeImg: 'Rasmni o’zgartirish' ,
+		mail: 'Email',
+		phone: 'Telefon raqami',
+		resetPassword: 'Parolni o\'zgartirish',
+		password: 'Parol kiriting',
+		calculate: {
+			btnText: 'Hisob-kitob',
+			doneNamaz: 'Tutilmagan ro\'zalar oynasi',
+			dayLeft: 'Kun qoldi',
+			monthLeft: 'Oy qoldi',
+			leftQazoFromToday: 'Bugungi kundan boshlab uzluksiz ro\'za tutsangiz!',
+			startedDate: 'Boshlanish sanasi',
+			finishDate: 'Yakunlanish sanasi',
+			year: 'Yil',
+			month: 'Oy',
+			day: 'Kun',
+			calculateTitle: 'Namoz va Ro\'zalarni qayd etish',
+			bomdod: 'Bomdod',
+			peshin: 'Peshin',
+			asr: 'Asr',
+			shom: 'Shom',
+			xufton: 'Xufton',
+			vitr: 'Vitr',
+			countOfFasting: 'Tutilgan ro’zalar miqdori',
+			countOfNamaz: 'Tutilmagan ro’zalar miqdori',
+			motivationText: 'Mashalloh, Alloh xayrli va bardavom qilsin',
+			submit: 'Qayd etish',
+			fasting: 'Ro\'za',
+		},
+		userBar: {
+			welcome: 'Xush kelibsiz,',
+			namazQazo: 'Namoz qazosi',
+			fastingQazo: 'Ro\'za qazosi',	
+			age: 'yosh'
+		},
+		lang: {
+			title: 'Tilni tanlash',
+			uz: 'O\'zbekcha',
+			ru: 'Ruscha',
+			en: 'Inglizcha'
+		},
+		logout: {
+			logoutText: 'Chiqish',
+			logoutCongirmText: 'Rostdan ham akkauntingizdan chiqishni istaysizmi?',
+			yes: 'Ha',
+			no: 'Yo\'q'
+		},
+		setting: {
+			settingTitle: 'Sozlamalar',
+			profile: 'Profil',
+			privacyPolicy: 'Maxfiylik siyosati',
+			theme: 'Mavzu',
+			termsConditions: 'Foydalanish shartlari'
+		},
+	},
+	dashboard: {
+		dashboardText: 'Asosiy',
+		statistics: 'Statistikalar',
+		mainPage: 'Bosh sahifa',
+		all: 'Jami',
+		last: 'Qoldi',
+		countWindow: 'Hisob oynasi',
+		fastingDoneDays: `Ro\'zalar kundaligi`,
+		doneDay: 'Tutilgan kunlar',
+		notDoneDay: 'Tutilmagan kunlar',
+		days: {
+			mon: 'DU',
+			tue: 'SE',
+			wed: 'CHO',
+			thu: 'PA',
+			fri: 'JU',
+			sut: 'SHA',
+			sun: 'YAK'
+		},
+		readNamaz: 'O\'qilgan rakatlar',
+		notReadNamaz: 'O\'qilmagan rakatlar',
+		lastDaysOfNamaz: 'O\'qilmagan namozlar muddati',
+		lastDaysOfNamazSpeed: 'Qazo namozlarini tezlashtirish',
+		timeSpeed: 'barobar kup'
 	},
 }
 
-
 export default {
 	UZ,
-	Uz
 }

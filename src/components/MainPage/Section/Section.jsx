@@ -23,8 +23,8 @@ function Section () {
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang)
-		console.log(Languages)
+		setLanguage(lang || 'UZ')
+		// console.log(Languages)
 	  },[lang, setLanguage])
 	  
   return (

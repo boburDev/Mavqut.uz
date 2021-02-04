@@ -3,7 +3,20 @@ import "./sideBar.css"
 import Background from "./backGraund/backgraund"
 import { Link } from "react-router-dom"
 
+import { useEffect } from 'react'
+import Languages from "../lang/languages"
+import { useLang } from '../lang/langContext'
+import { useParams } from 'react-router-dom'
+
 export const SidebarReg = () => {
+
+  const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang || 'UZ')
+	  },[lang, setLanguage])
+	  
   return (
     <div className="sidebar">
       <div className="bg">
@@ -16,7 +29,7 @@ export const SidebarReg = () => {
       	</Link>
           <div className="btncalc">
             <Link to="/main">
-                Бош саҳифа
+            {Languages[language].dashboard.mainPage}
             </Link>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import './Exit.css';
 import user_ava_1 from '././assets/user_ava_1.png';
 import { useLogOut } from './Context'
-export default function Exit() {
+export default function Exit({body, yes,no}) {
 	const [logOut] = useLogOut(true)
 	return(
 		<div className="exit">
@@ -13,16 +13,16 @@ export default function Exit() {
 				</div>
 				<div className="bottom_block">
 					<h4>
-						Rostdan ham akkauntingizdan chiqishni istaysizmi?
+						{body}
 					</h4>
 					<div className="buttons">
 						<button onClick={()=>{
 							window.localStorage.removeItem("access_token")
 							window.location.href = '/register/sign-in'
-						}}>Ha</button>
+						}}>{yes}</button>
 						<button onClick={()=>{
 							logOut(!logOut)
-						}}>Yo'q</button>
+						}}>{no}</button>
 					</div>
 				</div>
 			</div>

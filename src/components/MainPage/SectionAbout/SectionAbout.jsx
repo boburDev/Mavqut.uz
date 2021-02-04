@@ -14,7 +14,7 @@ export default function SectionAbout () {
     
 
     useEffect(()=>{
-        setLanguage(lang)
+        setLanguage(lang || 'UZ')
       },[lang, setLanguage])
 
 

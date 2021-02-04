@@ -5,9 +5,20 @@ import axios from 'axios'
 import './Select.css'
 import { useEffect, useRef, useState } from 'react'
 import { useServer } from '../app/ServerContext'
+import Languages from "../lang/languages"
+import { useLang } from '../lang/langContext'
+import { useParams } from 'react-router-dom'
 
 function RuzaUpdate() {
 	const [server] = useServer()
+
+    const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang || 'UZ')
+	},[lang, setLanguage])
+	  
 
     const [today,setToday] = useState()
 
@@ -61,25 +72,32 @@ function RuzaUpdate() {
         }}>
         <div className="status-editing">
         <label htmlFor="bomdod">
-        Бомдод<input ref={bomdod} maxLength="2" type="text" id="bomdod"/>
+        {Languages[language].main.calculate.bomdod}
+        <input ref={bomdod} maxLength="2" type="text" id="bomdod"/>
         </label>
         <label htmlFor="peshin">
-        Пешин<input ref={peshin} maxLength="2" type="text" id="peshin"/>
+        {Languages[language].main.calculate.peshin}
+        <input ref={peshin} maxLength="2" type="text" id="peshin"/>
         </label>
         <label htmlFor="asr">
-        Aср<input ref={asr} maxLength="2" type="text" id="asr"/>
+        {Languages[language].main.calculate.asr}
+        <input ref={asr} maxLength="2" type="text" id="asr"/>
         </label>
         <label htmlFor="shom">
-        Шом<input ref={shom} maxLength="2" type="text" id="shom"/>
+        {Languages[language].main.calculate.shom}
+        <input ref={shom} maxLength="2" type="text" id="shom"/>
         </label>
         <label htmlFor="xufton">
-        Хуфтон<input ref={xufton} maxLength="2" type="text" id="xufton"/>
+        {Languages[language].main.calculate.xufton}
+        <input ref={xufton} maxLength="2" type="text" id="xufton"/>
         </label>
         <label htmlFor="vitr">
-        Витр<input ref={vitr} maxLength="2" type="text" id="vitr"/>
+        {Languages[language].main.calculate.vitr}
+        <input ref={vitr} maxLength="2" type="text" id="vitr"/>
         </label>
         <label htmlFor="ruza">
-        Рўза<input ref={ruza} maxLength="1" type="text" id="ruza"/>
+        {Languages[language].main.calculate.fasting}
+        <input ref={ruza} maxLength="1" type="text" id="ruza"/>
         </label>
         </div>
         <div className="ruza-update-date">
@@ -120,7 +138,7 @@ function RuzaUpdate() {
         </div>
         </div>
         </div>
-        <button className="ruza-update-button">Қайд этиш</button>
+        <button className="ruza-update-button">{Languages[language].main.calculate.submit}</button>
         </div>
         </form>
         <div className="submitted">
