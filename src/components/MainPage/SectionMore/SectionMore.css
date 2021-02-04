@@ -33,40 +33,6 @@
     line-height: 2;
 }
 
-/* .arrow {
-    position: relative;
-    top: -60px;
-    left: -15px;
-    width: 70px;
-    height: 7px;
-    background-color: #fff;
-    z-index: 12;
-    cursor: pointer;
-}*/
-
-/* .arrow::before {
-    display: block;
-    position: absolute;
-    top: -7px;
-    left: -7px;
-    width: 30px;
-    height: 5px;
-    transform: rotate(-40deg);
-    background-color: #fff;
-    content: "";
-}
-
-.arrow::after {
-    display: block;
-    position: absolute;
-    top: 9.5px;
-    left: -7px;
-    width: 30px;
-    height: 5px;
-    transform: rotate(40deg);
-    background-color: #fff;
-    content: "";
-}  */
 .close{
     position: absolute;
     top: 20px;

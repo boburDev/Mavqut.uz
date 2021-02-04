@@ -59,13 +59,13 @@ const UZ = {
 		},
 		moreBtn: `Mavqut.uz
 		Mavqut.uz saytining imkoniyatlari va foydalanish tartibi bilan quyida batafsil tanishishingiz mumkin:
-		1. Ro'yxatdan o'tish
+		\n1. Ro'yxatdan o'tish
 		Ro'yxatdan o'tish uchun belgilangan joylarga shaxsiy ma'lumotlaringizni kiritishingiz talab etiladi.
 		Ekranning o'ng tomonida shaxsiy sahifangiz uchun berilgan rasmlardan birini tanlashingiz mumkin.
 		Shuningdek, yuqori o'ng burchakda joylashgan sanani o'zgartirish orqali milodiy yoki hijriy yil hisobini ko'rish imkoniyati mavjud.
 		Quyi qismda ajratilgan bo'sh joyga elektron pochta manzilingiz (e-mail) va maxfiy parolingizni kiriting.
 		"Yuborish" tugmasini bosish orqali ro'yxatdan o'tish jarayoni yakunlanadi.
-		2. Sozlamalar
+		\n2. Sozlamalar
 		Sozlamalar qismida kiritilgan barcha ma'lumotlarni o'zgartirish imkoniyati mavjud.
 		Ekranning o'ng qismida ko'rsatilgan bo'lim orqali o'zingizga qulay bo'lgan tilni tanlash imkoniyati mavjud.
 		Sahifaning yuqori o'ng burchagida joylashgan "Eslatmalar" tugmasini bosish orqali kunlik qazo namozlarini ado etish haqidagi eslatmalarni qabul qilishingiz mumkin.
