@@ -18,13 +18,13 @@
   position: fixed;
   z-index: 200;
   left: 21%;
-  bottom: 15%;
+  bottom: 12%;
   list-style-type: none;
   margin: 0;
   padding: 0;
   animation: visibility 4s ease;
 }
-
+/* bottom: 12%; */
 .navbar-main .about a {
   margin-right: 70px;
   padding: 10px 50px;
