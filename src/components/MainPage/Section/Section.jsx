@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Section.css'
 import './KeyFrayms.css'
 import './SectionMedia.css'
@@ -13,8 +13,20 @@ import moon from './images/moon.png'
 import clouds from './images/clouds.png'
 import SectionMore from '../SectionMore/SectionMore'
 import SectionAbout from '../SectionAbout/SectionAbout'
+import Languages from "../../lang/languages"
+import { useLang } from '../../lang/langContext'
+import { useParams } from 'react-router-dom'
 
 function Section () {
+
+	const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang)
+		console.log(Languages)
+	  },[lang, setLanguage])
+	  
   return (
     <>
 		<main className="main">
@@ -44,17 +56,16 @@ function Section () {
 					<li className="wrapper-item" id="logo_mavqut">
 						<img className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
 						<div className="logo_text">
-							<h2>Mavqut</h2>
-							<p>Qazo nomoz va ro'zalarni ado etish uchun yordanchi!</p>
-							<p>ان الصلاة كانت على المؤمنين كتابا موقوتا</p>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At!</p>
-							<span>Niso - 103</span>
+							<h2>{Languages[language].main.heading.logoHead}</h2>
+							<p>{Languages[language].main.heading.textOnUz}</p>
+							<p>{Languages[language].main.heading.textOnAR}</p>
+							<p>{Languages[language].main.heading.textOnRU}</p>
+							<span>{Languages[language].main.heading.ayahName}</span>
 						</div>
 					</li>
 				</ul>
 				<SectionMore />
 				<SectionAbout />
-				
 			</div>
 		</main>
 	</>

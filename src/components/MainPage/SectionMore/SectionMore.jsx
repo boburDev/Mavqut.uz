@@ -1,8 +1,24 @@
-import React from 'react' 
+import { useEffect } from 'react'
+import Languages from "../../lang/languages"
+import { useLang } from '../../lang/langContext'
+import { useParams } from 'react-router-dom'
+
 import './SectionMore.css'
 import close from '../Section/images/cloIcon.svg'
 
+
 export default function SectionMore () {
+
+    const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+	
+    
+
+    useEffect(()=>{
+        setLanguage(lang)
+      },[lang, setLanguage])
+
+      
     function arrow() {
         const more = document.getElementById('wrapper')
         document.getElementById('logo_mavqut').style.display = 'block'
@@ -37,10 +53,7 @@ export default function SectionMore () {
                     <div onClick={arrow}><img className="close" src={close} alt="close"/></div>
                     <div className="more-body">
                         <h2>Clicked</h2>
-                        <p className="more-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit distinctio doloribus unde harum est autem ducimus architecto quisquam nobis, sint ad earum sapiente quam, velit sunt similique non quod eligendi aut quis voluptates excepturi voluptatibus accusamus. Deleniti impedit doloremque, consequuntur natus obcaecati sint sapiente ipsam tenetur quas rerum, architecto laudantium magni aliquam ad molestias accusamus alias iure facilis aut et inventore dicta. Iusto cumque et pariatur asperiores mollitia deserunt consequatur, excepturi quo! Incidunt possimus ad recusandae tempora ullam blanditiis ipsam numquam quidem voluptates quasi commodi repellat corrupti modi eligendi nesciunt, culpa dicta earum, quam distinctio aliquam ut? Ad, blanditiis asperiores!
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab neque ipsum earum, expedita cumque repellendus ex fuga impedit dolorum beatae? Iste nulla ex magnam praesentium obcaecati quae blanditiis hic fugit quaerat ipsum, nemo dignissimos rem iusto amet odit dolorem quasi quisquam reiciendis aut et eaque tenetur dolor earum. Iusto eveniet ratione dolorem. Eaque facere tempora debitis, eos cum, magni quas veritatis, accusamus atque molestias enim voluptate dolor perferendis ullam tenetur aliquid quaerat qui reprehenderit vitae error provident? Nulla eligendi voluptatum illum! Excepturi veniam labore molestiae illo illum repudiandae exercitationem reprehenderit facere voluptatum, ipsam delectus aspernatur temporibus ut, sequi fugit quibusdam voluptates dolores corporis. Hic, delectus quod? Earum laborum vel magni sunt exercitationem eveniet quaerat, nisi labore? Ad, odit voluptatum.
-                        </p>
+                        <p className="more-text">{Languages[language].main.moreBtn}</p>
                     </div>
                 </div>
         </>
