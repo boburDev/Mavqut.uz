@@ -279,7 +279,7 @@ const RU = {
 		mainPage: 'Bosh sahifa',
 		all: 'Итого:',
 		last: 'осталось',
-		countWindow: 'Расчет',
+		countWindow: 'Окно Каза намаз',
 		fastingDoneDays: `Ro'zalar kundaligi`,
 		doneDay: 'Tutilgan kunlar',
 		notDoneDay: 'Tutilmagan kunlar',
@@ -302,4 +302,5 @@ const RU = {
 
 export default {
 	UZ,
+	RU,
 }
