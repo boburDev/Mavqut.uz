@@ -44,10 +44,10 @@ export default function Calendar() {
                 })
 
                 const data = resp1.data
-				// const countOfPrayForDay = 20
+				const countOfPrayForDay = 20
 				// const daysInYear = 365
 				
-				const takeADay = data.const_total_namaz - data.total_namaz + 20
+				const takeADay = data.const_total_namaz - data.total_namaz
 
 				const year = resp.data.start_at_namaz - 15
 				if (year >= 0 && takeADay === 0) {
@@ -57,7 +57,7 @@ export default function Calendar() {
 				}
 				if (takeADay % 20 === 0) {
 					// console.log(takeADay);
-					setLastDay(takeADay / 20)
+					setLastDay(takeADay / countOfPrayForDay)
 				}
 			}
 		})()

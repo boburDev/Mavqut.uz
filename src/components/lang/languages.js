@@ -161,6 +161,145 @@ const UZ = {
 		timeSpeed: 'barobar kup'
 	},
 }
+
+const RU = {
+	main: {
+		linkAbout: 'Biz haqimizda',
+		linkLets: 'Kirish',
+		linkMore: 'Batafsil',
+		linkDown: 'Dasturni yuklab olish',
+		heading: {
+			logoHead: 'Mavqut',
+			textOnUz: `Qazo nomoz va ro'zalarni ado etish uchun yordanchi!`,
+			textOnAR: 'ان الصلاة كانت على المؤمنين كتابا موقوتا!',
+			textOnRU: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. At!!',
+			ayahName: 'Niso - 103'
+		},
+		moreBtn: `Mavqut.uz
+		Вы можете ознакомиться подробно с возможностями и режимом использования Mavqut.uz ниже:
+		1. Регистрация
+		Вам необходимо будет ввести свою личную информацию в поля, предусмотренные для регистрации.
+		В правой части экрана вы можете выбрать одно из изображений, предоставленных для вашей личной страницы.
+		Также можно просмотреть годовой отчет НЭ или Хиджры, изменив дату в правом верхнем углу.
+		Введите свой адрес электронной почты и пароль в поле внизу.
+		Нажатие кнопки «Отправить» завершит процесс регистрации.
+		2. Настройки
+		Есть возможность изменить всю информацию, введенную в разделе настроек.
+		Вы можете выбрать язык, который вам подходит, в разделе, показанном в правой части экрана.
+		Вы можете получать напоминания о выполнении ежедневного каза намаза, нажав на кнопку «Заметки» в правом верхнем углу страницы.
+		3. Главная
+		1. На главной странице выберите раздел «Каза намаз».
+		2. В этом разделе показан расчет общего количества каза намаз за период с 15 лет до начала намаза пользователя.
+		3. Общая каза намаз также дается как отдельный счет для каждого из 5 времени намазов.
+		4. Внизу экрана, когда количество пропущенных намазов считывается в среднем 20 ракатов в день, указывается период полного выполнения в днях, месяцах, годах.
+		5. В разделе «Ускорение Каза намаз» можно определить время завершения, когда количество каза намаз выполняется в 1, 2 или 3 раза больше.`,
+		
+		aboutUsBtn: `Lorem ipci doloribu`,
+		authintification: {
+			title: `Зарегистрироваться`,
+			personalInfo: `Введите вашу личную информацию`,
+			name: 'Имя',
+			surname: 'Фамилия',
+			age: 'Возраст',
+			gender: {
+				title: 'Пол',
+				male: 'Мужской',
+				female: 'Женский'
+			},
+			namazStart: 'В каком возрасте вы начали намаз ?',
+			fastingStart: `В каком возрасте вы начали пост ?`,
+			mail: 'Введите ваш адрес электронной почты',
+			password: 'Введите свой пароль',
+			phone: 'Telefon raqamingizni kiriting',
+			haveAnAcc: 'Sahifangiz oldindan mavjudmi ?',
+			dontHave: 'Sahifangiz mavjud emasmi ?',
+			forgetPassword: 'Parolni unutdingizmi ?',
+			here: 'Bu yega',
+			press: 'bosing',
+			send: 'Отправить',
+		},
+		changeImg: 'Изменить изображение' ,
+		mail: 'Email',
+		phone: 'Telefon raqami',
+		resetPassword: 	`Parolni o'zgartirish`,
+		password: 'Parol kiriting',
+		calculate: {
+			btnText: 'Расчет',
+			doneNamaz: `Окно калькулятора (расчёта) | Расчёт`,
+			dayLeft: 'день осталось',
+			monthLeft: 'месяц осталось',
+			leftQazoFromToday: `Если вы будете постоянно поститься с сегодняшнего дня`,
+			startedDate: 'Дата начала',
+			finishDate: 'Дата завершения',
+			year: 'Год',
+			month: 'Месяц',
+			day: 'День',
+			calculateTitle: `Namoz va Ro'zalarni qayd etish`,
+			bomdod: 'Фаджр',
+			peshin: 'Зухр',
+			asr: 'Аср',
+			shom: 'Магриб',
+			xufton: 'Иша',
+			vitr: 'Витр',
+			countOfFasting: 'Tutilgan ro’zalar miqdori',
+			countOfNamaz: 'Tutilmagan ro’zalar miqdori',
+			motivationText: 'Mashalloh, Alloh xayrli va bardavom qilsin',
+			submit: 'Qayd etish',
+			fasting: `Ro'za`,
+		},
+		userBar: {
+			welcome: 'Добро пожаловать,',
+			namazQazo: 'Каза намаз',
+			fastingQazo: `Каза пост`,	
+			age: 'лет'
+		},
+		lang: {
+			title: 'Tilni tanlash',
+			uz: `O'zbekcha`,
+			ru: 'Ruscha',
+			en: 'Inglizcha'
+		},
+		logout: {
+			logoutText: 'Выход',
+			logoutCongirmText: 'Rostdan ham akkauntingizdan chiqishni istaysizmi?',
+			yes: 'Ha',
+			no: `Yo'q`
+		},
+		setting: {
+			settingTitle: 'Настройки',
+			profile: 'Profil',
+			privacyPolicy: 'Политика конфиденциальности',
+			theme: 'Темы',
+			termsConditions: 'Условия и положения'
+		},
+	},
+	dashboard: {
+		dashboardText: 'Главная',
+		statistics: 'Статистика',
+		mainPage: 'Bosh sahifa',
+		all: 'Итого:',
+		last: 'осталось',
+		countWindow: 'Расчет',
+		fastingDoneDays: `Ro'zalar kundaligi`,
+		doneDay: 'Tutilgan kunlar',
+		notDoneDay: 'Tutilmagan kunlar',
+		days: {
+			mon: 'DU',
+			tue: 'SE',
+			wed: 'CHO',
+			thu: 'PA',
+			fri: 'JU',
+			sut: 'SHA',
+			sun: 'YAK'
+		},
+		readNamaz: `O'qilgan rakatlar`,
+		notReadNamaz: `O'qilmagan rakatlar`,
+		lastDaysOfNamaz: `Продолжительность неисполненного намаза`,
+		lastDaysOfNamazSpeed: 'Ускорение каза намаза',
+		timeSpeed: 'раз больше'
+	},
+}
+
 export default {
 	UZ,
 }
