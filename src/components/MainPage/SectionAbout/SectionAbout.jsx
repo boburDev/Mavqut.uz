@@ -27,6 +27,7 @@ export default function SectionAbout () {
 		more.children[6].children[0].classList.remove('back')
 	}
     function arrow() {
+
         const more = document.getElementById('wrapper')
         const about = document.getElementById('section-about')
         document.getElementById('logo_mavqut').style.display = 'block'
@@ -34,13 +35,23 @@ export default function SectionAbout () {
         document.getElementById('navbar-more').style.display = 'block'
         document.getElementById('navbar-footer').classList.remove('navbar-fade')
       document.getElementById('navbar-foot').classList.remove('navbar-fade')
-	document.getElementById('navbar-language').classList.remove('navbar-fade')
+
+        let logo_text = document.getElementById('logo_text');
+        let logo_mavqut = document.getElementById('logo_mavqut')
+        let logo_box = document.getElementById('logo_box')
+		logo_text.classList.remove('fadeOutLogoText');
+		logo_box.classList.remove('boxFade')
+		logo_mavqut.classList.remove('scalingLogo');
+        
+	    document.getElementById('navbar-language').classList.remove('navbar-fade')
         more.children[2].children[0].classList.remove('about-c')
         more.children[4].children[0].classList.remove('about-c')
         more.children[5].children[0].classList.remove('about-c')
         more.children[6].children[0].classList.remove('about-c')
+        
         repeats(more)
-          
+        
+        
     }
     return (
         <>
