@@ -53,10 +53,10 @@ function Section () {
 					<li className="wrapper-item">
 						<img className="littele-towers" src={litteTowers} alt="litteTowers"/>
 					</li>
-					<li className="wrapper-item " id="logo_mavqut">
-						<div className="logo_box">
-						<img className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
-						<div className="logo_text">
+					<li className="wrapper-item " >
+						<div className="logo_box" id="logo_box">
+						<img id="logo_mavqut"  className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
+						<div id='logo_text' className="logo_text">
 							<h2>{Languages[language].main.heading.logoHead}</h2>
 							<p>{Languages[language].main.heading.textOnUz}</p>
 							<p>{Languages[language].main.heading.textOnAR}</p>

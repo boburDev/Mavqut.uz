@@ -1,7 +1,39 @@
-@media only screen and (max-width:1200px){
+/* @media only screen and (max-width:1200px){
     
     .navbar .nav-item , .navbar-more li{
         font-size: 20px;
         padding: 10px 30px;
+    }
+} */
+@media screen and (max-height:750px) {
+    .navbar-more {
+        position: fixed;
+        z-index: 200;
+        left: 24%;
+        bottom: 15%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        animation: visibility 4s ease;
+    }
+    .navbar-more li {
+        color: #fff;
+        border: 3px solid #fff;
+        border-radius: 50px;
+        padding: 4px 23px;
+        font-size: 20px;
+    }
+    
+}
+@media screen and(  max-width:1400px){
+    .wrapper-item .logo_text h2 {
+        font-size: 2.7rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    .wrapper-item .logo_text p {
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 10px;
     }
 }
