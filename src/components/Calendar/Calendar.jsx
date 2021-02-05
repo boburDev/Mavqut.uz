@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Calendar.css'
 import './CalendarMedia.css'
-
+import { useServer } from '../app/ServerContext'
+import axios from 'axios'
 import { useEffect } from 'react'
 import Languages from "../lang/languages"
 import { useLang } from '../lang/langContext'
@@ -11,10 +12,56 @@ export default function Calendar() {
 
 	const [language, setLanguage] = useLang()
 	const { lang } = useParams()
+	const [server] = useServer()
+
+
+	const [lastYear, setLastYear] = useState()
+	const [lastMonth, setLastMonth] = useState(0)
+	const [lastDay, setLastDay] = useState(0)
 
 	useEffect(()=>{
 		setLanguage(lang || 'UZ')
 	  },[lang, setLanguage])
+
+	  
+	  
+	  
+	  const token = window.localStorage.getItem("access_token")
+	  useEffect(()=>{
+		;(async()=>{
+			if (server) {
+
+				const resp = await axios.get(server + '/api/user/info',{
+					headers: {
+						'authorization': `Bearer ${token}`
+					}
+				})
+
+				const resp1 = await axios.get(server + '/api/remnant/info',{
+					headers: {
+						'authorization': `Bearer ${token}`
+					}
+                })
+
+                const data = resp1.data
+				// const countOfPrayForDay = 20
+				// const daysInYear = 365
+				
+				const takeADay = data.const_total_namaz - data.total_namaz + 20
+
+				const year = resp.data.start_at_namaz - 15
+				if (year >= 0 && takeADay === 0) {
+					setLastYear(year)
+				}else {
+					setLastYear(year - 1)
+				}
+				if (takeADay % 20 === 0) {
+					// console.log(takeADay);
+					setLastDay(takeADay / 20)
+				}
+			}
+		})()
+	},[server,token, lastDay])
 	  
 	return(
 		<div className="all">
@@ -27,7 +74,7 @@ export default function Calendar() {
 							<div className="big_column__left">
 								<div className="cub cub_number">
 									<div className="cub_in">
-										<h6>10</h6>
+										<h6>{lastYear}</h6>
 									</div>
 									<b>{Languages[language].main.calculate.year}</b>
 								</div>
@@ -36,7 +83,7 @@ export default function Calendar() {
 								</div>
 								<div className="cub cub_number">
 									<div className="cub_in">
-										<h6>2</h6>
+										<h6>{lastMonth}</h6>
 									</div>
 									<b>{Languages[language].main.calculate.month}</b>
 								</div>
@@ -45,7 +92,7 @@ export default function Calendar() {
 								</div>
 								<div className="cub cub_number">
 									<div className="cub_in">
-										<h6>12</h6>
+										<h6>{lastDay}</h6>
 									</div>
 									<b>{Languages[language].main.calculate.day}</b>
 								</div>

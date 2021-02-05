@@ -24,15 +24,17 @@ function Counter() {
         const token = window.localStorage.getItem("access_token")
 
         ;(async()=>{
-            const resp1 = await axios.get(server + '/api/remnant/info',{
-                headers: {
-                    'authorization': `Bearer ${token}`
-                }
-            })
-            const data = resp1.data
-            setFasting(((data.total_fasting * 100) / data.const_total_fasting))
-            setFastingMonth(((data.total_fasting * 100) / data.const_total_fasting))
-            setFastingConst(data.const_total_fasting)
+            if(server) {
+                const resp1 = await axios.get(server + '/api/remnant/info',{
+                    headers: {
+                        'authorization': `Bearer ${token}`
+                    }
+                })
+                const data = resp1.data
+                setFasting(((data.total_fasting * 100) / data.const_total_fasting))
+                setFastingMonth(((data.total_fasting * 100) / data.const_total_fasting))
+                setFastingConst(data.const_total_fasting)
+            }
         })()
 
     },[server])
