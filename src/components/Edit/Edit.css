@@ -227,7 +227,11 @@
 	right: 0;
 	z-index: 0;
 }
-
+@media screen and (max-height:750px){
+	.bg_image{
+		width: 37%;
+	}
+}
 
 /*media*/
 @media screen  and (max-height: 865px){
