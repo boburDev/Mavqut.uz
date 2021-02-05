@@ -6,8 +6,21 @@ import { useRef } from "react"
 import { useServer } from '../../app/ServerContext'
 import axios from "axios"
 import { useRegistration } from '../Registration_Context'
+import { useEffect } from 'react'
+import Languages from "../../lang/languages"
+import { useLang } from '../../lang/langContext'
+import { useParams } from 'react-router-dom'
+
 export default function LogIn() {
 	
+  const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang || 'UZ')
+	  },[lang, setLanguage])
+
+
 	const [server] = useServer()
 	const number = useRef()
 	const password = useRef()
@@ -33,22 +46,23 @@ export default function LogIn() {
         <div className="details">
 		  <form onSubmit={loginForm} id="form" className="login">
             <label>
-              Телефон ракамингизни киритинг <br></br>
-              <input ref={number} type="phone" placeholder="Phone" name="number" />
+			{Languages[language].main.authintification.phone} <br></br>
+              <input ref={number} type="phone" placeholder={Languages[language].main.phone} name="number" />
             </label>
             <label>
-              Махфий паролингизни киритинг <br></br>
-              <input ref={password} type="password" placeholder="Password" name="password" />
+            
+            {Languages[language].main.authintification.password} <br></br>
+              <input ref={password} type="password" placeholder={Languages[language].main.password} name="password" />
             </label>
             <span>
-              Саҳифангиз мавжуд эмасми ? <Link to="/register/sign-up">Бу ерга</Link>{" "}
-              босинг
+              {Languages[language].main.authintification.dontHave} <Link to="/register/sign-up">{Languages[language].main.authintification.here}</Link>{" "}
+              {Languages[language].main.authintification.press}
               <br />
-              <Link to="/get-in-touch">Паролни унутдингизми ?</Link>
+              <Link to="/get-in-touch">{Languages[language].main.authintification.forgetPassword}</Link>
             </span>
           </form>
         </div>
-        <input type="submit" value="Якунлаш" form="form" />
+        <input type="submit" value={Languages[language].main.authintification.send} form="form" />
         <div className="bg"></div>
       </div>
     )

@@ -1,7 +1,7 @@
 
 import { Doughnut } from 'react-chartjs-2'
 
-function Donat({dataDonat}) {
+function Donat({dataDonat, countNamaz, countFasting}) {
 
     const data = (canvas) => {
         const ctx = canvas.getContext("2d");
@@ -24,7 +24,7 @@ function Donat({dataDonat}) {
         
 
         return {
-            labels: ['Тутилган рўзалар миқдори', 'Тутилмаган рўзалар миқдори'],
+            labels: [countFasting, countNamaz],
             datasets: [
                 {
                     label: '# of Votes',

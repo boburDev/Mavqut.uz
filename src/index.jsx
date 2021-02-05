@@ -7,6 +7,7 @@ import { SideBarProvider } from './components/SideBar/Navigation/Context'
 import { LogOutProvider } from './components/Logout/Context'
 import { ServerProvider } from './components/app/ServerContext'
 import { RegistrationProvider } from "./components/Register/Registration_Context"
+import { LangProvider } from "./components/lang/langContext";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -15,7 +16,9 @@ ReactDOM.render(
           <LogOutProvider>
             <ServerProvider>
               <RegistrationProvider>
-                <App />
+                <LangProvider>
+                  <App />
+                </LangProvider>
               </RegistrationProvider>
             </ServerProvider>
           </LogOutProvider>

@@ -7,7 +7,20 @@ import { useRef, useState } from "react"
 import { useServer } from '../../app/ServerContext'
 import axios from "axios"
 import { useRegistration } from '../Registration_Context'
+import { useEffect } from 'react'
+import Languages from "../../lang/languages"
+import { useLang } from '../../lang/langContext'
+import { useParams } from 'react-router-dom'
+
 export default function UserRegister(){
+
+  const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang || 'UZ')
+	  },[lang, setLanguage])
+
 
 	const [server] = useServer()
 	const name = useRef()
@@ -58,42 +71,42 @@ export default function UserRegister(){
           <div className="user">
             <div className="full_user_caption">
               <img src={register_user} alt="downloading..." />
-              <h2>Шахсий маълумотларингизни киритинг</h2>
+              <h2>{Languages[language].main.authintification.personalInfo}</h2>
             </div>
 
             <div className="inputs">
               <label htmlFor="" className="form_user_labels">
-                Исм
+			  		{Languages[language].main.authintification.name}
                 <input ref={name} type="text" name="name"/>
               </label>
               <label htmlFor="" className="form_user_labels">
-                Фамилия
+			  		{Languages[language].main.authintification.surname}
                 <input ref={surname} type="text" name="surname" />
               </label>
               <label htmlFor="" className="form_user_labels">
-                Ёш
+                {Languages[language].main.authintification.age}
                 <input ref={age} type="number" min="0" name="age" />
               </label>
             </div>
           </div>
 
           <div className="form_gender">
-            <p>Жинс</p>
+            <p>{Languages[language].main.authintification.gender.title}</p>
             <div className="radio">
               <input onChange={(e)=> setSex(e.target.value)} type="radio" id="male" name="gender" value="male" />
-              <label htmlFor="male">Эркак</label>
+              <label htmlFor="male">{Languages[language].main.authintification.gender.male}</label>
               <input onChange={(e)=> setSex(e.target.value)} type="radio" id="female" name="gender" value="female" />
-              <label htmlFor="female">Aёл</label>
+              <label htmlFor="female">{Languages[language].main.authintification.gender.female}</label>
             </div>
           </div>
 
           <div className="form_ages">
             <label>
-              Намозни неча ёшдан бошлагансиз? <br></br>
+              {Languages[language].main.authintification.namazStart}<br></br>
               <input ref={startNomoz} type="number" min="0" max="99" name="start_at_namaz" />
             </label>
             <label>
-              Рўзани неча ёшдан бошлагансиз? <br></br>
+			{Languages[language].main.authintification.fastingStart}<br></br>
               <input ref={startFasting} type="number" min="0" max="99" name="start_at_fasting" />
             </label>
           </div>
@@ -102,7 +115,7 @@ export default function UserRegister(){
         <div className="right">
           <div className="img_box">
             <img src={edit_icon} alt="downloading..." />
-            <h2>Шахсий маълумотларингизни киритинг</h2>
+            <h2>{Languages[language].main.changeImg}</h2>
             <div className="form_right_imgProfile">
               <div className="one">
                 <input onChange={e=>setIcon(e.target.value)} type="radio" name="avatar" id="ava_1" value="user_ava_1.png" />
@@ -149,19 +162,19 @@ export default function UserRegister(){
 
           <div className="email">
             <label>
-              Электрон почта манзилингизни киритинг <br></br>
+              {Languages[language].main.authintification.mail} <br></br>
               <input ref={email} type="email" placeholder="Электрон почта" name="email" />
             </label>
             <label>
-              Телефон ракамингизни киритинг <br></br>
+              {Languages[language].main.authintification.phone} <br></br>
               <input ref={phone} type="phone" placeholder="Телефон раками" name="phone" />
             </label>
             <label>
-              Махфий паролингизни киритинг <br></br>
+              {Languages[language].main.authintification.password} <br></br>
               <input ref={password} type="password" placeholder="Махфий парол" name="password" />
               <span>
-                Саҳифангиз олдиндан мавжудми ? <br />{" "}
-                <Link to="/register/sign-in">Бу ерга</Link> босинг
+                {Languages[language].main.authintification.haveAnAcc} <br />{" "}
+                <Link to="/register/sign-in">{Languages[language].main.authintification.here}</Link> {Languages[language].main.authintification.press}	
               </span>
             </label>
           </div>

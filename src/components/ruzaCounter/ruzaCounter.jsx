@@ -3,9 +3,19 @@ import './ruzaCounter.css'
 import  "./ruzaCounterMedia.css"
 import { useServer } from "../app/ServerContext"
 import axios from 'axios'
+import Languages from "../lang/languages"
+import { useLang } from '../lang/langContext'
+import { useParams } from 'react-router-dom'
+
 function Counter() {
     
     const [server] = useServer()
+    const [language, setLanguage] = useLang()
+	const { lang } = useParams()
+
+	useEffect(()=>{
+		setLanguage(lang || 'UZ')
+	  },[lang, setLanguage])
 
     const [fastingConst,setFastingConst] = useState(0)
     const [fasting,setFasting] = useState(0)
@@ -48,7 +58,7 @@ function Counter() {
     return (
         <>
                 <div className="counter-wrapper">
-                    <p className="counter-title">Бугунги кундан бошлаб узлуксиз рўза тутсангиз,</p>
+                    <p className="counter-title">{Languages[language].main.calculate.leftQazoFromToday}</p>
                     <div className="wrapper-statist">
                         <div className="circle-day-fasting">
                             <div className="outer">
@@ -64,7 +74,8 @@ function Counter() {
                                     <circle className="progress-day-fasting-time" strokeWidth="90" cx="125" cy="125" r="125" fill="transparent" />
                                 </svg>
                                 <div className="inner"></div>
-                                <p>{fastingConst}</p>
+                                <p data-title={Languages[language].main.calculate.dayLeft}>{fastingConst}</p>
+                                
                             </div>
                         </div>
 
@@ -82,7 +93,8 @@ function Counter() {
                                     <circle className="progress-month-fasting-time" strokeWidth="90" cx="125" cy="125" r="125" fill="transparent" />
                                 </svg>
                                 <div className="inner"></div>
-                                <p>{fastingConst / 30}</p>
+                                <p data-title={Languages[language].main.calculate.monthLeft}
+                                >{fastingConst / 30}</p>
                             </div>
                         </div>
                     </div>

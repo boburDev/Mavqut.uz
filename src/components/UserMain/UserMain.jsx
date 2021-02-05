@@ -12,7 +12,9 @@ import { useEffect, useState } from "react"
 import { Redirect } from 'react-router-dom'
 import { useServer } from '../app/ServerContext'
 import axios from "axios"
+
 function UserMain({type, who}) {
+
 	const [category] = useCategory()
 	const [server] = useServer()
 	const [userData,setUserData] = useState({})
@@ -46,7 +48,7 @@ function UserMain({type, who}) {
 		<UserNav avatar={userData.avatar} name={userData.name} surname={userData.surname}/>
 		<WelcomeNav type={type} who={who} category={category} name={userData.name}/>
 		{
-			type !== 'term' && <StatusBar start="15" current={"20"} end={"35"} />
+			type !== 'term' && <StatusBar start="15" current={userData.start_namaz} end={userData.age} />
 		}
 		</div>
 		{
