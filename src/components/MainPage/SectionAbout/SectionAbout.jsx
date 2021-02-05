@@ -39,6 +39,9 @@ export default function SectionAbout () {
         let logo_text = document.getElementById('logo_text');
         let logo_mavqut = document.getElementById('logo_mavqut')
         let logo_box = document.getElementById('logo_box')
+        document.getElementById('logo_mavqut').style.opacity = 1
+        document.getElementById('logo_mavqut').style.transition = 'transform 1s linear'
+        // transition:transform 1s linear;
 		logo_text.classList.remove('fadeOutLogoText');
 		logo_box.classList.remove('boxFade')
 		logo_mavqut.classList.remove('scalingLogo');

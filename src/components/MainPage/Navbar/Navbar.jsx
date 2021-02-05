@@ -38,7 +38,9 @@ export default function Navbar () {
 
 	const more = document.getElementById('wrapper')
 	const about = document.getElementById('section-about')
-	document.getElementById('logo_mavqut').style.display = 'none'
+
+	document.getElementById('logo_mavqut').style.opacity = 0
+	document.getElementById('logo_mavqut').style.transition = 'all .5s ease'
 	about.classList.add('section-about-ani')
 	document.getElementById('navbar-more').style.display = 'none'
 	document.getElementById('navbar-footer').classList.add('navbar-fade')
