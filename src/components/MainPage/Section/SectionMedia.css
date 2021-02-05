@@ -6,6 +6,10 @@
         font-size: 20px;
         font-weight: 400;
     }
+    .wrapper-item .logo_text p {
+        font-size: 15px;
+        font-weight: 400;
+    }
     .wrapper-item .towers.tower {
         transform-origin: -572px 2050px;
         transform: scale(0.8);

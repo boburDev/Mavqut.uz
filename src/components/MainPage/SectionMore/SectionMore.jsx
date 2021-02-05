@@ -30,6 +30,13 @@ export default function SectionMore () {
 
       more.children[6].children[0].classList.remove('littele-tower1')
       more.children[6].children[0].classList.add('back')
+
+      let logo_text = document.getElementById('logo_text');
+        let logo_mavqut = document.getElementById('logo_mavqut')
+        let logo_box = document.getElementById('logo_box')
+		logo_text.classList.remove('fadeOutLogoText');
+		logo_box.classList.remove('boxFade')
+		logo_mavqut.classList.remove('scalingLogo');
     }
     return(
         <>

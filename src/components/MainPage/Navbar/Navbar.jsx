@@ -14,9 +14,21 @@ export default function Navbar () {
 		more.children[4].children[0].classList.remove('back')
 		more.children[5].children[0].classList.remove('back')
 		more.children[6].children[0].classList.remove('back')
+		// more.children[7].children[0].children[1].classList.remove('fadeOutLogoText');
 	}
 
   function about () {
+	let logo_text = document.getElementById('logo_text');
+		
+		let logo_mavqut = document.getElementById('logo_mavqut')
+		let logo_box = document.getElementById('logo_box')
+
+		logo_text.classList.add('fadeOutLogoText');
+		logo_box.classList.add('boxFade')
+		logo_mavqut.classList.add('scalingLogo')
+		
+
+
 	const more = document.getElementById('wrapper')
 	const about = document.getElementById('section-about')
 	document.getElementById('logo_mavqut').style.display = 'none'
@@ -50,8 +62,17 @@ export default function Navbar () {
   }
 
   function more () {
-		const more = document.getElementById('wrapper')
-		document.getElementById('logo_mavqut').style.display = 'none'
+		const 																																																					more = document.getElementById('wrapper')
+		// document.getElementById('logo_mavqut').style.display = 'none'
+		let logo_text = document.getElementById('logo_text');
+		
+		let logo_mavqut = document.getElementById('logo_mavqut')
+		let logo_box = document.getElementById('logo_box')
+
+		logo_text.classList.add('fadeOutLogoText');
+		logo_box.classList.add('boxFade')
+		logo_mavqut.classList.add('scalingLogo')
+		
 		document.getElementById('navabr').classList.add('navbar-fade')
 		document.getElementById('navbar-more').classList.add('navbar-fade')
 		document.getElementById('navbar-footer').classList.add('navbar-fade')
