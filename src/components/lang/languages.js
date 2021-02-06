@@ -56,7 +56,7 @@ const UZ = {
 		5. Ma'lumotlar kiritilgan joriy sana belgilanadi.
 		6. Barcha ma'lumotlar taqdim etilganidan so'ng "Qayd etish" tugmasi bosiladi va jarayon yakunlanadi. Ushbu kiritilgan ma'lumotlar asosida barcha ma'lumotlar va statistik tahlillar avtomatik tarzda o'zgarib boradi.`,
 		
-		aboutUsBtn: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae ut similique distinctio corporis repellat doloribus facilis nesciunt porro ad. Excepturi dolor illum pariatur perspiciatis autem impedit. Excepturi aspernatur, sequi vero ipsum, doloribus dicta fugiat accusamus commodi minima ducimus, atque vitae voluptatum cupiditate dolores aliquam ipsa adipisci ea sed id expedita nulla reprehenderit delectus. Esse, asperiores nemo temporibus quod eos dicta, eveniet ipsam distinctio sint velit aut quos voluptate consectetur nulla impedit rem odio qui ea dolor! Est mollitia eum architecto dolores ducimus iste. Earum provident aspernatur soluta ipsa deleniti quam officiis accusamus eveniet sapiente quibusdam laudantium labore tempora a expedita quis ducimus iure, debitis ut eaque hic delectus consequuntur quasi non? Odit maxime consequatur voluptas, mollitia dicta ut quas molestias eius eveniet distinctio! Et architecto porro, illo soluta voluptates saepe ducimus obcaecati aut harum, cupiditate, repellat suscipit! Corrupti consectetur nulla vitae repudiandae vel eveniet magnam neque suscipit, necessitatibus veritatis ab, quo deleniti. Quo harum corporis officia est alias iste. Necessitatibus quo neque, molestias molestiae dignissimos esse laboriosam, repudiandae quae soluta nisi illum cupiditate animi repellendus assumenda nostrum minima veritatis consequatur cum perspiciatis, dicta facilis nobis omnis? Tempore cum ad eos repellendus inventore quas, sunt architecto excepturi dolorum repellat eum doloremque beatae voluptatem sed officia possimus iusto dolorem deleniti! Dolorum ullam laudantium consectetur officiis nihil quaerat odit quos nemo, quas velit officia optio facere aperiam assumenda ipsam animi ab omnis aut error nostrum dolor facilis numquam. Tenetur porro asperiores temporibus eius possimus in expedita veniam ea repellendus odio ipsam ad commodi, error, doloremque dolor atque aliquam deleniti veritatis maxime mollitia ducimus quam. Reprehenderit quasi, pariatur id suscipit fuga laborum rem veritatis minus corrupti officiis nisi labore eligendi eius amet debitis explicabo tempora necessitatibus incidunt saepe a ipsam! Dolores nulla molestiae accusamus, aliquid voluptatem minima iste sed vitae laborum quos vero dolore maiores reprehenderit, libero dolor quas earum aliquam assumenda ut, ducimus culpa adipisci eos iure placeat. Quos doloribus perspiciatis, perferendis maiores amet veritatis provident voluptatum asperiores adipisci pariatur facilis itaque quo dignissimos eligendi, consequatur vitae. Ad incidunt, sequi inventore quam provident harum architecto blanditiis ex laudantium reiciendis tempore dolorum vel saepe eaque sit rerum. Facere necessitatibus ullam odio, eum alias molestiae, architecto nam et pariatur, fuga repellendus porro dolorum laborum reiciendis quidem voluptatibus nihil saepe quae? Soluta nisi aliquam doloribus hic necessitatibus impedit accusamus tempora quisquam illo sequi, maxime eveniet ratione illum unde atque quas corporis pariatur nemo! Dolorum quisquam explicabo porro voluptatum at unde praesentium ipsa. Sit aliquid ab dignissimos sapiente odit consequatur laborum ducimus eligendi non, quod quisquam labore laudantium doloribus corrupti omnis repellendus id veritatis. At esse, quo id eaque architecto ipsam fugiat aspernatur vitae, exercitationem illum error ipsum delectus accusamus culpa eum blanditiis voluptate voluptatem enim voluptas! Quod perspiciatis voluptatem quia repellendus libero! Labore pariatur enim amet, itaque atque commodi eveniet perferendis repellat quia, vero culpa. Velit distinctio, tenetur expedita inventore sint quidem eveniet rerum non quaerat ipsum maiores, omnis doloribus dolore suscipit aliquid quia numquam consequatur? At voluptates nisi ipsam maxime recusandae. Animi rem exercitationem reiciendis voluptatibus dolore sit deleniti, maiores corporis perferendis! Saepe rem error similique, repellat esse iste facilis adipisci, ad maiores deserunt cum fugiat minima perspiciatis nisi eveniet veniam quis, repudiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu`,
+		aboutUsBtn: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae u ad maiores deserunt cum fugiat minima perspiciatis nisi eveniet veniam quis, repudiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu`,
 		authintification: {
 			title: `Ro'yxatdan o'tish`,
 			personalInfo: `Shaxsiy ma'lumotlaringizni kiriting`,
@@ -300,7 +300,146 @@ const RU = {
 	},
 }
 
+const EN = {
+	main: {
+		linkAbout: 'About us',
+		linkLets: `Let's go`,
+		linkMore: 'More',
+		linkDown: 'Download',
+		heading: {
+			logoHead: 'Mavqut',
+			textOnUz: `Qazo nomoz va ro'zalarni ado etish uchun yordanchi!`,
+			textOnAR: 'ان الصلاة كانت على المؤمنين كتابا موقوتا!',
+			textOnRU: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. At!!',
+			ayahName: 'Niso - 103'
+		},
+		moreBtn: `Mavqut.uz
+		You can familiarize yourself with the possibilities and mode of use of Mavqut.uz below:
+		1. Registration
+		You will be required to enter your personal information in the fields provided for registration.
+		On the right side of the screen, you can select one of the images provided for your personal page.
+		It is also possible to view the AD or Hijri year account by changing the date in the upper right corner.
+		Enter your email address and password in the space provided at the bottom.
+		Clicking the "Send" button will complete the registration process.
+		2. Settings
+		It is possible to change all the information entered in the settings section.
+		You can choose the language that suits you through the section shown on the right side of the screen. 
+		You can receive reminders about performing daily qaza namaz by clicking on the “Notes” button in the top right corner of the page.
+		3. Home
+		1. On the main page, select the "Qaza Namaz" section.
+		2. This section shows the calculation of the total number of qaza namaz in the period from the age of 15 until the user starts namaz.
+		3. General qaza namaz is also given as a separate account for each of the 5 times of namaz.
+		4. At the bottom of the screen, when the number of missed namaz is read in an average of 20 rakats per day, the period of full completion is indicated in terms of days, months, years.
+		5. In the section "Acceleration of Qaza Namaz" it is possible to determine the time of completion when the amount of qaza namaz is performed 1, 2 or 3 times more.`,
+		
+		aboutUsBtn: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae ut similique distinctio corporis repellat doloribus facilis nesciunt porro ad. Excepturi dodiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu`,
+		authintification: {
+			title: `Sign up`,
+			personalInfo: `Enter your personal information`,
+			name: 'Name',
+			surname: 'Surname',
+			age: 'Age',
+			gender: {
+				title: 'Gender',
+				male: 'Male',
+				female: 'Female'
+			},
+			namazStart: 'At what age did you start namaz ?',
+			fastingStart: `At what age did you start fasting ?`,
+			mail: 'Enter your email address',
+			password: 'Enter your password',
+			phone: 'Enter your phone number',
+			haveAnAcc: 'Sahifangiz oldindan mavjudmi ?',
+			dontHave: 'Sahifangiz mavjud emasmi ?',
+			forgetPassword: 'Parolni unutdingizmi ?',
+			here: 'Bu yega',
+			press: 'bosing',
+			send: 'Send',
+		},
+		changeImg: 'Change the image' ,
+		mail: 'Email',
+		phone: 'Phone number',
+		resetPassword: 	`Change password`,
+		password: 'Enter password',
+		calculate: {
+			btnText: 'Calculating',
+			doneNamaz: `Calculator Window`,
+			dayLeft: 'day is left',
+			monthLeft: 'month is left',
+			leftQazoFromToday: `If you fast continuously from today!`,
+			startedDate: 'Started date',
+			finishDate: 'Completion date',
+			year: 'Year',
+			month: 'Month',
+			day: 'Day',
+			calculateTitle: `Namoz va Ro'zalarni qayd etish`,
+			bomdod: 'Fajr',
+			peshin: 'Dhuhr',
+			asr: 'Asr',
+			shom: 'Maghrib',
+			xufton: 'Isha',
+			vitr: 'Witr',
+			countOfFasting: 'Tutilgan ro’zalar miqdori',
+			countOfNamaz: 'Tutilmagan ro’zalar miqdori',
+			motivationText: 'Mashalloh, Alloh xayrli va bardavom qilsin',
+			submit: 'Qayd etish',
+			fasting: `Ro'za`,
+		},
+		userBar: {
+			welcome: 'Welcome,',
+			namazQazo: 'Qaza Prayers',
+			fastingQazo: `Qaza Fasting`,	
+			age: 'years old'
+		},
+		lang: {
+			title: 'Choose language',
+			uz: `Uzbek`,
+			ru: 'Russian',
+			en: 'English'
+		},
+		logout: {
+			logoutText: 'Exit',
+			logoutCongirmText: 'Rostdan ham akkauntingizdan chiqishni istaysizmi?',
+			yes: 'Yes',
+			no: `No`
+		},
+		setting: {
+			settingTitle: 'Settings',
+			profile: 'Profile',
+			privacyPolicy: 'Privacy policy',
+			theme: 'Themes',
+			termsConditions: 'Terms & Conditions'
+		},
+	},
+	dashboard: {
+		dashboardText: 'Dashboard',
+		statistics: 'Statistics',
+		mainPage: 'Home',
+		all: 'Overall:',
+		last: 'is left',
+		countWindow: 'Calculator Window',
+		fastingDoneDays: `Ro'zalar kundaligi`,
+		doneDay: 'Tutilgan kunlar',
+		notDoneDay: 'Tutilmagan kunlar',
+		days: {
+			mon: 'DU',
+			tue: 'SE',
+			wed: 'CHO',
+			thu: 'PA',
+			fri: 'JU',
+			sut: 'SHA',
+			sun: 'YAK'
+		},
+		readNamaz: `O'qilgan rakatlar`,
+		notReadNamaz: `O'qilmagan rakatlar`,
+		lastDaysOfNamaz: `Duration of unperformed namaz`,
+		lastDaysOfNamazSpeed: 'Accelerate the Qaza Namaz',
+		timeSpeed: 'times more'
+	},
+}
+
 export default {
 	UZ,
 	RU,
+	EN
 }

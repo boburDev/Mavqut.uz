@@ -10,19 +10,20 @@ import moon from "./assets/moon.png";
 import halfTree from "./assets/half-tree.png";
 import tree from "./assets/tree.png";
 import { Link } from "react-router-dom";
-
+import { useParams } from 'react-router-dom'
 export default function Validation() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
     }
+    const { lang } = useParams()
 
   return (
     <div className="val-section">
       <div className="bg-img"></div>
       <div className="val-content">
         <div className="val-text">
-          <Link className="val-clear-icon" to='/main'>
+          <Link className="val-clear-icon" to={`/${lang}/main`}>
             <MdClear size={30} color="#ccc" />
           </Link>
           <div className="val-all-text-wrapper">

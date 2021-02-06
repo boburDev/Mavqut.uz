@@ -62,12 +62,12 @@ function RuzaUpdate() {
     return (
         <>
         <div className="pray-counter">
+        <h2 style={{textAlign: 'center', marginBottom: 15}}>{Languages[language].main.calculate.calculateTitle}</h2>
         <form className="ruza-update-form"
         onSubmit={e => {
             e.preventDefault()
             document.querySelector('.submitted').classList.add('submitted--block')
-
-            updatingRemnant()
+            // updatingRemnant()
             e.target.reset()
         }}>
         <div className="status-editing">
