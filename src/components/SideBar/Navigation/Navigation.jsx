@@ -50,8 +50,7 @@ function Navigation (){
 		const split = route.url.split('/')
 		const bgSideBar = document.getElementById('bg-sidebar')
 		const chaeckClassHas = bgSideBar.classList.contains('top')
-
-		if (split && split[2] === 'dashboard') {
+		if (split && split[3] === 'dashboard') {
 			setImageChange('main')
 			document.getElementById('statistics-sidebar-link').classList.remove('sidebarLink--active')
 			document.getElementById('main-sidebar-link').classList.add('sidebarLink--active')
@@ -62,7 +61,7 @@ function Navigation (){
 				roadInSideBarFooter: true,
 				animateMoon: 'default'
 			})
-		} else if (split && split[2] === 'statistics') {
+		} else if (split && split[3] === 'statistics') {
 			setImageChange('statistics')
 			document.getElementById('statistics-sidebar-link').classList.add('sidebarLink--active')
 			document.getElementById('main-sidebar-link').classList.remove('sidebarLink--active')
@@ -109,18 +108,18 @@ return (
 
 	<div className="btncalc">
 	<NavLink
-	to={"/main/calculate"} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Languages[language].main.calculate.btnText}</NavLink>
+	to={`/${lang}/main/calculate`} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Languages[language].main.calculate.btnText}</NavLink>
 	</div>
 
 		<ul className="side-navbar">
 				<li className="side-item main-link">
-					<Link to={"/main/dashboard"} className="sidebarLink sidebarLink--active" id="main-sidebar-link">
+					<Link to={`/${lang}/main/dashboard`} className="sidebarLink sidebarLink--active" id="main-sidebar-link">
 						<img src={imgChange === "main" ? mainIcon : mainChangeIcon} alt="main-link"/>
 						{Languages[language].dashboard.dashboardText}
 					</Link>
 				</li>
 			<li className="side-item statistics-link">
-				<Link to={"/main/statistics"} id="statistics-sidebar-link" className="sidebarLink">
+				<Link to={`/${lang}/main/statistics`} id="statistics-sidebar-link" className="sidebarLink">
 					<img src={imgChange === 'statistics' ? statisticsChangeIcon : statisticsIcon} alt="statistics"/>
 					{Languages[language].dashboard.statistics}
 				</Link>
@@ -160,22 +159,22 @@ return (
 				</div>
 				<ul className="sub-footer-links" style={hiddenStyle}>
 					<li className="sub-footer-link-item">
-					<Link to={"/setting"} className="sub-footer-link">
+					<Link to={`/${lang}/setting`} className="sub-footer-link">
 					{Languages[language].main.setting.profile}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={"/setting/privacy"} className="sub-footer-link">
+					<Link to={`/${lang}/setting/privacy`} className="sub-footer-link">
 					{Languages[language].main.setting.privacyPolicy}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={"/setting/theme"} className="sub-footer-link">
+					<Link to={`/${lang}/setting/theme`} className="sub-footer-link">
 					{Languages[language].main.setting.theme}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={"/setting/term"} className="sub-footer-link">
+					<Link to={`/${lang}/setting/term`} className="sub-footer-link">
 						{Languages[language].main.setting.termsConditions}
 					</Link>
 					</li>

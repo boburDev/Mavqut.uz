@@ -71,7 +71,7 @@ export default function Navbar () {
   }
 
   function more () {
-		const 																																																					more = document.getElementById('wrapper')
+		const more = document.getElementById('wrapper')
 		// document.getElementById('logo_mavqut').style.display = 'none'
 		let logo_text = document.getElementById('logo_text');
 		
@@ -106,7 +106,7 @@ export default function Navbar () {
     <nav>
       <ul className="navbar-main" id="navabr">
         <li onClick={about} className="nav-item about"><Link to="#">{Languages[language].main.linkAbout}</Link></li>
-        <li onClick={lets} className="nav-item lets"><Link to="/main/dashboard">{Languages[language].main.linkLets}</Link></li>
+        <li onClick={lets} className="nav-item lets"><Link to={`/${lang}/main/dashboard`}>{Languages[language].main.linkLets}</Link></li>
       </ul>
       <ul className="navbar-more" id="navbar-more">
         <li onClick={more} className="navbar-more-item">{Languages[language].main.linkMore}</li>
@@ -115,7 +115,7 @@ export default function Navbar () {
         <li  className="nav-item phone"><Link to="#"><img src={phone} className="phone-icon" alt="phone"/></Link></li>
 		
 		
-		<li  className="nav-item phone"><Link to="/UZ/get-in-touch"><img src={message} className="message-icon" alt="phone"/></Link></li>
+		<li  className="nav-item phone"><Link to={`/${lang}/get-in-touch`}><img src={message} className="message-icon" alt="phone"/></Link></li>
 		
 		
 		<li  className="nav-item phone"><Link to=""><img src={question} className="question-icon" alt="phone"/></Link></li>
@@ -124,9 +124,9 @@ export default function Navbar () {
         <li className="nav-item download"><Link to="#"><span>{Languages[language].main.linkDown}</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>
       </ul>
 	  <ul className="navbar-language language" id="navbar-language">
-        <li className="nav-item lang"><Link to="#"><span>EN</span></Link></li>
+        <li className="nav-item lang"><Link to="/EN/main"><span>EN</span></Link></li>
 		<div className="vl"></div>
-		<li className="nav-item lang"><Link to="#"><span>RU</span></Link></li>
+		<li className="nav-item lang"><Link to="/RU/main"><span>RU</span></Link></li>
 		<div className="vl"></div>
 		<li className="nav-item lang"><Link to="/UZ/main"><span>UZ</span></Link></li>
       </ul>

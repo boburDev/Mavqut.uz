@@ -34,7 +34,7 @@ export default function SectionAbout () {
         about.classList.remove('section-about-ani')
         document.getElementById('navbar-more').style.display = 'block'
         document.getElementById('navbar-footer').classList.remove('navbar-fade')
-      document.getElementById('navbar-foot').classList.remove('navbar-fade')
+        document.getElementById('navbar-foot').classList.remove('navbar-fade')
 
         let logo_text = document.getElementById('logo_text');
         let logo_mavqut = document.getElementById('logo_mavqut')
