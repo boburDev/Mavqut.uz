@@ -55,7 +55,7 @@ export default function LogIn() {
               <input ref={password} type="password" placeholder={Lang[language].main.password} name="password" />
             </label>
             <span>
-              {Lang[language].main.authintification.dontHave} <Link to="/register/sign-up">{Lang[language].main.authintification.here}</Link>{" "}
+              {Lang[language].main.authintification.dontHave} <Link to={"/" + lang + "/register/sign-up"}>{Lang[language].main.authintification.here}</Link>{" "}
               {Lang[language].main.authintification.press}
               <br />
               <Link to="/get-in-touch">{Lang[language].main.authintification.forgetPassword}</Link>

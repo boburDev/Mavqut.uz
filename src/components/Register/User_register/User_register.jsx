@@ -174,7 +174,7 @@ export default function UserRegister(){
               <input ref={password} type="password" placeholder="Махфий парол" name="password" />
               <span>
                 {Lang[language].main.authintification.haveAnAcc} <br />{" "}
-                <Link to="/register/sign-in">{Lang[language].main.authintification.here}</Link> {Lang[language].main.authintification.press}	
+                <Link to={"/" + lang + "/register/sign-in"}>{Lang[language].main.authintification.here}</Link> {Lang[language].main.authintification.press}	
               </span>
             </label>
           </div>
