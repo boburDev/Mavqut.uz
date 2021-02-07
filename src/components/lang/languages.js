@@ -386,7 +386,7 @@ const EN = {
 		Contact Us
 		If you have any questions about these Terms, please contact us.`,
 		authintification: {
-			title: `Sign up`,
+			title: `Sign`,
 			personalInfo: `Enter your personal information`,
 			name: 'Name',
 			surname: 'Surname',

@@ -58,7 +58,7 @@ export default function LogIn() {
               {Lang[language].main.authintification.dontHave} <Link to={"/" + lang + "/register/sign-up"}>{Lang[language].main.authintification.here}</Link>{" "}
               {Lang[language].main.authintification.press}
               <br />
-              <Link to="/get-in-touch">{Lang[language].main.authintification.forgetPassword}</Link>
+              <Link to={"/" + lang + "/get-in-touch"}>{Lang[language].main.authintification.forgetPassword}</Link>
             </span>
           </form>
         </div>
