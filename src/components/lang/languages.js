@@ -57,6 +57,8 @@ const UZ = {
 		6. Barcha ma'lumotlar taqdim etilganidan so'ng "Qayd etish" tugmasi bosiladi va jarayon yakunlanadi. Ushbu kiritilgan ma'lumotlar asosida barcha ma'lumotlar va statistik tahlillar avtomatik tarzda o'zgarib boradi.`,
 		
 		aboutUsBtn: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae u ad maiores deserunt cum fugiat minima perspiciatis nisi eveniet veniam quis, repudiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu`,
+		privacyPolicyText: ``,
+		termAndConditionText: ``,
 		authintification: {
 			title: `Ro'yxatdan o'tish`,
 			personalInfo: `Shaxsiy ma'lumotlaringizni kiriting`,
@@ -195,6 +197,8 @@ const RU = {
 		5. В разделе «Ускорение Каза намаз» можно определить время завершения, когда количество каза намаз выполняется в 1, 2 или 3 раза больше.`,
 		
 		aboutUsBtn: `Lorem ipci doloribu`,
+		privacyPolicyText: ``,
+		termAndConditionText: ``,
 		authintification: {
 			title: `Зарегистрироваться`,
 			personalInfo: `Введите вашу личную информацию`,
@@ -333,6 +337,54 @@ const EN = {
 		5. In the section "Acceleration of Qaza Namaz" it is possible to determine the time of completion when the amount of qaza namaz is performed 1, 2 or 3 times more.`,
 		
 		aboutUsBtn: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime soluta deserunt, totam amet beatae ut similique distinctio corporis repellat doloribus facilis nesciunt porro ad. Excepturi dodiandae vero necessitatibus. Maxime recusandae ipsum quas vitae. Rem eos saepe aliquam numquam dolor adipisci doloribu`,
+		privacyPolicyText: `Privacy Policy of Mavqut.uz
+
+		MBM IT Company operates the Mavqut.uz website, which provides the SERVICE.
+		This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, Mavqut.uz website.
+		If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+		The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at http://www.mavqut.uz , unless otherwise defined in this Privacy Policy.
+		
+		Information Collection and Use
+		For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including your name, phone number, and e-mail address. The information that we collect will be used to contact or identify you.
+		
+		Log Data
+		We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol (“IP”) address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.
+		
+		Service Providers
+		We may employ third-party companies and individuals due to the following reasons:
+		To facilitate our Service;
+		To provide the Service on our behalf;
+		To perform Service-related services; 
+		To assist us in analyzing how our Service is used.
+		We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+		
+		Security
+		We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+		
+		Links to Other Sites
+		Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+		
+		Changes to This Privacy Policy
+		We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.
+		
+		Contact Us
+		If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.`,
+		termAndConditionText: `Terms and Condition
+
+		Last updated: (date)
+		Please read these Terms and Conditions  carefully before using the http://www.mavqut.uz website operated by MBM IT Company.
+		Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+		By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+		
+		Links To Other Web Sites
+		Our Service may contain links to third-party web sites or services that are not owned or controlled by MBM IT Company.
+		MBM IT Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that MBM IT Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+		
+		Changes
+		We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 7 days (should be changed) days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+		
+		Contact Us
+		If you have any questions about these Terms, please contact us.`,
 		authintification: {
 			title: `Sign up`,
 			personalInfo: `Enter your personal information`,

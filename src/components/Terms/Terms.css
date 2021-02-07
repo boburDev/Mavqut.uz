@@ -12,7 +12,14 @@
 	border-radius: 35px;
 	background: #FFFFFF;
 	text-align: left;
-	line-height: 1.1;
+	line-height: 1.4;
+}
+.terms .text_block p{
+	padding: 30px;
+	border-radius: 35px;
+	background: #FFFFFF;
+	text-align: left;
+	line-height: 1.4;
 }
 
 @media (min-width:1200px) {

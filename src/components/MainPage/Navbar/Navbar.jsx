@@ -106,7 +106,7 @@ export default function Navbar () {
     <nav>
       <ul className="navbar-main" id="navabr">
         <li onClick={about} className="nav-item about"><Link to="#">{Languages[language].main.linkAbout}</Link></li>
-        <li onClick={lets} className="nav-item lets"><Link to={`/${lang}/main/dashboard`}>{Languages[language].main.linkLets}</Link></li>
+        <li onClick={lets} className="nav-item lets"><Link to={`/${language}/main/dashboard`}>{Languages[language].main.linkLets}</Link></li>
       </ul>
       <ul className="navbar-more" id="navbar-more">
         <li onClick={more} className="navbar-more-item">{Languages[language].main.linkMore}</li>
@@ -115,7 +115,7 @@ export default function Navbar () {
         <li  className="nav-item phone"><Link to="#"><img src={phone} className="phone-icon" alt="phone"/></Link></li>
 		
 		
-		<li  className="nav-item phone"><Link to={`/${lang}/get-in-touch`}><img src={message} className="message-icon" alt="phone"/></Link></li>
+		<li  className="nav-item phone"><Link to={`/${language}/get-in-touch`}><img src={message} className="message-icon" alt="phone"/></Link></li>
 		
 		
 		<li  className="nav-item phone"><Link to=""><img src={question} className="question-icon" alt="phone"/></Link></li>
