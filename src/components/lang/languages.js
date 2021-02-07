@@ -491,7 +491,7 @@ const EN = {
 }
 
 export const Lang = {
-	UZ,
-	RU,
-	EN
+	uz: UZ,
+	ru: RU,
+	en: EN
 }

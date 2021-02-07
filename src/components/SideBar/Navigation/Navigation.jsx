@@ -22,7 +22,7 @@ function Navigation (){
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang || 'UZ')
+		setLanguage(lang.toLowerCase() || 'uz')
 	  },[lang, setLanguage])
 
 	

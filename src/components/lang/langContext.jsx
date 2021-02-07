@@ -3,7 +3,7 @@ const Context = createContext()
 
 const LangProvider = ({children})=>{
 
-    const [state, setState] = useState('UZ')
+    const [state, setState] = useState('uz')
 
     const value = {
         state,

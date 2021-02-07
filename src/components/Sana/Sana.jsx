@@ -13,7 +13,7 @@ export default function Sana() {
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang || 'UZ')
+		setLanguage(lang.toLowerCase() || 'uz')
 	  },[lang, setLanguage])
 	  
 	return(

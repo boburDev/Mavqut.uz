@@ -12,7 +12,7 @@ export default function Calendar() {
     const [language, setLanguage] = useLang()
 	const { lang } = useParams()
 	useEffect(()=>{
-		setLanguage(lang || 'UZ')
+		setLanguage(lang.toLowerCase() || 'uz')
 	  },[lang, setLanguage])
     const taked = {
         background:"linear-gradient(#B707E3,#4156B0 )"

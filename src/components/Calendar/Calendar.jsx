@@ -20,7 +20,7 @@ export default function Calendar() {
 	const [lastDay, setLastDay] = useState(0)
 
 	useEffect(()=>{
-		setLanguage(lang || 'UZ')
+		setLanguage(lang.toLowerCase() || 'uz')
 	  },[lang, setLanguage])
 
 	  

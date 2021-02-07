@@ -23,7 +23,7 @@ function Section () {
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang || 'UZ')
+		setLanguage(lang.toLowerCase() || 'uz')
 		// console.log(Languages)
 	  },[lang, setLanguage])
 	  
