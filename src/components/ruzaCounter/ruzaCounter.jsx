@@ -3,7 +3,7 @@ import './ruzaCounter.css'
 import  "./ruzaCounterMedia.css"
 import { useServer } from "../app/ServerContext"
 import axios from 'axios'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -60,7 +60,7 @@ function Counter() {
     return (
         <>
                 <div className="counter-wrapper">
-                    <p className="counter-title">{Languages[language].main.calculate.leftQazoFromToday}</p>
+                    <p className="counter-title">{Lang[language].main.calculate.leftQazoFromToday}</p>
                     <div className="wrapper-statist">
                         <div className="circle-day-fasting">
                             <div className="outer">
@@ -76,7 +76,7 @@ function Counter() {
                                     <circle className="progress-day-fasting-time" strokeWidth="90" cx="125" cy="125" r="125" fill="transparent" />
                                 </svg>
                                 <div className="inner"></div>
-                                <p data-title={Languages[language].main.calculate.dayLeft}>{fastingConst}</p>
+                                <p data-title={Lang[language].main.calculate.dayLeft}>{fastingConst}</p>
                                 
                             </div>
                         </div>
@@ -95,7 +95,7 @@ function Counter() {
                                     <circle className="progress-month-fasting-time" strokeWidth="90" cx="125" cy="125" r="125" fill="transparent" />
                                 </svg>
                                 <div className="inner"></div>
-                                <p data-title={Languages[language].main.calculate.monthLeft}
+                                <p data-title={Lang[language].main.calculate.monthLeft}
                                 >{fastingConst / 30}</p>
                             </div>
                         </div>

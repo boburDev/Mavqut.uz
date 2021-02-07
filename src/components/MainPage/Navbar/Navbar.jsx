@@ -6,7 +6,7 @@ import question from '../Section/images/questions.png'
 import download from '../Section/images/download.png'
 import message from '../Section/images/message.png'
 import { useEffect } from 'react'
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 
 export default function Navbar () {
@@ -105,11 +105,11 @@ export default function Navbar () {
   return (
     <nav>
       <ul className="navbar-main" id="navabr">
-        <li onClick={about} className="nav-item about"><Link to="#">{Languages[language].main.linkAbout}</Link></li>
-        <li onClick={lets} className="nav-item lets"><Link to={`/${language}/main/dashboard`}>{Languages[language].main.linkLets}</Link></li>
+        <li onClick={about} className="nav-item about"><Link to="#">{Lang[language].main.linkAbout}</Link></li>
+        <li onClick={lets} className="nav-item lets"><Link to={`/${language}/main/dashboard`}>{Lang[language].main.linkLets}</Link></li>
       </ul>
       <ul className="navbar-more" id="navbar-more">
-        <li onClick={more} className="navbar-more-item">{Languages[language].main.linkMore}</li>
+        <li onClick={more} className="navbar-more-item">{Lang[language].main.linkMore}</li>
       </ul>
 	  <ul className="navbar-footer footer" id="navbar-footer">
         <li  className="nav-item phone"><Link to="#"><img src={phone} className="phone-icon" alt="phone"/></Link></li>
@@ -121,7 +121,7 @@ export default function Navbar () {
 		<li  className="nav-item phone"><Link to=""><img src={question} className="question-icon" alt="phone"/></Link></li>
       </ul>
 	  <ul className="navbar-foot foot" id="navbar-foot">
-        <li className="nav-item download"><Link to="#"><span>{Languages[language].main.linkDown}</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>
+        <li className="nav-item download"><Link to="#"><span>{Lang[language].main.linkDown}</span> <img src={download} className="nav-item download-icon" alt="downolad"/></Link></li>
       </ul>
 	  <ul className="navbar-language language" id="navbar-language">
         <li className="nav-item lang"><Link to="/EN/main"><span>EN</span></Link></li>

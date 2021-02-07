@@ -1,7 +1,7 @@
 import React from 'react';
 import './Privacy.css';
 import { useEffect } from 'react'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -18,7 +18,7 @@ export default function Privacy() {
 			<h2 className="text-ceter">Privacy policy</h2>
 			<div className="text_block">
 				<p>
-					{Languages[language].main.privacyPolicyText}
+					{Lang[language].main.privacyPolicyText}
 				</p>
 			</div>
 		</div>

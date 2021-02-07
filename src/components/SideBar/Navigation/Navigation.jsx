@@ -12,7 +12,7 @@ import { useSideBar } from "./Context"
 import Logout from '../../Logout/Exit'
 import { useLogOut } from '../../Logout/Context'
 
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -108,20 +108,20 @@ return (
 
 	<div className="btncalc">
 	<NavLink
-	to={`/${lang}/main/calculate`} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Languages[language].main.calculate.btnText}</NavLink>
+	to={`/${lang}/main/calculate`} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Lang[language].main.calculate.btnText}</NavLink>
 	</div>
 
 		<ul className="side-navbar">
 				<li className="side-item main-link">
 					<Link to={`/${lang}/main/dashboard`} className="sidebarLink sidebarLink--active" id="main-sidebar-link">
 						<img src={imgChange === "main" ? mainIcon : mainChangeIcon} alt="main-link"/>
-						{Languages[language].dashboard.dashboardText}
+						{Lang[language].dashboard.dashboardText}
 					</Link>
 				</li>
 			<li className="side-item statistics-link">
 				<Link to={`/${lang}/main/statistics`} id="statistics-sidebar-link" className="sidebarLink">
 					<img src={imgChange === 'statistics' ? statisticsChangeIcon : statisticsIcon} alt="statistics"/>
-					{Languages[language].dashboard.statistics}
+					{Lang[language].dashboard.statistics}
 				</Link>
 			</li>
 		</ul>
@@ -137,7 +137,7 @@ return (
 				}}
 				className="footer-link">
 					<img src={logOutIcon} alt="log-out-link"/>
-					{Languages[language].main.logout.logoutText}
+					{Lang[language].main.logout.logoutText}
 				</div>
 			</li>
 			<li className="footer-link-item footer-open-class" style={settingStyle}>
@@ -155,33 +155,33 @@ return (
 				}}
 				className="footer-link">
 					<img src={settingIcon} alt="log-out-link"/>
-					{Languages[language].main.setting.settingTitle}
+					{Lang[language].main.setting.settingTitle}
 				</div>
 				<ul className="sub-footer-links" style={hiddenStyle}>
 					<li className="sub-footer-link-item">
 					<Link to={`/${lang}/setting`} className="sub-footer-link">
-					{Languages[language].main.setting.profile}
+					{Lang[language].main.setting.profile}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
 					<Link to={`/${lang}/setting/privacy`} className="sub-footer-link">
-					{Languages[language].main.setting.privacyPolicy}
+					{Lang[language].main.setting.privacyPolicy}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
 					<Link to={`/${lang}/setting/theme`} className="sub-footer-link">
-					{Languages[language].main.setting.theme}
+					{Lang[language].main.setting.theme}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
 					<Link to={`/${lang}/setting/term`} className="sub-footer-link">
-						{Languages[language].main.setting.termsConditions}
+						{Lang[language].main.setting.termsConditions}
 					</Link>
 					</li>
 				</ul>
 			</li>
 		</ul>
-		{sideBarValue.logout === true && <Logout yes={Languages[language].main.logout.yes} no={Languages[language].main.logout.no} body={Languages[language].main.logout.logoutCongirmText} />}
+		{sideBarValue.logout === true && <Logout yes={Lang[language].main.logout.yes} no={Lang[language].main.logout.no} body={Lang[language].main.logout.logoutCongirmText} />}
 	</div>
 	)
 	}

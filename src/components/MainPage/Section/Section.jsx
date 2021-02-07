@@ -13,7 +13,7 @@ import moon from './images/moon.png'
 import clouds from './images/clouds.png'
 import SectionMore from '../SectionMore/SectionMore'
 import SectionAbout from '../SectionAbout/SectionAbout'
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -57,11 +57,11 @@ function Section () {
 						<div className="logo_box" id="logo_box">
 						<img id="logo_mavqut"  className="logo_mavqut" src={logoMavqut} alt="litteTowers"/>
 						<div id='logo_text' className="logo_text">
-							<h2>{Languages[language].main.heading.logoHead}</h2>
-							<p>{Languages[language].main.heading.textOnUz}</p>
-							<p>{Languages[language].main.heading.textOnAR}</p>
-							<p>{Languages[language].main.heading.textOnRU}</p>
-							<span>{Languages[language].main.heading.ayahName}</span>
+							<h2>{Lang[language].main.heading.logoHead}</h2>
+							<p>{Lang[language].main.heading.textOnUz}</p>
+							<p>{Lang[language].main.heading.textOnAR}</p>
+							<p>{Lang[language].main.heading.textOnRU}</p>
+							<span>{Lang[language].main.heading.ayahName}</span>
 						</div>
 						</div>
 					</li>

@@ -3,7 +3,7 @@ import './ProcessBar.css';
 import './ProcessBarMedia.css'
 import { useServer } from '../app/ServerContext'
 import axios from 'axios'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -127,18 +127,18 @@ function ProcessBar() {
 
                         <div className="gauge" id="gauge">
                             <p className="gauge-title">
-                                <span className="gauge-title-heading">{Languages[language].dashboard.all}</span>
+                                <span className="gauge-title-heading">{Lang[language].dashboard.all}</span>
                                 <span className="gauge-title-amount">{totalNamaz}</span>
                             </p>
                             <div className="gauge-body">
                                 <div className="gauge-fill"></div>
-                                <div className="gauge-cover" data-text={Languages[language].dashboard.last}></div>
+                                <div className="gauge-cover" data-text={Lang[language].dashboard.last}></div>
                             </div>
                         </div>
                         
                         <div className="process-chart-wrap">
                             <div className="process-heading">
-                                <h3>{Languages[language].dashboard.countWindow}</h3>
+                                <h3>{Lang[language].dashboard.countWindow}</h3>
                             </div>
                             <div className="process-pie-charts">
                                 <span onClick={() => {
@@ -173,7 +173,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{bomdodEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.bomdod}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.bomdod}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                     <div className="circle circle-peshin">
@@ -189,7 +189,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{peshinEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.peshin}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.peshin}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                     <div className="circle circle-asr">
@@ -205,7 +205,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{asrEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.asr}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.asr}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{shomEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.shom}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.shom}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                     <div className="circle circle-xufton">
@@ -239,7 +239,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{xuftonEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.xufton}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.xufton}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                     <div className="circle circle-vitr">
@@ -255,7 +255,7 @@ function ProcessBar() {
                                             </svg>
                                             <div className="inner"></div>
                                             <p><b>{vitrEditable}</b></p>
-                                            <span data-type={Languages[language].main.calculate.vitr}>{Languages[language].dashboard.last}</span>
+                                            <span data-type={Lang[language].main.calculate.vitr}>{Lang[language].dashboard.last}</span>
                                         </div>
                                     </div>
                                 </div>

@@ -12,12 +12,14 @@ import { useEffect, useState } from "react"
 import { Redirect } from 'react-router-dom'
 import { useServer } from '../app/ServerContext'
 import axios from "axios"
+import { useParams } from 'react-router-dom'
 
 function UserMain({type, who}) {
 
 	const [category] = useCategory()
 	const [server] = useServer()
 	const [userData,setUserData] = useState({})
+	const { lang } = useParams()
 	const token = window.localStorage.getItem("access_token")
 	useEffect(()=>{
 		;(async()=>{
@@ -39,7 +41,7 @@ function UserMain({type, who}) {
 		})()
 	},[server,token])
 
-	if (!token) return <Redirect to="/register/sign-in" />
+	if (!token) return <Redirect to={"/" + lang + "/register/sign-in"} />
 	
 	return (
 		<div className={cl(st.main)}>

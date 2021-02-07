@@ -7,7 +7,7 @@ import axios from 'axios'
 import { useServer } from "../app/ServerContext"
 
 import { useEffect } from 'react'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -116,7 +116,7 @@ export default function Edit() {
 									<img alt="icon" src={edit} className="w-100" />
 								</div>
 								<p>
-									{Languages[language].main.changeImg}
+									{Lang[language].main.changeImg}
 								</p>
 							</div>
 							<div className="profilePhotos">
@@ -171,13 +171,13 @@ export default function Edit() {
 								<div className="img">
 									<img alt="icon" src={registerUser} className="w-100" />
 								</div>
-								<p>{Languages[language].main.authintification.personalInfo}</p>
+								<p>{Lang[language].main.authintification.personalInfo}</p>
 							</div>
 							<div className="nameEdit">
 								<div className="row">
 									<div className="name_block col-xl-6 col-6">
 
-										<label htmlFor="name" className="form-label">{Languages[language].main.authintification.name}</label>
+										<label htmlFor="name" className="form-label">{Lang[language].main.authintification.name}</label>
 										<div className="input-group mb-3">
 											<div className="img">
 												<img alt="icon" src={edit} className="w-100" />
@@ -188,7 +188,7 @@ export default function Edit() {
 									</div>
 									<div className="name_block col-xl-6 col-6">
 									
-										<label htmlFor="name" className="form-label">{Languages[language].main.authintification.surname}</label>
+										<label htmlFor="name" className="form-label">{Lang[language].main.authintification.surname}</label>
 										<div className="input-group mb-3">
 											<input ref={surname} type="text" className="form-control" placeholder={fetchingData && fetchingData.surname} id="surname" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
@@ -202,22 +202,22 @@ export default function Edit() {
 							<div className="nameEdit">
 								<div className="row">
 									<div className="name_block col-xl-6 col-6">
-										<label htmlFor="group1" className="form-label">{Languages[language].main.authintification.gender.title}</label>
+										<label htmlFor="group1" className="form-label">{Lang[language].main.authintification.gender.title}</label>
 										<div className="input-group-gender">
 										<div>
 											<input onChange={(e)=>setGender(e.target.value)}  className="" type="radio" value="male" name="group1" aria-label="Radio button for following text input" id="radio1" />
-											<label htmlFor="radio1" className="gender-radio">{Languages[language].main.authintification.gender.male}</label>
+											<label htmlFor="radio1" className="gender-radio">{Lang[language].main.authintification.gender.male}</label>
 										</div>
 										<div>
 											<input onChange={(e)=>setGender(e.target.value)} className="" type="radio" id="radio2" value="female" name="group1" aria-label="Radio button for following text input" />
-											<label htmlFor="radio2" className="gender-radio">{Languages[language].main.authintification.gender.female}</label>
+											<label htmlFor="radio2" className="gender-radio">{Lang[language].main.authintification.gender.female}</label>
 										</div>
 											
 										</div>
 
 									</div>
 									<div className=" name_block col-xl-6 col-6">
-										<label htmlFor="age" className="form-label">{Languages[language].main.authintification.age}</label>
+										<label htmlFor="age" className="form-label">{Lang[language].main.authintification.age}</label>
 										<div className="input-group mb-3">
 											<input ref={age} type="number" max='99' className="form-control age_input" placeholder={fetchingData && fetchingData.age} id="age" aria-label="age" />
 										</div>
@@ -231,7 +231,7 @@ export default function Edit() {
 								<div className="row">
 									<div className="name_block col-xl-6 col-6">
 
-										<label htmlFor="name" className="form-label">{Languages[language].main.mail}</label>
+										<label htmlFor="name" className="form-label">{Lang[language].main.mail}</label>
 										<div className="nameEditemail input-group mb-3">
 											<input ref={email} type="text" className="form-control" placeholder={fetchingData && fetchingData.email} id="email" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
@@ -239,7 +239,7 @@ export default function Edit() {
 									</div>
 									<div className="name_block col-xl-6 col-6">
 									
-										<label htmlFor="name" className="form-label">{Languages[language].main.phone}</label>
+										<label htmlFor="name" className="form-label">{Lang[language].main.phone}</label>
 										<div className="input-group mb-3">
 											<input ref={phone} type="text" className="form-control" placeholder={fetchingData && fetchingData.phone} id="number" aria-label="Username" aria-describedby="basic-addon1" />
 										</div>
@@ -257,26 +257,26 @@ export default function Edit() {
 								<div className="img">
 									<img alt="icon" src={edit} className="w-100" />
 								</div>
-								<p>{Languages[language].main.lang.title}</p>
+								<p>{Lang[language].main.lang.title}</p>
 							</div>
 							<div className="language_select">
 								<div>
 									<input onChange={(e)=>setLang(e.target.value)} type="radio" name="language" id="uzbek" value="uzbek" />
-									<label htmlFor="uzbek">{Languages[language].main.lang.uz}</label>
+									<label htmlFor="uzbek">{Lang[language].main.lang.uz}</label>
 								</div>
 								<div>
 									<input onChange={(e)=>setLang(e.target.value)} type="radio" name="language" id="russian" value="russian"  />
-									<label htmlFor="russian">{Languages[language].main.lang.ru}</label>
+									<label htmlFor="russian">{Lang[language].main.lang.ru}</label>
 								</div>
 								<div>
 									<input onChange={(e)=>setLang(e.target.value)} type="radio" name="language" id="english" value="english" />
-									<label htmlFor="english">{Languages[language].main.lang.en}</label>
+									<label htmlFor="english">{Lang[language].main.lang.en}</label>
 								</div>
 							</div>
 						</div>
 						{/*Password*/}
 						<div className="password">
-							<h4>{Languages[language].main.resetPassword}</h4>
+							<h4>{Lang[language].main.resetPassword}</h4>
 							<input ref={password} type="password" />
 						</div>
 					</div>

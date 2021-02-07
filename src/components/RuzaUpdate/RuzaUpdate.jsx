@@ -1,16 +1,16 @@
 import './RuzaUpdate.css'
 import './RuzaUpdateMedia.css'
 import { Select, Option } from '../Select/Seelct'
-import axios from 'axios'
+// import axios from 'axios'
 import './Select.css'
 import { useEffect, useRef, useState } from 'react'
-import { useServer } from '../app/ServerContext'
-import Languages from "../lang/languages"
+// import { useServer } from '../app/ServerContext'
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
 function RuzaUpdate() {
-	const [server] = useServer()
+	// const [server] = useServer()
 
     const [language, setLanguage] = useLang()
 	const { lang } = useParams()
@@ -40,29 +40,29 @@ function RuzaUpdate() {
 	const vitr = useRef()
 	const ruza = useRef()
 
-    async function updatingRemnant(e) {
-		e.preventDefault()
-		const userRemnantData = {
-            bomdod: bomdod.current.value,
-            peshin: peshin.current.value,
-            asr: asr.current.value,
-            shom: shom.current.value,
-            xufton: xufton.current.value,
-            vitr: vitr.current.value,
-            ruza: ruza.current.value,
-		}
-		if(server){
-			await axios.post(server + '/', {
-				userRemnantData
-			})
-		}
-	}
+    // async function (e) {
+	// 	e.preventDefault()
+	// 	const userRemnantData = {
+    //         bomdod: bomdod.current.value,
+    //         peshin: peshin.current.value,
+    //         asr: asr.current.value,
+    //         shom: shom.current.value,
+    //         xufton: xufton.current.value,
+    //         vitr: vitr.current.value,
+    //         ruza: ruza.current.value,
+	// 	}
+	// 	if(server){
+	// 		await axios.post(server + '/', {
+	// 			userRemnantData
+	// 		})
+	// 	}
+	// }
 
 
     return (
         <>
         <div className="pray-counter">
-        <h2 style={{textAlign: 'center', marginBottom: 15}}>{Languages[language].main.calculate.calculateTitle}</h2>
+        <h2 style={{textAlign: 'center', marginBottom: 15}}>{Lang[language].main.calculate.calculateTitle}</h2>
         <form className="ruza-update-form"
         onSubmit={e => {
             e.preventDefault()
@@ -72,31 +72,31 @@ function RuzaUpdate() {
         }}>
         <div className="status-editing">
         <label htmlFor="bomdod">
-        {Languages[language].main.calculate.bomdod}
+        {Lang[language].main.calculate.bomdod}
         <input ref={bomdod} maxLength="2" type="text" id="bomdod"/>
         </label>
         <label htmlFor="peshin">
-        {Languages[language].main.calculate.peshin}
+        {Lang[language].main.calculate.peshin}
         <input ref={peshin} maxLength="2" type="text" id="peshin"/>
         </label>
         <label htmlFor="asr">
-        {Languages[language].main.calculate.asr}
+        {Lang[language].main.calculate.asr}
         <input ref={asr} maxLength="2" type="text" id="asr"/>
         </label>
         <label htmlFor="shom">
-        {Languages[language].main.calculate.shom}
+        {Lang[language].main.calculate.shom}
         <input ref={shom} maxLength="2" type="text" id="shom"/>
         </label>
         <label htmlFor="xufton">
-        {Languages[language].main.calculate.xufton}
+        {Lang[language].main.calculate.xufton}
         <input ref={xufton} maxLength="2" type="text" id="xufton"/>
         </label>
         <label htmlFor="vitr">
-        {Languages[language].main.calculate.vitr}
+        {Lang[language].main.calculate.vitr}
         <input ref={vitr} maxLength="2" type="text" id="vitr"/>
         </label>
         <label htmlFor="ruza">
-        {Languages[language].main.calculate.fasting}
+        {Lang[language].main.calculate.fasting}
         <input ref={ruza} maxLength="1" type="text" id="ruza"/>
         </label>
         </div>
@@ -138,7 +138,7 @@ function RuzaUpdate() {
         </div>
         </div>
         </div>
-        <button className="ruza-update-button">{Languages[language].main.calculate.submit}</button>
+        <button className="ruza-update-button">{Lang[language].main.calculate.submit}</button>
         </div>
         </form>
         <div className="submitted">

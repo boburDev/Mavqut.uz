@@ -1,7 +1,7 @@
 import React from 'react';
 import './Terms.css';
 import { useEffect } from 'react'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -19,7 +19,7 @@ export default function Terms() {
 			<h2 className="text-ceter">Terms & Conditions</h2>
 			<div className="text_block">
 				<p>
-					{Languages[language].main.termAndConditionText}
+					{Lang[language].main.termAndConditionText}
 				</p>
 			</div>
 		</div>

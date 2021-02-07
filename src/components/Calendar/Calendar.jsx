@@ -4,7 +4,7 @@ import './CalendarMedia.css'
 import { useServer } from '../app/ServerContext'
 import axios from 'axios'
 import { useEffect } from 'react'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ export default function Calendar() {
 
 
 	const [lastYear, setLastYear] = useState()
-	const [lastMonth, setLastMonth] = useState(0)
+	const [lastMonth] = useState(0)
 	const [lastDay, setLastDay] = useState(0)
 
 	useEffect(()=>{
@@ -69,14 +69,14 @@ export default function Calendar() {
 					<div className="big_column col-xl-5 col-md-7">
 						<div className="big_column__in big_column__in_once">
 							<b>
-							{Languages[language].dashboard.lastDaysOfNamaz}
+							{Lang[language].dashboard.lastDaysOfNamaz}
 							</b>
 							<div className="big_column__left">
 								<div className="cub cub_number">
 									<div className="cub_in">
 										<h6>{lastYear}</h6>
 									</div>
-									<b>{Languages[language].main.calculate.year}</b>
+									<b>{Lang[language].main.calculate.year}</b>
 								</div>
 								<div className="cub cub_dots">
 									<h1>:</h1>	
@@ -85,7 +85,7 @@ export default function Calendar() {
 									<div className="cub_in">
 										<h6>{lastMonth}</h6>
 									</div>
-									<b>{Languages[language].main.calculate.month}</b>
+									<b>{Lang[language].main.calculate.month}</b>
 								</div>
 								<div className="cub cub_dots">
 									<h1>:</h1>
@@ -94,7 +94,7 @@ export default function Calendar() {
 									<div className="cub_in">
 										<h6>{lastDay}</h6>
 									</div>
-									<b>{Languages[language].main.calculate.day}</b>
+									<b>{Lang[language].main.calculate.day}</b>
 								</div>
 							</div>
 						</div>
@@ -102,19 +102,19 @@ export default function Calendar() {
 					<div className="big_column col-xl-7 col-12">
 						<div className="big_column__in">
 							<b>
-							{Languages[language].dashboard.lastDaysOfNamazSpeed}
+							{Lang[language].dashboard.lastDaysOfNamazSpeed}
 							</b>
 							<div className="big_column_right_all">
 								<div className="row m-0 p-0 w-100">
 									<div className="big_column__right col-xl-4 col-md-12">
 										<h6>
-											1 {Languages[language].dashboard.timeSpeed}
+											1 {Lang[language].dashboard.timeSpeed}
 										</h6>
 										<h6 className="active">
-											2 {Languages[language].dashboard.timeSpeed}
+											2 {Lang[language].dashboard.timeSpeed}
 										</h6>
 										<h6>
-											3 {Languages[language].dashboard.timeSpeed}
+											3 {Lang[language].dashboard.timeSpeed}
 										</h6>
 									</div>
 									<div className="big_column__right col-xl-8 col-md-12">
@@ -126,15 +126,15 @@ export default function Calendar() {
 												<div className="row m-0 p-0">
 													<div className="day__bottom_cub linear_left col-xl-4 col-4">
 														<h1>9</h1>
-														<h6>{Languages[language].main.calculate.year}</h6>
+														<h6>{Lang[language].main.calculate.year}</h6>
 													</div>
 													<div className="day__bottom_cub col-xl-4 col-4">
 														<h1>5</h1>
-														<h6>{Languages[language].main.calculate.month}</h6>
+														<h6>{Lang[language].main.calculate.month}</h6>
 													</div>
 													<div className="day__bottom_cub linear_right col-xl-4 col-4">
 														<h1>25</h1>
-														<h6>{Languages[language].main.calculate.day}</h6>
+														<h6>{Lang[language].main.calculate.day}</h6>
 													</div>
 												</div>
 											</div>

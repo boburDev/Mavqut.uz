@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './LineProcess.css'
 import LineChart from './LineProcessChart/LineChart'
 import './LineProcessMedia.css'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -41,7 +41,7 @@ function LineProcess() {
                     </div>
                     <div className="right-tab">
                         <div className="statics-counter">
-                            <div data-title={Languages[language].dashboard.readNamaz}
+                            <div data-title={Lang[language].dashboard.readNamaz}
                             className="done-namaz">
                                 256
                                 <div className="process">
@@ -65,7 +65,7 @@ function LineProcess() {
                                     <p><b>48%</b></p>
                                 </div>
                             </div>
-                            <div data-title={Languages[language].dashboard.notReadNamaz}
+                            <div data-title={Lang[language].dashboard.notReadNamaz}
                             className="not-done-namaz">
                             1085
                             <div className="process">

@@ -2,7 +2,7 @@ import React from 'react'
 import './SectionAbout.css'
 import close from '../Section/images/cloIcon.svg'
 import { useEffect } from 'react'
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -60,7 +60,7 @@ export default function SectionAbout () {
         <>
         <div className="section-about" id="section-about">
          <div onClick={arrow}><img className="close" src={close} alt="close"/></div>
-            <div className="section-body">{Languages[language].main.aboutUsBtn}</div>
+            <div className="section-body">{Lang[language].main.aboutUsBtn}</div>
         </div>
         </>
     )

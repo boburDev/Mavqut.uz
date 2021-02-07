@@ -4,7 +4,7 @@ import  "./ProcessDonatMedia.css"
 import { useServer } from '../app/ServerContext'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -68,7 +68,7 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: bomdod > 20 ? bomdod : 20}}>{bomdod}%</div>
                         </div>
                         <div className="type_name">
-                            {Languages[language].main.calculate.bomdod}
+                            {Lang[language].main.calculate.bomdod}
                         </div>
                     </div>
                     <div className="type peshin_type">
@@ -79,7 +79,7 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: peshin > 20 ? peshin : 20}}>{peshin}%</div>
                         </div>
                         <div className="type_name">
-                        {Languages[language].main.calculate.peshin}
+                        {Lang[language].main.calculate.peshin}
                         </div>
                     </div>
                     <div className="type asr_type">
@@ -90,7 +90,7 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: asr > 20 ? asr : 20}}>{asr}%</div>
                         </div>
                         <div className="type_name">
-                        {Languages[language].main.calculate.asr}
+                        {Lang[language].main.calculate.asr}
                         </div>
                     </div>
                     <div className="type shom_type">
@@ -101,7 +101,7 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: shom > 20 ? shom : 20}}>{shom}%</div>
                         </div>
                         <div className="type_name">
-                        {Languages[language].main.calculate.shom}
+                        {Lang[language].main.calculate.shom}
                         </div>
                     </div>
                     <div className="type xufton_type">
@@ -112,7 +112,7 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: xufton > 20 ? xufton : 20}}>{xufton}%</div>
                         </div>
                         <div className="type_name">
-                        {Languages[language].main.calculate.xufton}
+                        {Lang[language].main.calculate.xufton}
                         </div>
                     </div>
                     <div className="type vitr_type">
@@ -123,15 +123,15 @@ function DonatProcess() {
                             <div className="percent" style={{bottom: vitr > 20 ? vitr : 20}}>{vitr}%</div>
                         </div>
                         <div className="type_name">
-                        {Languages[language].main.calculate.vitr}
+                        {Lang[language].main.calculate.vitr}
                         </div>
                     </div>
                 </div>
                     <div className="donat-chart" data-done="70%" data-not-done="30%">
-                        <div className="donat-ruza" data-donat-text={Languages[language].main.calculate.fasting}>
+                        <div className="donat-ruza" data-donat-text={Lang[language].main.calculate.fasting}>
                             <Donat
-                            countFasting={Languages[language].main.calculate.countOfFasting}
-                            countNamaz={Languages[language].main.calculate.countOfNamaz}
+                            countFasting={Lang[language].main.calculate.countOfFasting}
+                            countNamaz={Lang[language].main.calculate.countOfNamaz}
                             dataDonat={donatData} />
                         </div>
                     </div>

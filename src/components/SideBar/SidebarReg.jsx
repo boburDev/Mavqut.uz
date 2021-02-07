@@ -4,7 +4,7 @@ import Background from "./backGraund/backgraund"
 import { Link } from "react-router-dom"
 
 import { useEffect } from 'react'
-import Languages from "../lang/languages"
+import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -29,7 +29,7 @@ export const SidebarReg = () => {
       	</Link>
           <div className="btncalc">
             <Link to="/main">
-            {Languages[language].dashboard.mainPage}
+            {Lang[language].dashboard.mainPage}
             </Link>
           </div>
         </div>

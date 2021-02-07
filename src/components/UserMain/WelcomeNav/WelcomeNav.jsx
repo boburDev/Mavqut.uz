@@ -6,7 +6,7 @@ import './WelcomeNavMedia.css'
 import notification from "../assets/notification.png";
 import notification_fill from "../assets/notification-fill.png";
 
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -27,7 +27,7 @@ const WelcomeNav = ({type, who, category, name}) => {
         <div className="containerBox">
             <div className="title_nav">
                 {
-                    (type !== 'term' || who === 'user') && <h3>{Languages[language].main.userBar.welcome} {name}</h3>
+                    (type !== 'term' || who === 'user') && <h3>{Lang[language].main.userBar.welcome} {name}</h3>
                 }
                 {
                     (type === 'main' || type === 'statistics') && <div className="links">
@@ -35,13 +35,13 @@ const WelcomeNav = ({type, who, category, name}) => {
                         setCategory('Namaz')
                     }}
                     className={'link '+( (category === 'Namaz')? 'isActive':'') }>
-                        {Languages[language].main.userBar.namazQazo}
+                        {Lang[language].main.userBar.namazQazo}
                     </div>
                     <div onClick={() => {
                         setCategory('Fasting')
                     }}
                     className={'link '+( (category === 'Fasting')? 'isActive':'')}>
-                        {Languages[language].main.userBar.fastingQazo}
+                        {Lang[language].main.userBar.fastingQazo}
                     </div>
                 </div>}
                 <span onClick={()=>{setBell(!bell)}} className={'bell '+ ( (type === 'term' && who !== '')? 'onsetting' :'')}>

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -58,7 +58,7 @@ export default function SectionMore () {
                     <div onClick={arrow}><img className="close" src={close} alt="close"/></div>
                     <div className="more-body">
                         <h2>Clicked</h2>
-                        <p className="more-text">{Languages[language].main.moreBtn}</p>
+                        <p className="more-text">{Lang[language].main.moreBtn}</p>
                     </div>
                 </div>
         </>

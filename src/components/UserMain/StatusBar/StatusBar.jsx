@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import "./statusbar.css";
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -23,10 +23,10 @@ export default function StatusBar(props) {
     return (
         <div className="coninerStatus">
             <div className="track">
-                <span className="start">{props.start} {Languages[language].main.userBar.age}</span>
-                <span className="end">{props.end} {Languages[language].main.userBar.age}</span>
+                <span className="start">{props.start} {Lang[language].main.userBar.age}</span>
+                <span className="end">{props.end} {Lang[language].main.userBar.age}</span>
                 <div style={progressStyle} className="inner">
-                    <span style={hiddenStyle} className="current">{props.current} {Languages[language].main.userBar.age}</span>
+                    <span style={hiddenStyle} className="current">{props.current} {Lang[language].main.userBar.age}</span>
                 </div>
             </div>
         </div>

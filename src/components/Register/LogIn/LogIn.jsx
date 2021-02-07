@@ -7,7 +7,7 @@ import { useServer } from '../../app/ServerContext'
 import axios from "axios"
 import { useRegistration } from '../Registration_Context'
 import { useEffect } from 'react'
-import Languages from "../../lang/languages"
+import { Lang } from "../../lang/languages"
 import { useLang } from '../../lang/langContext'
 import { useParams } from 'react-router-dom'
 
@@ -46,23 +46,23 @@ export default function LogIn() {
         <div className="details">
 		  <form onSubmit={loginForm} id="form" className="login">
             <label>
-			{Languages[language].main.authintification.phone} <br></br>
-              <input ref={number} type="phone" placeholder={Languages[language].main.phone} name="number" />
+			{Lang[language].main.authintification.phone} <br></br>
+              <input ref={number} type="phone" placeholder={Lang[language].main.phone} name="number" />
             </label>
             <label>
             
-            {Languages[language].main.authintification.password} <br></br>
-              <input ref={password} type="password" placeholder={Languages[language].main.password} name="password" />
+            {Lang[language].main.authintification.password} <br></br>
+              <input ref={password} type="password" placeholder={Lang[language].main.password} name="password" />
             </label>
             <span>
-              {Languages[language].main.authintification.dontHave} <Link to="/register/sign-up">{Languages[language].main.authintification.here}</Link>{" "}
-              {Languages[language].main.authintification.press}
+              {Lang[language].main.authintification.dontHave} <Link to="/register/sign-up">{Lang[language].main.authintification.here}</Link>{" "}
+              {Lang[language].main.authintification.press}
               <br />
-              <Link to="/get-in-touch">{Languages[language].main.authintification.forgetPassword}</Link>
+              <Link to="/get-in-touch">{Lang[language].main.authintification.forgetPassword}</Link>
             </span>
           </form>
         </div>
-        <input type="submit" value={Languages[language].main.authintification.send} form="form" />
+        <input type="submit" value={Lang[language].main.authintification.send} form="form" />
         <div className="bg"></div>
       </div>
     )

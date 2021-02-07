@@ -490,7 +490,7 @@ const EN = {
 	},
 }
 
-export default {
+export const Lang = {
 	UZ,
 	RU,
 	EN
