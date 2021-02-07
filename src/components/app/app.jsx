@@ -27,7 +27,7 @@ function App() {
 
   window.onresize = () => {
     let width = window.innerWidth
-    const windowNone = document.querySelector('.display')
+    const windowNone = document.querySelector('.wrap-all-content')
     const windowNoneSecond = document.querySelector('.main')
     if (width < 1200) {
       if (windowNone) {
@@ -61,7 +61,8 @@ function App() {
 
   return (
 
-    <Switch>
+    <div className="wrap-all-content">
+      <Switch>
       <Route path="/" exact>
         <div className="main">
           {
@@ -168,6 +169,7 @@ function App() {
         </div>
       </Route>
     </Switch>
+    </div>
 
   )
 }
