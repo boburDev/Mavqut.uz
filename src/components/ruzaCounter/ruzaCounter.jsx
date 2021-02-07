@@ -14,7 +14,7 @@ function Counter() {
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang.toLowerCase() || 'uz')
+		setLanguage(lang || 'UZ')
 	  },[lang, setLanguage])
 
     const [fastingConst,setFastingConst] = useState(0)

@@ -18,7 +18,7 @@ export default function UserRegister(){
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang.toLowerCase() || 'uz')
+		setLanguage(lang || 'UZ')
 	  },[lang, setLanguage])
 
 

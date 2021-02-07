@@ -99,7 +99,7 @@ export default function Navbar () {
 
 
   useEffect(()=>{
-	setLanguage(lang.toLowerCase() || 'uz')
+	setLanguage(lang || 'UZ')
   },[lang, setLanguage])
   
   return (

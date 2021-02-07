@@ -11,7 +11,7 @@ export default function StatusBar(props) {
 	const { lang } = useParams()
 
 	useEffect(()=>{
-		setLanguage(lang.toLowerCase() || 'uz')
+		setLanguage(lang || 'UZ')
 	},[lang, setLanguage])
 
     const progressStyle={
