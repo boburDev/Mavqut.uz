@@ -18,12 +18,19 @@
 .navbar-more {
   position: fixed;
   z-index: 200;
-  left: 21%;
+  left: 19%;
   bottom: 12%;
   list-style-type: none;
   margin: 0;
   padding: 0;
   animation: visibility 4s ease;
+}
+
+@media only screen and (max-width: 1300px){
+.navbar-more {
+  left: 17%;
+    bottom: 19%;
+}
 }
 /* bottom: 12%; */
 .navbar-main .about a {
@@ -110,7 +117,7 @@
   font-size: 20px;
 }
 .download-icon {
-  width: 5%;
+  width: 7%;
   margin: 0 0 2% 5px;
 }
 .foot:hover {
