@@ -16,7 +16,7 @@ export default function Calendar() {
 
 
 	const [lastYear, setLastYear] = useState()
-	const [lastMonth] = useState(0)
+	const [lastMonth, setLastMonth] = useState(0)
 	const [lastDay, setLastDay] = useState(0)
 
 	useEffect(()=>{
@@ -47,21 +47,31 @@ export default function Calendar() {
 				const countOfPrayForDay = 20
 				// const daysInYear = 365
 				
-				const takeADay = data.const_total_namaz - data.total_namaz
+				const takeADay = data.const_total_namaz - data.total_namaz + (600 - 20)
 
 				const year = resp.data.start_at_namaz - 15
 				if (year >= 0 && takeADay === 0) {
 					setLastYear(year)
 				}else {
 					setLastYear(year - 1)
+					setLastMonth(12)
 				}
-				if (takeADay % 20 === 0) {
-					// console.log(takeADay);
+				
+				if (takeADay % 20 === 0 && lastDay <= 0) {
 					setLastDay(takeADay / countOfPrayForDay)
 				}
 			}
 		})()
-	},[server,token, lastDay])
+	},[server,token])
+
+	useEffect(()=>{
+
+		if (lastDay === 30) {
+			// setLastDay(0)
+			setLastMonth(lastMonth - 1)
+		}
+
+	},[lastDay, lastMonth])
 	  
 	return(
 		<div className="all">

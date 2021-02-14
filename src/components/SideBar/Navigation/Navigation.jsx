@@ -108,18 +108,18 @@ return (
 
 	<div className="btncalc">
 	<NavLink
-	to={`/${lang}/main/calculate`} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Lang[language].main.calculate.btnText}</NavLink>
+	to={`/${language}/main/calculate`} activeStyle={activeCalculate} className="btn-outline-light calculate rounded-pill w-100 py-1">{Lang[language].main.calculate.btnText}</NavLink>
 	</div>
 
 		<ul className="side-navbar">
 				<li className="side-item main-link">
-					<Link to={`/${lang}/main/dashboard`} className="sidebarLink sidebarLink--active" id="main-sidebar-link">
+					<Link to={`/${language}/main/dashboard`} className="sidebarLink sidebarLink--active" id="main-sidebar-link">
 						<img src={imgChange === "main" ? mainIcon : mainChangeIcon} alt="main-link"/>
 						{Lang[language].dashboard.dashboardText}
 					</Link>
 				</li>
 			<li className="side-item statistics-link">
-				<Link to={`/${lang}/main/statistics`} id="statistics-sidebar-link" className="sidebarLink">
+				<Link to={`/${language}/main/statistics`} id="statistics-sidebar-link" className="sidebarLink">
 					<img src={imgChange === 'statistics' ? statisticsChangeIcon : statisticsIcon} alt="statistics"/>
 					{Lang[language].dashboard.statistics}
 				</Link>
@@ -159,22 +159,22 @@ return (
 				</div>
 				<ul className="sub-footer-links" style={hiddenStyle}>
 					<li className="sub-footer-link-item">
-					<Link to={`/${lang}/setting`} className="sub-footer-link">
+					<Link to={`/${language}/setting`} className="sub-footer-link">
 					{Lang[language].main.setting.profile}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={`/${lang}/setting/privacy`} className="sub-footer-link">
+					<Link to={`/${language}/setting/privacy`} className="sub-footer-link">
 					{Lang[language].main.setting.privacyPolicy}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={`/${lang}/setting/theme`} className="sub-footer-link">
+					<Link to={`/${language}/setting/theme`} className="sub-footer-link">
 					{Lang[language].main.setting.theme}
 					</Link>
 					</li>
 					<li className="sub-footer-link-item">
-					<Link to={`/${lang}/setting/term`} className="sub-footer-link">
+					<Link to={`/${language}/setting/term`} className="sub-footer-link">
 						{Lang[language].main.setting.termsConditions}
 					</Link>
 					</li>
