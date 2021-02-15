@@ -62,7 +62,7 @@ export default function Calendar() {
 				}
 			}
 		})()
-	},[server,token])
+	},[server,lastDay,token])
 
 	useEffect(()=>{
 
