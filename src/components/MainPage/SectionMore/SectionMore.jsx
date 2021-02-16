@@ -57,7 +57,7 @@ export default function SectionMore () {
         <div className="more" id="more">
                     <div onClick={arrow}><img className="close" src={close} alt="close"/></div>
                     <div className="more-body">
-                        <h2>Clicked</h2>
+                        <h2>{Lang[language].main.clicked}</h2>
                         <p className="more-text">{Lang[language].main.moreBtn}</p>
                     </div>
                 </div>

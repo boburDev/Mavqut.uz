@@ -129,6 +129,8 @@ export default function Navbar () {
 		<li className="nav-item lang"><Link to="/RU/main"><span>RU</span></Link></li>
 		<div className="vl"></div>
 		<li className="nav-item lang"><Link to="/UZ/main"><span>UZ</span></Link></li>
+		<div className="vl"></div>
+		<li className="nav-item lang"><Link to="/УЗ/main"><span>УЗ</span></Link></li>
       </ul>
     </nav>
   )

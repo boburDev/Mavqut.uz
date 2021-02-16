@@ -15,7 +15,7 @@ export default function Privacy() {
 
 	return(
 		<div className="privacy">
-			<h2 className="text-ceter">Privacy policy</h2>
+			<h2 className="text-ceter">{Lang[language].main.privacy}</h2>
 			<div className="text_block">
 				<p>
 					{Lang[language].main.privacyPolicyText}

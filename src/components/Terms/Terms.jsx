@@ -16,7 +16,7 @@ export default function Terms() {
 
 	return(
 		<div className="terms">
-			<h2 className="text-ceter">Terms & Conditions</h2>
+			<h2 className="text-ceter">{Lang[language].main.terms}</h2>
 			<div className="text_block">
 				<p>
 					{Lang[language].main.termAndConditionText}
