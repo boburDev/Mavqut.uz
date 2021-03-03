@@ -96,6 +96,10 @@
 	margin-right: 10px;
 	font-size: 20px;
 	font-weight: 500;
+
+}
+.form .left .form_gender .radio label:hover{
+	cursor: pointer;
 }
 .form .left .form_ages {
 	width: 100%;

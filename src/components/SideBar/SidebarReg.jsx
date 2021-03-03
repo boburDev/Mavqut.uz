@@ -29,7 +29,7 @@ export const SidebarReg = () => {
       	</Link>
           <div className="btncalc">
             <Link to="/main">
-            {Lang[language].dashboard.mainPage}
+            {Lang[language].dashboard.mainPage || 'Main'} 
             </Link>
           </div>
         </div>

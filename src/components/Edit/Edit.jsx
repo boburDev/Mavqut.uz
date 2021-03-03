@@ -281,7 +281,7 @@ export default function Edit() {
 						</div>
 					</div>
 				</div>
-				<button>ok</button>
+				<button className="submit_button">Submit</button>
 				<div className="bg_image">
 				</div>
 			</form>

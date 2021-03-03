@@ -4,6 +4,18 @@
         padding: 5px;
     }
 }
+
+@media screen and (max-height:888px){
+    .pray-counter {
+        position: relative;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-top: 10px;
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
 @media screen and  (max-height:740px){
     .pray-counter {
         position: relative;
@@ -14,18 +26,21 @@
         padding:5px;
         border-radius: 10px;
     }
+    .pray-counter >h2{
+        font-size: 22px;
+    }
     .status-editing {
         width: 700px;
-        height: 165px;
+        height: 150px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
     }
     .ruza-update-button {
-        width: 198px;
-        height: 58px;
-        margin-top: 65px;
+        width: 175px;
+        height: 50px;
+        margin-top: 60px;
         padding: 10px 20px;
         border-radius: 17px;
         font-weight: 600;
@@ -46,16 +61,5 @@
         display: flex;
         justify-content: space-between;
         width: 25%;
-    }
-}
-@media screen and (max-height:868px){
-    .pray-counter {
-        position: relative;
-        margin: 0 auto;
-        background-color: #fff;
-        margin-top: 10px;
-        width: 90%;
-        padding: 20px;
-        border-radius: 10px;
     }
 }

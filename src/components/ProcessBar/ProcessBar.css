@@ -157,14 +157,16 @@ margin-left: auto;
 .circle-bomdod p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-bomdod span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-48%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;
@@ -218,14 +220,16 @@ margin-left: auto;
 .circle-peshin p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-peshin span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;
@@ -278,14 +282,16 @@ margin-left: auto;
 .circle-asr p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-asr span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-49%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;
@@ -346,14 +352,16 @@ margin-left: auto;
 .circle-shom p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-shom span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-49%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;
@@ -406,14 +414,16 @@ margin-left: auto;
 .circle-xufton p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-xufton span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-49%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;
@@ -466,14 +476,16 @@ margin-left: auto;
 .circle-vitr p {
     position: absolute;
     top: 40px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 22px;
     z-index: 11;
 }
 .circle-vitr span {
     position: absolute;
     top: 80px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-49%);
     color: #ccc;
     font-size: 18px;
     z-index: 11;

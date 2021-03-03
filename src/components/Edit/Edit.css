@@ -16,6 +16,18 @@
 .editAll p {
 	margin:0!important;
 }
+.editAll  button.submit_button{
+	padding: 5px;
+	border:1px solid  #2B083C;
+	color: #2B083C;
+	border-radius: 20px;
+	font-weight: 500;
+	width: 100px;
+}
+.editAll  button.submit_button:hover{
+	color: white;
+	background-color: #2B083C;
+}
 .editPhoto{
 	display: flex;
 	position: relative;
@@ -64,6 +76,9 @@
 	font-size: 25px;
 	margin-left: 20px;
 	margin-bottom: 0;
+}
+.editAll label:hover{
+	cursor: pointer;
 }
 .nameEditemail{
 	margin-left: 15px;

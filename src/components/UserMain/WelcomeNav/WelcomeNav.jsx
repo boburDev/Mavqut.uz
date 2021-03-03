@@ -34,7 +34,7 @@ const WelcomeNav = ({type, who, category, name}) => {
                     <div onClick={() => {
                         setCategory('Namaz')
                     }}
-                    className={'link '+( (category === 'Namaz')? 'isActive':'') }>
+                    className={'link '+( (category === 'Namaz') ? 'isActive':'') }>
                         {Lang[language].main.userBar.namazQazo}
                     </div>
                     <div onClick={() => {

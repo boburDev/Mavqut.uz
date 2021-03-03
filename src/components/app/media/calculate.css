@@ -53,10 +53,10 @@
         margin-top: 10px;
         padding: 5px;
     }
-    .status-editing {
+    /* .status-editing {
         width: 700px;
         height: 200px;
-    }
+    } */
     .status-editing label input {
         width: 30%;
     }
