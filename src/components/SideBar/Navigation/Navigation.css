@@ -19,13 +19,16 @@
 	border: 2px solid #fff;
 }
 .nav .btncalc {
-	position: absolute;
-	top: 10%;
-	left: 17%;
-	text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, 10px);
+    text-align: center;
 }
 .nav .btncalc a {
-	padding: 15px 25px;
+	padding: 8px 25px;
+	/* padding: 15px 25px; */
 	text-align: center;
 	font-weight: 600;
 	font-size: 1.5rem;
@@ -143,7 +146,7 @@
 }
 .sub-footer-links {
 	position: absolute;
-	top: -192px;
+	top: -206px;
 	right: 0px;
 	width: 100%;
 	display: flex;

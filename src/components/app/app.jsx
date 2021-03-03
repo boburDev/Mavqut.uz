@@ -27,9 +27,10 @@ function App() {
 
   window.onresize = () => {
     let width = window.innerWidth
+    let height = window.innerHeight
     const windowNone = document.querySelector('.wrap-all-content')
     const windowNoneSecond = document.querySelector('.main')
-    if (width < 1200) {
+    if (width < 1200 || height<650) {
       if (windowNone) {
         windowNone.style.display = 'none'
       } else {
@@ -46,9 +47,10 @@ function App() {
 
   useLayoutEffect(()=>() => {
     let width = window.innerWidth
+    let height = window.innerHeight
     const windowNone = document.querySelector('.wrap-all-content')
     const windowNoneSecond = document.querySelector('.main')
-    if (width < 1200) {
+    if (width < 1200 || height < 650) {
       if (windowNone) {
         windowNone.style.display = 'none'
       } else {

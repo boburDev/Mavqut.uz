@@ -34,9 +34,6 @@
 }
 
 @media screen and  (max-width: 1300px) and (min-width: 1200px){
-	.nav .btncalc {
-		left: 6%;
-    }
     .nav .btncalc a {
         padding: 15px 19px;
         font-size: 1.2rem;
@@ -46,9 +43,6 @@
 	}
 }
 @media screen and  (max-width: 1440px) and (min-width: 1301px){
-	.nav .btncalc {
-		left: 6%;
-    }
     
 	.side-navbar{
 		left: 38%;
