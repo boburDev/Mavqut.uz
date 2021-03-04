@@ -4,7 +4,7 @@ import './Select.css'
 
 const Context = createContext()
 
-export const Select = ({ children, defaultValue, onSelect }) => {
+export const Select = ({ children, defaultValue, onSelect,onSelectValue }) => {
 
     const [currentValue,setCurrentValue] = useState(defaultValue)
     const [placeholder,setPlaceholder] = useState('Choose')
@@ -17,6 +17,7 @@ export const Select = ({ children, defaultValue, onSelect }) => {
         setPlaceholder,
         opened,
         setOpened,
+        onSelectValue
     }
 
     return (
@@ -50,13 +51,14 @@ export const Select = ({ children, defaultValue, onSelect }) => {
 
 
 export const Option = ({ children, value, placeholder}) => {
-
-    const { currentValue,setCurrentValue, onSelect, setPlaceholder, setOpened } = useContext(Context)
+    
+    const { currentValue,setCurrentValue, onSelect, setPlaceholder, setOpened, onSelectValue } = useContext(Context)
     return (
     <>
        <li
         className={currentValue === value ? 'selected' : null}
         onClick={ e => {
+            onSelectValue(value)
             setCurrentValue(value)
             setPlaceholder(placeholder)
             setOpened(false)
