@@ -1,16 +1,16 @@
 import './RuzaUpdate.css'
 import './RuzaUpdateMedia.css'
 import { Select, Option } from '../Select/Seelct'
-// import axios from 'axios'
+import axios from 'axios'
 import './Select.css'
 import { useEffect, useRef, useState } from 'react'
-// import { useServer } from '../app/ServerContext'
+import { useServer } from '../app/ServerContext'
 import { Lang } from "../lang/languages"
 import { useLang } from '../lang/langContext'
 import { useParams } from 'react-router-dom'
 
 function RuzaUpdate() {
-	// const [server] = useServer()
+	const [server] = useServer()
 
     const [language, setLanguage] = useLang()
 	const { lang } = useParams()
@@ -26,6 +26,10 @@ function RuzaUpdate() {
 
     const years = [1992,1993,1994,1995,1996,1997,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
     
+
+    const [cDay, setCDay] = useState()
+    const [cMonth, setCMonth] = useState()
+    const [cYear, setCYear] = useState()
     useEffect(()=>{
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, '0');
@@ -39,37 +43,49 @@ function RuzaUpdate() {
 	const xufton = useRef()
 	const vitr = useRef()
 	const ruza = useRef()
+    const dayRef = useRef()
+    async function updateInfo(e) {
+		e.preventDefault()
+        console.log(cYear+"-"+cDay+"-"+cMonth)
+		const userRemnantData = {
+            bomdod: bomdod.current.value,
+            peshin: peshin.current.value,
+            asr: asr.current.value,
+            shom: shom.current.value,
+            xufton: xufton.current.value,
+            vitr: vitr.current.value,
+            ruza: ruza.current.value,
+            selectDate:new Date(cYear+"-"+cMonth+"-"+cDay)
+		}
+        
+		if(server){
+			await axios.post(server + '/api/remnant', {
+				userRemnantData
+			}).then(res=>{
+                
+                document.querySelector('.submitted').classList.add('submitted--block')
+                console.log(res)
+            }).catch(err=>{
+                console.log(err)
+            })
+		}
+	}
 
-    // async function (e) {
-	// 	e.preventDefault()
-	// 	const userRemnantData = {
-    //         bomdod: bomdod.current.value,
-    //         peshin: peshin.current.value,
-    //         asr: asr.current.value,
-    //         shom: shom.current.value,
-    //         xufton: xufton.current.value,
-    //         vitr: vitr.current.value,
-    //         ruza: ruza.current.value,
-	// 	}
-	// 	if(server){
-	// 		await axios.post(server + '/', {
-	// 			userRemnantData
-	// 		})
-	// 	}
-	// }
-
+    const updateDay=()=>{
+       setCDay(dayRef.current.value+1)
+    }
+    const updateMonth=(month)=>{
+        setCMonth(month+1)
+    }
+    const updateYear=(year)=>{
+        setCYear(year+1)
+    }
 
     return (
         <>
         <div className="pray-counter">
         <h2 style={{textAlign: 'center', marginBottom: 15}}>{Lang[language].main.calculate.calculateTitle}</h2>
-        <form className="ruza-update-form"
-        onSubmit={e => {
-            e.preventDefault()
-            document.querySelector('.submitted').classList.add('submitted--block')
-            // updatingRemnant()
-            e.target.reset()
-        }}>
+        <form className="ruza-update-form">
         <div className="status-editing">
         <label htmlFor="bomdod">
         {Lang[language].main.calculate.bomdod}
@@ -102,11 +118,11 @@ function RuzaUpdate() {
         </div>
         <div className="ruza-update-date">
         <div className="update-date">
-        <input maxLength="2" type="text" placeholder={today}/>
+        <input maxLength="2" type="text" onChange={updateDay} ref={dayRef} placeholder={today}/>
         
         <div className="update-selects">
         <div className="custom-update-select-month">
-        <Select>
+        <Select  onSelectValue={updateMonth}>
         {
             months.map((month,index) => 
             <Option
@@ -115,14 +131,14 @@ function RuzaUpdate() {
             placeholder={month}
             >{month}</Option>)
         }
-        </Select>
+        </Select >
         <div className="counter">
         <div className="top-caret"></div>
         <div className="bottom-caret"></div>
         </div>
         </div>
         <div className="custom-update-select-year">
-        <Select>
+        <Select onSelectValue={updateYear}>
         {
             years.map((year,index) => <Option
             key={index}
@@ -138,7 +154,7 @@ function RuzaUpdate() {
         </div>
         </div>
         </div>
-        <button className="ruza-update-button">{Lang[language].main.calculate.submit}</button>
+        <button className="ruza-update-button" onClick={updateInfo}>{Lang[language].main.calculate.submit}</button>
         </div>
         </form>
         <div className="submitted">

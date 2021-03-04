@@ -1,7 +1,7 @@
 
 import { Doughnut } from 'react-chartjs-2'
 
-function Donat({dataDonat, countNamaz, countFasting}) {
+function Donat({dataDonat,successeed,nosuccessed,  countNamaz, countFasting}) {
 
     const data = (canvas) => {
         const ctx = canvas.getContext("2d");
@@ -36,7 +36,7 @@ function Donat({dataDonat, countNamaz, countFasting}) {
                     borderWidth: 2,
                     pointColor : "#fff",
                     pointHighlightFill: "#fff",
-                    data: [39, 19],
+                    data: [nosuccessed, successeed],
                 }
             ]
         }

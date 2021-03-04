@@ -27,6 +27,7 @@ function DonatProcess() {
     const [xufton,setXufton] = useState(0)
     const [vitr,setVitr] = useState(0)
     const [donatData,setDonatData] = useState({})
+    const [ruza, setRuza] = useState({successeed:0, nosuccessed:0, done:0, notDone:70})
     useEffect(()=>{
         const token = window.localStorage.getItem("access_token")
 
@@ -37,13 +38,17 @@ function DonatProcess() {
                 }
             })
             const data = resp1.data
-
-            const bomdod = -(((data.bomdod * 100) / data.const_bomdod) - 100)
-            const peshin = -(((data.peshin * 100) / data.const_peshin) - 100)
-            const asr = -(((data.asr * 100) / data.const_asr) - 100)
-            const shom = -(((data.shom * 100) / data.const_shom) - 100)
-            const xufton = -(((data.xufton * 100) / data.const_xufton) - 100)
-            const vitr = -(((data.vitr * 100) / data.const_vitr) - 100)
+            
+            const bomdod = -Math.floor((((data.bomdod * 100) / data.const_bomdod) - 100))
+            const peshin = -Math.floor((((data.peshin * 100) / data.const_peshin) - 100))
+            const asr = -Math.floor((((data.asr * 100) / data.const_asr) - 100))
+            const shom = -Math.floor((((data.shom * 100) / data.const_shom) - 100))
+            const xufton = -Math.floor((((data.xufton * 100) / data.const_xufton) - 100))
+            const vitr = -Math.floor((((data.vitr * 100) / data.const_vitr) - 100))
+            setRuza({
+                successeed:data.total_fasting, 
+                nosuccessed:data.const_total_fasting-data.total_fasting
+            })
             setDonatData(data)
             setBomdod(bomdod)
             setPeshin(peshin)
@@ -127,12 +132,14 @@ function DonatProcess() {
                         </div>
                     </div>
                 </div>
-                    <div className="donat-chart" data-done="70%" data-not-done="30%">
+                    <div className="donat-chart" data-not-done={`${Math.floor(ruza.successeed/(ruza.successeed+ruza.nosuccessed)*100)}%`} data-done={`${Math.floor(ruza.nosuccessed/(ruza.successeed+ruza.nosuccessed)*100)}%`}>
                         <div className="donat-ruza" data-donat-text={Lang[language].main.calculate.fasting}>
                             <Donat
                             countFasting={Lang[language].main.calculate.countOfFasting}
                             countNamaz={Lang[language].main.calculate.countOfNamaz}
-                            dataDonat={donatData} />
+                            dataDonat={donatData}
+                            successeed={ruza.successeed}
+                            nosuccessed={ruza.nosuccessed} />
                         </div>
                     </div>
                 </div>
