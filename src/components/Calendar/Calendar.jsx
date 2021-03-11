@@ -15,10 +15,10 @@ export default function Calendar() {
 	const [server] = useServer()
 
 
-	const [lastYear, setLastYear] = useState()
+	const [lastYear, setLastYear] = useState(0)
 	const [lastMonth, setLastMonth] = useState(0)
 	const [lastDay, setLastDay] = useState(0)
-
+	
 	useEffect(()=>{
 		setLanguage(lang || 'UZ')
 	  },[lang, setLanguage])
@@ -44,35 +44,41 @@ export default function Calendar() {
                 })
 
                 const data = resp1.data
-				const countOfPrayForDay = 20
-				// const daysInYear = 365
-				
-				const takeADay = data.const_total_namaz - data.total_namaz + (600 - 20)
+				let count = 0
+				let counter = 1
+				const countOfPrayPerDay = 20
+				let month = 12
+				let year = resp.data.start_at_namaz - 15
+				const days = (data.const_total_namaz - data.total_namaz + 620) - 620 * count
+				let day = Math.floor(days / countOfPrayPerDay)
 
-				const year = resp.data.start_at_namaz - 15
-				if (year >= 0 && takeADay === 0) {
-					setLastYear(year)
-				}else {
-					setLastYear(year - 1)
-					setLastMonth(12)
-				}
+				setLastYear(year)
 				
-				if (takeADay % 20 === 0 && lastDay <= 0) {
-					setLastDay(takeADay / countOfPrayForDay)
+				if (year === 0) {
+					setLastYear(0)
+					setLastDay(0)
+					setLastMonth(0)
+				}
+
+				if (month === 0) {
+					month = 12
+					setLastMonth(month)
+					setLastYear(--year)
+				}
+
+				if (days % countOfPrayPerDay === 0 && 31 - day <= 0) {
+					setLastMonth(--month)
+					setLastDay(31 * counter - day)
+					setLastYear(--year)
+				} else if (days % countOfPrayPerDay === 0 && day > 0) {
+					setLastYear(--year)
+					setLastMonth(month)
+					setLastDay(31 - day)
 				}
 			}
 		})()
-	},[server,lastDay,token])
+	},[server,token])
 
-	useEffect(()=>{
-
-		if (lastDay === 30) {
-			// setLastDay(0)
-			setLastMonth(lastMonth - 1)
-		}
-
-	},[lastDay, lastMonth])
-	  
 	return(
 		<div className="all">
 				<div className="row m-0 p-0">
